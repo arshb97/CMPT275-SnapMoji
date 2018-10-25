@@ -14,7 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBAction func showPopUp(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 
 }
 
