@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		037433932181A81B00C5FBEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037433922181A81B00C5FBEE /* AppDelegate.swift */; };
+		037433952181A81B00C5FBEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037433942181A81B00C5FBEE /* ViewController.swift */; };
+		037433982181A81B00C5FBEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037433962181A81B00C5FBEE /* Main.storyboard */; };
+		0374339A2181A81B00C5FBEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037433992181A81B00C5FBEE /* Assets.xcassets */; };
+		0374339D2181A81B00C5FBEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0374339B2181A81B00C5FBEE /* LaunchScreen.storyboard */; };
+		037433A82181A81C00C5FBEE /* SnapMojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037433A72181A81C00C5FBEE /* SnapMojiTests.swift */; };
+		037433B32181A81C00C5FBEE /* SnapMojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037433B22181A81C00C5FBEE /* SnapMojiUITests.swift */; };
+		037433C12181AB6300C5FBEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 037433C02181AB6300C5FBEE /* GoogleService-Info.plist */; };
+		037433C22181AB6300C5FBEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 037433C02181AB6300C5FBEE /* GoogleService-Info.plist */; };
+		037433C32181AB6300C5FBEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 037433C02181AB6300C5FBEE /* GoogleService-Info.plist */; };
+		0AFB586462136D4B2141C40C /* Pods_SnapMojiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8B07F48342063CD9290CCD /* Pods_SnapMojiUITests.framework */; };
+		0BF783B7C9FC6222377408E6 /* Pods_SnapMoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF25389BA0328EC1246A39 /* Pods_SnapMoji.framework */; };
+		BB421DA9311A1D06E6ABB097 /* Pods_SnapMojiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C7C6B0A7880468BD54B6A8 /* Pods_SnapMojiTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		037433A42181A81C00C5FBEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 037433872181A81B00C5FBEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0374338E2181A81B00C5FBEE;
+			remoteInfo = SnapMoji;
+		};
+		037433AF2181A81C00C5FBEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 037433872181A81B00C5FBEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0374338E2181A81B00C5FBEE;
+			remoteInfo = SnapMoji;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0374338F2181A81B00C5FBEE /* SnapMoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapMoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		037433922181A81B00C5FBEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		037433942181A81B00C5FBEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		037433972181A81B00C5FBEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		037433992181A81B00C5FBEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0374339C2181A81B00C5FBEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0374339E2181A81B00C5FBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037433A32181A81C00C5FBEE /* SnapMojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapMojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		037433A72181A81C00C5FBEE /* SnapMojiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapMojiTests.swift; sourceTree = "<group>"; };
+		037433A92181A81C00C5FBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037433AE2181A81C00C5FBEE /* SnapMojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapMojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		037433B22181A81C00C5FBEE /* SnapMojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapMojiUITests.swift; sourceTree = "<group>"; };
+		037433B42181A81C00C5FBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037433C02181AB6300C5FBEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0B8B07F48342063CD9290CCD /* Pods_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45BF25389BA0328EC1246A39 /* Pods_SnapMoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56FCA876A9BB9F92789652D5 /* Pods-SnapMojiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiUITests/Pods-SnapMojiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		89C7C6B0A7880468BD54B6A8 /* Pods_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98426F5F68DFD0E0EB0F7DD2 /* Pods-SnapMoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.release.xcconfig"; sourceTree = "<group>"; };
+		9C89551F86E91A6D1805ADB6 /* Pods-SnapMojiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiTests/Pods-SnapMojiTests.release.xcconfig"; sourceTree = "<group>"; };
+		B2B76B0C5F8DCA318F41EAA4 /* Pods-SnapMojiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiTests/Pods-SnapMojiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD312281F77984E04A1DE8C7 /* Pods-SnapMojiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiUITests/Pods-SnapMojiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D139183A866A9EB1A3EF1A32 /* Pods-SnapMoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0374338C2181A81B00C5FBEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BF783B7C9FC6222377408E6 /* Pods_SnapMoji.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037433A02181A81C00C5FBEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB421DA9311A1D06E6ABB097 /* Pods_SnapMojiTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037433AB2181A81C00C5FBEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFB586462136D4B2141C40C /* Pods_SnapMojiUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		037433862181A81B00C5FBEE = {
+			isa = PBXGroup;
+			children = (
+				037433912181A81B00C5FBEE /* SnapMoji */,
+				037433A62181A81C00C5FBEE /* SnapMojiTests */,
+				037433B12181A81C00C5FBEE /* SnapMojiUITests */,
+				037433902181A81B00C5FBEE /* Products */,
+				664AEC5649AB07E15936F3EA /* Pods */,
+				FDDECF9379DE95D343DD03AA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		037433902181A81B00C5FBEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0374338F2181A81B00C5FBEE /* SnapMoji.app */,
+				037433A32181A81C00C5FBEE /* SnapMojiTests.xctest */,
+				037433AE2181A81C00C5FBEE /* SnapMojiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		037433912181A81B00C5FBEE /* SnapMoji */ = {
+			isa = PBXGroup;
+			children = (
+				037433922181A81B00C5FBEE /* AppDelegate.swift */,
+				037433942181A81B00C5FBEE /* ViewController.swift */,
+				037433962181A81B00C5FBEE /* Main.storyboard */,
+				037433992181A81B00C5FBEE /* Assets.xcassets */,
+				0374339B2181A81B00C5FBEE /* LaunchScreen.storyboard */,
+				0374339E2181A81B00C5FBEE /* Info.plist */,
+				037433C02181AB6300C5FBEE /* GoogleService-Info.plist */,
+			);
+			path = SnapMoji;
+			sourceTree = "<group>";
+		};
+		037433A62181A81C00C5FBEE /* SnapMojiTests */ = {
+			isa = PBXGroup;
+			children = (
+				037433A72181A81C00C5FBEE /* SnapMojiTests.swift */,
+				037433A92181A81C00C5FBEE /* Info.plist */,
+			);
+			path = SnapMojiTests;
+			sourceTree = "<group>";
+		};
+		037433B12181A81C00C5FBEE /* SnapMojiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				037433B22181A81C00C5FBEE /* SnapMojiUITests.swift */,
+				037433B42181A81C00C5FBEE /* Info.plist */,
+			);
+			path = SnapMojiUITests;
+			sourceTree = "<group>";
+		};
+		664AEC5649AB07E15936F3EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D139183A866A9EB1A3EF1A32 /* Pods-SnapMoji.debug.xcconfig */,
+				98426F5F68DFD0E0EB0F7DD2 /* Pods-SnapMoji.release.xcconfig */,
+				B2B76B0C5F8DCA318F41EAA4 /* Pods-SnapMojiTests.debug.xcconfig */,
+				9C89551F86E91A6D1805ADB6 /* Pods-SnapMojiTests.release.xcconfig */,
+				56FCA876A9BB9F92789652D5 /* Pods-SnapMojiUITests.debug.xcconfig */,
+				BD312281F77984E04A1DE8C7 /* Pods-SnapMojiUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FDDECF9379DE95D343DD03AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45BF25389BA0328EC1246A39 /* Pods_SnapMoji.framework */,
+				89C7C6B0A7880468BD54B6A8 /* Pods_SnapMojiTests.framework */,
+				0B8B07F48342063CD9290CCD /* Pods_SnapMojiUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0374338E2181A81B00C5FBEE /* SnapMoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 037433B72181A81C00C5FBEE /* Build configuration list for PBXNativeTarget "SnapMoji" */;
+			buildPhases = (
+				76A609486A5083F100E0A864 /* [CP] Check Pods Manifest.lock */,
+				0374338B2181A81B00C5FBEE /* Sources */,
+				0374338C2181A81B00C5FBEE /* Frameworks */,
+				0374338D2181A81B00C5FBEE /* Resources */,
+				D27E11E6BBA0CCED65758BB4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapMoji;
+			productName = SnapMoji;
+			productReference = 0374338F2181A81B00C5FBEE /* SnapMoji.app */;
+			productType = "com.apple.product-type.application";
+		};
+		037433A22181A81C00C5FBEE /* SnapMojiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 037433BA2181A81C00C5FBEE /* Build configuration list for PBXNativeTarget "SnapMojiTests" */;
+			buildPhases = (
+				DF9C3F3F0A5416ACC4EB1614 /* [CP] Check Pods Manifest.lock */,
+				0374339F2181A81C00C5FBEE /* Sources */,
+				037433A02181A81C00C5FBEE /* Frameworks */,
+				037433A12181A81C00C5FBEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				037433A52181A81C00C5FBEE /* PBXTargetDependency */,
+			);
+			name = SnapMojiTests;
+			productName = SnapMojiTests;
+			productReference = 037433A32181A81C00C5FBEE /* SnapMojiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		037433AD2181A81C00C5FBEE /* SnapMojiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 037433BD2181A81C00C5FBEE /* Build configuration list for PBXNativeTarget "SnapMojiUITests" */;
+			buildPhases = (
+				D5FC0717E3888F7999DC4E75 /* [CP] Check Pods Manifest.lock */,
+				037433AA2181A81C00C5FBEE /* Sources */,
+				037433AB2181A81C00C5FBEE /* Frameworks */,
+				037433AC2181A81C00C5FBEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				037433B02181A81C00C5FBEE /* PBXTargetDependency */,
+			);
+			name = SnapMojiUITests;
+			productName = SnapMojiUITests;
+			productReference = 037433AE2181A81C00C5FBEE /* SnapMojiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		037433872181A81B00C5FBEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = MojoMojis;
+				TargetAttributes = {
+					0374338E2181A81B00C5FBEE = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					037433A22181A81C00C5FBEE = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 0374338E2181A81B00C5FBEE;
+					};
+					037433AD2181A81C00C5FBEE = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 0374338E2181A81B00C5FBEE;
+					};
+				};
+			};
+			buildConfigurationList = 0374338A2181A81B00C5FBEE /* Build configuration list for PBXProject "SnapMoji" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 037433862181A81B00C5FBEE;
+			productRefGroup = 037433902181A81B00C5FBEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0374338E2181A81B00C5FBEE /* SnapMoji */,
+				037433A22181A81C00C5FBEE /* SnapMojiTests */,
+				037433AD2181A81C00C5FBEE /* SnapMojiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0374338D2181A81B00C5FBEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0374339D2181A81B00C5FBEE /* LaunchScreen.storyboard in Resources */,
+				037433C12181AB6300C5FBEE /* GoogleService-Info.plist in Resources */,
+				0374339A2181A81B00C5FBEE /* Assets.xcassets in Resources */,
+				037433982181A81B00C5FBEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037433A12181A81C00C5FBEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037433C22181AB6300C5FBEE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037433AC2181A81C00C5FBEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037433C32181AB6300C5FBEE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76A609486A5083F100E0A864 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapMoji-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D27E11E6BBA0CCED65758BB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5FC0717E3888F7999DC4E75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapMojiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF9C3F3F0A5416ACC4EB1614 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapMojiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0374338B2181A81B00C5FBEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037433952181A81B00C5FBEE /* ViewController.swift in Sources */,
+				037433932181A81B00C5FBEE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0374339F2181A81C00C5FBEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037433A82181A81C00C5FBEE /* SnapMojiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037433AA2181A81C00C5FBEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037433B32181A81C00C5FBEE /* SnapMojiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		037433A52181A81C00C5FBEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0374338E2181A81B00C5FBEE /* SnapMoji */;
+			targetProxy = 037433A42181A81C00C5FBEE /* PBXContainerItemProxy */;
+		};
+		037433B02181A81C00C5FBEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0374338E2181A81B00C5FBEE /* SnapMoji */;
+			targetProxy = 037433AF2181A81C00C5FBEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		037433962181A81B00C5FBEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				037433972181A81B00C5FBEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0374339B2181A81B00C5FBEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0374339C2181A81B00C5FBEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		037433B52181A81C00C5FBEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		037433B62181A81C00C5FBEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		037433B82181A81C00C5FBEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D139183A866A9EB1A3EF1A32 /* Pods-SnapMoji.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapMoji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MojoMojis.SnapMoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		037433B92181A81C00C5FBEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98426F5F68DFD0E0EB0F7DD2 /* Pods-SnapMoji.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapMoji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MojoMojis.SnapMoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		037433BB2181A81C00C5FBEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B76B0C5F8DCA318F41EAA4 /* Pods-SnapMojiTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapMojiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MojoMojis.SnapMojiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapMoji.app/SnapMoji";
+			};
+			name = Debug;
+		};
+		037433BC2181A81C00C5FBEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C89551F86E91A6D1805ADB6 /* Pods-SnapMojiTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapMojiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MojoMojis.SnapMojiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapMoji.app/SnapMoji";
+			};
+			name = Release;
+		};
+		037433BE2181A81C00C5FBEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56FCA876A9BB9F92789652D5 /* Pods-SnapMojiUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapMojiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MojoMojis.SnapMojiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SnapMoji;
+			};
+			name = Debug;
+		};
+		037433BF2181A81C00C5FBEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD312281F77984E04A1DE8C7 /* Pods-SnapMojiUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapMojiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MojoMojis.SnapMojiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SnapMoji;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0374338A2181A81B00C5FBEE /* Build configuration list for PBXProject "SnapMoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037433B52181A81C00C5FBEE /* Debug */,
+				037433B62181A81C00C5FBEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		037433B72181A81C00C5FBEE /* Build configuration list for PBXNativeTarget "SnapMoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037433B82181A81C00C5FBEE /* Debug */,
+				037433B92181A81C00C5FBEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		037433BA2181A81C00C5FBEE /* Build configuration list for PBXNativeTarget "SnapMojiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037433BB2181A81C00C5FBEE /* Debug */,
+				037433BC2181A81C00C5FBEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		037433BD2181A81C00C5FBEE /* Build configuration list for PBXNativeTarget "SnapMojiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037433BE2181A81C00C5FBEE /* Debug */,
+				037433BF2181A81C00C5FBEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 037433872181A81B00C5FBEE /* Project object */;
+}
