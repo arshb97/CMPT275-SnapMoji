@@ -1,6 +1,0 @@
-framework module Pods_SnapMojiUITests {
-  umbrella header "Pods-SnapMojiUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
