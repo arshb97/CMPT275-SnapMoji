@@ -14,6 +14,7 @@
 		73D60F3E2183BFB2001AAA21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */; };
 		73D60F492183BFB2001AAA21 /* SnapMojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F482183BFB2001AAA21 /* SnapMojiTests.swift */; };
 		73D60F542183BFB3001AAA21 /* SnapMojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F532183BFB3001AAA21 /* SnapMojiUITests.swift */; };
+		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		73D60F4F2183BFB2001AAA21 /* SnapMojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapMojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D60F532183BFB3001AAA21 /* SnapMojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapMojiUITests.swift; sourceTree = "<group>"; };
 		73D60F552183BFB3001AAA21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				73D60F332183BFB1001AAA21 /* AppDelegate.swift */,
 				73D60F352183BFB1001AAA21 /* ViewController.swift */,
 				73D60F372183BFB1001AAA21 /* Main.storyboard */,
+				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
 				73D60F3F2183BFB2001AAA21 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */,
 				73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */,
+				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
