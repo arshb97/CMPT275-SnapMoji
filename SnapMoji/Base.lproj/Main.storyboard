@@ -287,6 +287,9 @@
                         <viewLayoutGuide key="safeArea" id="D9N-9Q-hJM"/>
                     </view>
                     <navigationItem key="navigationItem" id="TPo-j2-EQ5"/>
+                    <connections>
+                        <segue destination="UuH-0B-i01" kind="presentation" identifier="previewPhoto_Segue" id="Ywm-4R-wmQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7a-C2-vtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -311,12 +314,18 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="savePhoto_tap:" destination="UuH-0B-i01" eventType="touchUpInside" id="lIZ-KA-y1J"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BqY-QX-XG3">
                                         <rect key="frame" x="8" y="28" width="48" height="30"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelButton_tap:" destination="UuH-0B-i01" eventType="touchUpInside" id="Xu5-BO-Ksy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -344,7 +353,7 @@
                     </view>
                     <connections>
                         <outlet property="photo" destination="5um-4o-E7u" id="ARl-hs-sXW"/>
-                        <segue destination="rdw-9B-Jzq" kind="presentation" identifier="showPhoto_Segue" id="AoL-Rr-FAK"/>
+                        <segue destination="rdw-9B-Jzq" kind="presentation" identifier="showPhoto_Segue" id="j4H-nX-VHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKC-L8-SdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,7 +378,7 @@
         <image name="test-icon" width="31" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AoL-Rr-FAK"/>
+        <segue reference="j4H-nX-VHp"/>
         <segue reference="oXE-x9-Zpw"/>
         <segue reference="63o-yf-e3T"/>
     </inferredMetricsTieBreakers>

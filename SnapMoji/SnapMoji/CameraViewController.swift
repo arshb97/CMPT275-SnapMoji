@@ -95,7 +95,7 @@ class CameraViewController: UIViewController {
     */
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showPhoto_Segue" {
+        if segue.identifier == "previewPhoto_Segue" {
             let previewVC = segue.destination as! PreviewViewController
             previewVC.image = self.image
             
@@ -107,7 +107,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let imageData = photo.fileDataRepresentation() {
             self.image = UIImage(data: imageData)
-            performSegue(withIdentifier: "showPhoto_Segue", sender: nil)
+            performSegue(withIdentifier: "previewPhoto_Segue", sender: nil)
         }
     }
 }
