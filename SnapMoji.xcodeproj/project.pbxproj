@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034D0CDD21867BBC005CC0CB /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CDC21867BBC005CC0CB /* PopUpViewController.swift */; };
+		034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CDE21868196005CC0CB /* PreviewViewController.swift */; };
+		034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE221868322005CC0CB /* CameraViewController.swift */; };
 		03C6A2512184EA2800F5FFB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */; };
 		370506BB0884C843BD804D6E /* Pods_SnapMoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F322DF366EC37112FFFC322E /* Pods_SnapMoji.framework */; };
 		46C4ACFA34692B56761B32E4 /* Pods_SnapMojiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		034D0CDC21867BBC005CC0CB /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = "/Users/josh/Documents/GitHub/CMPT275-SnapMoji/SnapMoji/PopUpViewController.swift"; sourceTree = "<absolute>"; };
+		034D0CDE21868196005CC0CB /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		034D0CE221868322005CC0CB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = SnapMoji/CameraViewController.swift; sourceTree = "<group>"; };
 		03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EEA0527C87C8E9907A5F479 /* Pods-SnapMoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.debug.xcconfig"; sourceTree = "<group>"; };
 		46F5568E803BE46E003256EA /* Pods-SnapMojiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiUITests/Pods-SnapMojiUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 			children = (
 				73D60F332183BFB1001AAA21 /* AppDelegate.swift */,
 				73D60F352183BFB1001AAA21 /* ViewController.swift */,
+				034D0CDC21867BBC005CC0CB /* PopUpViewController.swift */,
+				034D0CDE21868196005CC0CB /* PreviewViewController.swift */,
+				034D0CE221868322005CC0CB /* CameraViewController.swift */,
 				73D60F372183BFB1001AAA21 /* Main.storyboard */,
 				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
@@ -419,6 +428,9 @@
 				73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */,
 				73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */,
 				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
+				034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */,
+				034D0CDD21867BBC005CC0CB /* PopUpViewController.swift in Sources */,
+				034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

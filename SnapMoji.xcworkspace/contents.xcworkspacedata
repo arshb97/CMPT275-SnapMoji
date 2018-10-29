@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/josh/Documents/GitHub/CMPT275-SnapMoji/SnapMoji/PopUpViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:SnapMoji.xcodeproj">
    </FileRef>
    <FileRef
