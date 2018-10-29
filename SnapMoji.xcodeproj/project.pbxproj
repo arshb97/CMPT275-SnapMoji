@@ -15,6 +15,7 @@
 		73D60F492183BFB2001AAA21 /* SnapMojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F482183BFB2001AAA21 /* SnapMojiTests.swift */; };
 		73D60F542183BFB3001AAA21 /* SnapMojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F532183BFB3001AAA21 /* SnapMojiUITests.swift */; };
 		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
+		BAC55D2E2187C99C006292D1 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC55D2D2187C99C006292D1 /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		73D60F532183BFB3001AAA21 /* SnapMojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapMojiUITests.swift; sourceTree = "<group>"; };
 		73D60F552183BFB3001AAA21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		BAC55D2D2187C99C006292D1 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
 				73D60F3F2183BFB2001AAA21 /* Info.plist */,
+				BAC55D2D2187C99C006292D1 /* PopUpViewController.swift */,
 			);
 			path = SnapMoji;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */,
 				73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */,
 				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
+				BAC55D2E2187C99C006292D1 /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
