@@ -19,6 +19,8 @@ class CameraViewController: UIViewController {
     var photoOutput: AVCapturePhotoOutput?
     
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
+    
+    var image: UIImage?
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,25 +32,12 @@ class CameraViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func cameraButton_touchUpInside(_ sender: UIButton) {
-        //performSegue(withIdentifier: "showPhoto_Segue", sender: nil)
-        let settings = AVCapturePhotoSettings()
-        photoOutput?.capturePhoto(with: settings, delegate: self)
-    }
-   
-    extension ViewController: AVCapturePhotoCaptureDelegate {
-        func photoOuput (_ output: )
-    }
-    
     func setupCaptureSession() {
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
     }
     
     func setupDevice() {
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes:
-            [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position:
-            AVCaptureDevice.Position.unspecified)
+        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes:[AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
         let devices = deviceDiscoverySession.devices
         
         for device in devices {
@@ -67,8 +56,7 @@ class CameraViewController: UIViewController {
             let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
             captureSession.addInput(captureDeviceInput)
             photoOutput = AVCapturePhotoOutput()
-            photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format:
-                [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
+            photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
             captureSession.addOutput(photoOutput!)
         } catch {
             print(error)
@@ -88,6 +76,13 @@ class CameraViewController: UIViewController {
         captureSession.startRunning()
     }
     
+    @IBAction func cameraButton_touchUpInside(_ sender: Any) {
+        //performSegue(withIdentifier: "showPhoto_Segue", sender: nil)
+        let settings = AVCapturePhotoSettings()
+        self.photoOutput?.capturePhoto(with: settings, delegate: self)
+        //needed to add 'as! AVCapturePhotoCaptureDelegate' to fix error in above line
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -99,4 +94,20 @@ class CameraViewController: UIViewController {
     }
     */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPhoto_Segue" {
+            let previewVC = segue.destination as! PreviewViewController
+            previewVC.image = self.image
+            
+        }
+    }
+}
+
+extension CameraViewController: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation() {
+            self.image = UIImage(data: imageData)
+            performSegue(withIdentifier: "showPhoto_Segue", sender: nil)
+        }
+    }
 }
