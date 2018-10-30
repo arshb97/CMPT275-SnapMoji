@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -16,11 +17,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let friendImages: [UIImage] = [
         UIImage(named: "sadface")!
     ]
+    
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        // collectionView.dataSource = self
       //  collectionView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
