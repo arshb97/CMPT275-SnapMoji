@@ -71,6 +71,9 @@
                                 <rect key="frame" x="77" y="380" width="220" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button_image"/>
+                                <connections>
+                                    <segue destination="h6t-Jd-oMD" kind="presentation" modalTransitionStyle="crossDissolve" id="KLr-oK-boG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjs-yN-c3L">
                                 <rect key="frame" x="77" y="380" width="220" height="50"/>
@@ -143,7 +146,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D54-IG-f8H">
-                                <rect key="frame" x="16" y="44" width="18" height="35"/>
+                                <rect key="frame" x="0.0" y="44" width="42" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -157,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrB-uo-j1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="1150"/>
+            <point key="canvasLocation" x="789.60000000000002" y="1149.1754122938532"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qWb-oN-hYR">
@@ -316,7 +319,7 @@
                                 </items>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wA-UZ-6du">
-                                <rect key="frame" x="15" y="31" width="18" height="35"/>
+                                <rect key="frame" x="-1" y="31" width="39" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -585,7 +588,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Td8-1m-JPc"/>
         <segue reference="CBy-U3-dFl"/>
-        <segue reference="EMS-Iw-BZv"/>
-        <segue reference="e9f-3y-7Ef"/>
+        <segue reference="63o-yf-e3T"/>
+        <segue reference="AOR-En-Q9L"/>
     </inferredMetricsTieBreakers>
 </document>
