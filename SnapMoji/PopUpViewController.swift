@@ -20,6 +20,9 @@ class PopUp_ViewController: UIViewController {
     @IBAction func openCamera_touchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "openCamera_Segue", sender: nil)
     }
+    @IBAction func closePopup(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     /*
      // MARK: - Navigation
