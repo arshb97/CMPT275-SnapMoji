@@ -34,6 +34,9 @@
                                 <rect key="frame" x="77" y="520" width="220" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button_image"/>
+                                <connections>
+                                    <segue destination="EZr-Hp-mCQ" kind="presentation" id="j6c-tc-GF0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x09-Ey-8aM" userLabel="Information">
                                 <rect key="frame" x="77" y="590" width="220" height="50"/>
@@ -68,9 +71,6 @@
                                 <rect key="frame" x="77" y="380" width="220" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button_image"/>
-                                <connections>
-                                    <segue destination="EZr-Hp-mCQ" kind="presentation" modalTransitionStyle="crossDissolve" id="MxW-c4-yyf"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjs-yN-c3L">
                                 <rect key="frame" x="77" y="380" width="220" height="50"/>
@@ -210,6 +210,9 @@
                                 <rect key="frame" x="267" y="551" width="101" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <segue destination="EZr-Hp-mCQ" kind="presentation" id="e9f-3y-7Ef"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PP-va-woq" userLabel="friends">
                                 <rect key="frame" x="0.0" y="618" width="93" height="50"/>
@@ -552,7 +555,7 @@
         <!--cameraID-->
         <scene sceneID="ci2-Y2-rlv">
             <objects>
-                <viewControllerPlaceholder referencedIdentifier="cameraID" id="rsO-FF-lTN" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="camera" referencedIdentifier="cameraID" id="rsO-FF-lTN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJ7-Zj-T7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3383" y="114"/>
@@ -580,8 +583,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Td8-1m-JPc"/>
-        <segue reference="oXE-x9-Zpw"/>
+        <segue reference="CBy-U3-dFl"/>
         <segue reference="VXQ-Sq-hVJ"/>
-        <segue reference="zTR-Uj-tDS"/>
+        <segue reference="e9f-3y-7Ef"/>
     </inferredMetricsTieBreakers>
 </document>
