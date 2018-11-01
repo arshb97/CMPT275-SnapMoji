@@ -20,7 +20,6 @@
 		73D60F3E2183BFB2001AAA21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */; };
 		73D60F492183BFB2001AAA21 /* SnapMojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F482183BFB2001AAA21 /* SnapMojiTests.swift */; };
 		73D60F542183BFB3001AAA21 /* SnapMojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F532183BFB3001AAA21 /* SnapMojiUITests.swift */; };
-		BA3A06B0218917870034EDDE /* camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A06AF218917870034EDDE /* camera.storyboard */; };
 		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
 		FE65EEA9756AB3BE5B52FC3D /* Pods_SnapMojiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,7 +64,6 @@
 		73D60F552183BFB3001AAA21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA3A06AF218917870034EDDE /* camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = camera.storyboard; sourceTree = "<group>"; };
 		BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BF2225CE33CB98F019DE517A /* Pods-SnapMoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.release.xcconfig"; sourceTree = "<group>"; };
 		C5D196F872C9F0108FEBE27F /* Pods-SnapMojiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiTests/Pods-SnapMojiTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
 				73D60F3F2183BFB2001AAA21 /* Info.plist */,
 				03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */,
-				BA3A06AF218917870034EDDE /* camera.storyboard */,
 			);
 			path = SnapMoji;
 			sourceTree = "<group>";
@@ -295,7 +292,6 @@
 				03C6A2512184EA2800F5FFB2 /* GoogleService-Info.plist in Resources */,
 				73D60F3B2183BFB2001AAA21 /* Assets.xcassets in Resources */,
 				73D60F392183BFB1001AAA21 /* Main.storyboard in Resources */,
-				BA3A06B0218917870034EDDE /* camera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +317,15 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SnapMoji-checkManifestLockResult.txt",
 			);
@@ -339,11 +339,15 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SnapMojiTests-checkManifestLockResult.txt",
 			);
@@ -357,11 +361,15 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SnapMojiUITests-checkManifestLockResult.txt",
 			);
@@ -374,6 +382,8 @@
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji-frameworks.sh",
@@ -389,6 +399,8 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
