@@ -55,7 +55,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         */
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
         
-        
+        /*
         let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
         let imageUrl: URL = URL(fileURLWithPath: imagePath)
         let newImage: UIImage = image// create your UIImage here
@@ -69,7 +69,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         if FileManager.default.fileExists(atPath: imagePath) {
             ViewController.HappyMoji.image = image
         }
-        
+        */
         
         performSegue(withIdentifier: "showMojiLibrary_Segue", sender: nil)
         //dismiss(animated: true, completion: nil)

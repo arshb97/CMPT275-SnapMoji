@@ -534,6 +534,9 @@
                                         <rect key="frame" x="247" y="34" width="93" height="84"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Gallery" image="gallery"/>
+                                        <connections>
+                                            <action selector="gallery_tap:" destination="xJU-tx-heZ" eventType="touchUpInside" id="RFv-y3-pmH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCX-OA-Enw">
                                         <rect key="frame" x="143" y="157" width="88" height="30"/>
