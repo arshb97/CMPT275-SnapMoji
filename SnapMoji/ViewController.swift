@@ -17,20 +17,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let friendImages: [UIImage] = [
         UIImage(named: "sadface")!
     ]
-    
+    @IBOutlet weak var HappyMoji: UIImageView!
+    var fileName = "emotions.jpg"
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
        // collectionView.dataSource = self
       //  collectionView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return friends.count

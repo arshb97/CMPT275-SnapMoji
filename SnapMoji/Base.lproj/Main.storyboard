@@ -273,7 +273,7 @@
         <!--View Controller-->
         <scene sceneID="BQ3-il-5xo">
             <objects>
-                <viewController storyboardIdentifier="mojiLibrary" id="yQX-ne-mKL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mojiLibrary" id="yQX-ne-mKL" customClass="ViewController" customModule="SnapMoji" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v5q-q4-Jnk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -502,6 +502,9 @@
                         <color key="backgroundColor" red="0.0" green="0.47450980392156861" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="7sp-Tt-sTb"/>
                     </view>
+                    <connections>
+                        <outlet property="HappyMoji" destination="mMw-s4-XSc" id="Nuy-VD-B4u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Qk-iC-hFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -590,7 +593,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="YZE-Zg-VsK"/>
         <segue reference="oXE-x9-Zpw"/>
-        <segue reference="KLr-oK-boG"/>
-        <segue reference="j6c-tc-GF0"/>
+        <segue reference="EMS-Iw-BZv"/>
+        <segue reference="aaK-GK-FrL"/>
     </inferredMetricsTieBreakers>
 </document>
