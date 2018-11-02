@@ -10,6 +10,7 @@ import UIKit
 class PopUp_ViewController: UIViewController {
     
     override func viewDidLoad() {
+        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
         // collectionView.dataSource = self
         //  collectionView.delegate = self

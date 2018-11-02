@@ -23,6 +23,7 @@ class CameraViewController: UIViewController {
     var image: UIImage?
  
     override func viewDidLoad() {
+        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
         setupCaptureSession()
         setupDevice()
@@ -72,6 +73,9 @@ class CameraViewController: UIViewController {
         self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
     }
     
+    @IBAction func backButton_tap(_ sender: Any) {
+        performSegue(withIdentifier: "cameraBackButton_Segue", sender: nil)
+    }
     func startRunningCaptureSession() {
         captureSession.startRunning()
     }
@@ -98,9 +102,9 @@ class CameraViewController: UIViewController {
         if segue.identifier == "previewPhoto_Segue" {
             let previewVC = segue.destination as! PreviewViewController
             previewVC.image = self.image
-            
         }
     }
+
 }
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
