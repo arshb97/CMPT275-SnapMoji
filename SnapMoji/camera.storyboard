@@ -40,7 +40,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="cameraButton_touchUpInside:" destination="ql7-18-OmB" eventType="touchUpInside" id="9KA-DJ-UOi"/>
-                                    <segue destination="xe6-yV-cLw" kind="presentation" identifier="previewPhoto_Segue" animates="NO" modalTransitionStyle="crossDissolve" id="4VO-m3-jNx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,6 +52,9 @@
                         <viewLayoutGuide key="safeArea" id="5L3-v7-wGu"/>
                     </view>
                     <navigationItem key="navigationItem" id="TgR-3x-Xmy"/>
+                    <connections>
+                        <segue destination="xe6-yV-cLw" kind="presentation" identifier="previewPhoto_Segue" id="pzK-yp-Sl6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlC-zF-ycp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

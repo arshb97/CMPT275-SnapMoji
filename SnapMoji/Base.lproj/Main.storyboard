@@ -525,7 +525,6 @@
                                         <state key="normal" title="Camera" image="camera"/>
                                         <connections>
                                             <action selector="openCamera_touchUpInside:" destination="xJU-tx-heZ" eventType="touchUpInside" id="LhM-2Z-L6w"/>
-                                            <segue destination="rsO-FF-lTN" kind="presentation" identifier="openCamera_Segue" id="66m-3h-Nfn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ART-wN-D2G">
@@ -551,6 +550,9 @@
                         <color key="backgroundColor" white="1" alpha="0.20138591610000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="APc-P0-MGU"/>
                     </view>
+                    <connections>
+                        <segue destination="rsO-FF-lTN" kind="presentation" identifier="openCamera_Segue" id="9qa-gZ-kCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOj-Ni-9uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
