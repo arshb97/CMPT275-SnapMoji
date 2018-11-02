@@ -11,6 +11,12 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
     
     //ib outlet weak var image dragged here (maybe prepare segue?)
     
+    var VController: ViewController! //object representing ViewController for emojis
+    
+    func goBack() {
+        
+    }
+    
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
@@ -34,8 +40,18 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            //HappyMoji.image = image
+        if let emojiImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.dismiss(animated: true, completion: {
+                print("SUCCESSFULLY SET IMAGE")
+                
+                
+                //let imageV: UIImageView = UIImageView(image: emojiImage)
+                //imageV.frame = CGRect(origin: CGPoint(x: 0,y: 0), size: CGSize(width: emojiImage.size.width, height: emojiImage.size.height))
+            
+                //imageView.center = self.view.center
+
+                self.VController.HappyMoji.image = UIImage(data: emojiData as Data, scale: 1.0)
+            })//HappyMoji.image = image
         } else {
             print("ERROR COULD NOT SET IMAGE")
         }
