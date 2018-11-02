@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Photos
+import Firebase
 
 class PreviewViewController: UIViewController {
 
@@ -16,9 +18,40 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var photo: UIImageView!
     
     override func viewDidLoad() {
+        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         photo.image = self.image
+        
+        /*
+        //writing directory for image:
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        //name image
+        let fileName = "emotion.jpg"
+        
+        //create destination file url:
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        
+        //get UIImage jpeg data and check if the desination file already exists
+        if let data = UIImageJPEGRepresentation(image, 1.0),
+            !FileManager.default.fileExists(atPath: fileURL.path) {
+            do {
+                //writes the image data to disk
+                try data.write(to: fileURL)
+                print("file saved")
+            } catch {
+                print("error saving file:", error)
+            }
+        }
+        */
+        
+        //setup storing photo for firebase
+        // Points to the root reference
+   
+        
+        
+        
+        
     }
     
 

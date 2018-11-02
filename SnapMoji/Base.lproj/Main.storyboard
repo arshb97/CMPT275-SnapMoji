@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3fi-VD-TwX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3fi-VD-TwX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -239,7 +239,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yQX-ne-mKL" kind="show" id="CBy-U3-dFl"/>
+                                    <segue destination="yQX-ne-mKL" kind="presentation" modalTransitionStyle="crossDissolve" id="CBy-U3-dFl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJ0-Cw-Skl">
@@ -323,7 +323,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <segue destination="h6t-Jd-oMD" kind="show" id="63o-yf-e3T"/>
+                                    <segue destination="h6t-Jd-oMD" kind="presentation" modalTransitionStyle="crossDissolve" id="63o-yf-e3T"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happiness_emoji" translatesAutoresizingMaskIntoConstraints="NO" id="mMw-s4-XSc">
@@ -525,7 +525,7 @@
                                         <state key="normal" title="Camera" image="camera"/>
                                         <connections>
                                             <action selector="openCamera_touchUpInside:" destination="xJU-tx-heZ" eventType="touchUpInside" id="LhM-2Z-L6w"/>
-                                            <segue destination="rsO-FF-lTN" kind="presentation" id="66m-3h-Nfn"/>
+                                            <segue destination="rsO-FF-lTN" kind="presentation" identifier="openCamera_Segue" id="66m-3h-Nfn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ART-wN-D2G">
@@ -586,9 +586,9 @@
         <image name="test-icon" width="31" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Td8-1m-JPc"/>
-        <segue reference="CBy-U3-dFl"/>
-        <segue reference="63o-yf-e3T"/>
+        <segue reference="YZE-Zg-VsK"/>
+        <segue reference="oXE-x9-Zpw"/>
+        <segue reference="EMS-Iw-BZv"/>
         <segue reference="AOR-En-Q9L"/>
     </inferredMetricsTieBreakers>
 </document>

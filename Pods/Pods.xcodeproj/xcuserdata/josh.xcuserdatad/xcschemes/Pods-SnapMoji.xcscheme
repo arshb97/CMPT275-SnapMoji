@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22A316B3A9AF789373819AA220478D0F"
+               BlueprintIdentifier = "292CD16F018F749F8D3B68DE4273863A"
                BuildableName = "Pods_SnapMoji.framework"
                BlueprintName = "Pods-SnapMoji"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "22A316B3A9AF789373819AA220478D0F"
+            BlueprintIdentifier = "292CD16F018F749F8D3B68DE4273863A"
             BuildableName = "Pods_SnapMoji.framework"
             BlueprintName = "Pods-SnapMoji"
             ReferencedContainer = "container:Pods.xcodeproj">
