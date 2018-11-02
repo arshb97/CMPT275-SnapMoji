@@ -73,6 +73,9 @@ class CameraViewController: UIViewController {
         self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
     }
     
+    @IBAction func backButton_tap(_ sender: Any) {
+        performSegue(withIdentifier: "cameraBackButton_Segue", sender: nil)
+    }
     func startRunningCaptureSession() {
         captureSession.startRunning()
     }

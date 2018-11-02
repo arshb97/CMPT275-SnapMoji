@@ -10,13 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--mojiLibrary-->
+        <scene sceneID="zrG-Si-Xd3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="mojiLibrary" id="tBz-Lj-VCq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LeT-hT-Z93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011" y="590"/>
+        </scene>
         <!--popupID-->
         <scene sceneID="QNl-xb-prq">
             <objects>
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="popupID" id="d1n-yD-snW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHY-op-aiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="716"/>
+            <point key="canvasLocation" x="1898" y="768"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="MWH-aD-LGo">
@@ -42,6 +50,16 @@
                                     <action selector="cameraButton_touchUpInside:" destination="ql7-18-OmB" eventType="touchUpInside" id="9KA-DJ-UOi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccE-z8-wCZ">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton_tap:" destination="ql7-18-OmB" eventType="touchUpInside" id="ljB-kb-IXv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -54,6 +72,7 @@
                     <navigationItem key="navigationItem" id="TgR-3x-Xmy"/>
                     <connections>
                         <segue destination="xe6-yV-cLw" kind="presentation" identifier="previewPhoto_Segue" id="pzK-yp-Sl6"/>
+                        <segue destination="tBz-Lj-VCq" kind="presentation" identifier="cameraBackButton_Segue" id="Vhd-f5-Ynz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlC-zF-ycp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -90,7 +109,6 @@
                                         </state>
                                         <connections>
                                             <action selector="cancelButton_tap:" destination="xe6-yV-cLw" eventType="touchUpInside" id="uWe-pa-TJK"/>
-                                            <segue destination="d1n-yD-snW" kind="presentation" modalTransitionStyle="crossDissolve" id="qhp-qT-vIh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -119,6 +137,7 @@
                     </view>
                     <connections>
                         <outlet property="photo" destination="eO9-a9-tvX" id="XpI-Gf-vAs"/>
+                        <segue destination="tBz-Lj-VCq" kind="presentation" identifier="showMojiLibrary_Segue" id="oHn-LH-0rK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFl-UB-rlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,4 +145,7 @@
             <point key="canvasLocation" x="2684" y="1609.745127436282"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vhd-f5-Ynz"/>
+    </inferredMetricsTieBreakers>
 </document>

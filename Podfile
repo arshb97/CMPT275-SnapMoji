@@ -10,7 +10,7 @@ target 'SnapMoji' do
   # Pods for SnapMoji
   pod 'Firebase/Core'
   pod 'Firebase/Database'
-
+  pod 'Firebase/Storage'
 
   target 'SnapMojiTests' do
     inherit! :search_paths

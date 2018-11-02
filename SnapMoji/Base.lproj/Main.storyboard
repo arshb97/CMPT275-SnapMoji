@@ -273,7 +273,7 @@
         <!--View Controller-->
         <scene sceneID="BQ3-il-5xo">
             <objects>
-                <viewController id="yQX-ne-mKL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mojiLibrary" id="yQX-ne-mKL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v5q-q4-Jnk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -590,7 +590,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="YZE-Zg-VsK"/>
         <segue reference="oXE-x9-Zpw"/>
-        <segue reference="EMS-Iw-BZv"/>
-        <segue reference="AOR-En-Q9L"/>
+        <segue reference="KLr-oK-boG"/>
+        <segue reference="j6c-tc-GF0"/>
     </inferredMetricsTieBreakers>
 </document>
