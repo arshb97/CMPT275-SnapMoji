@@ -55,19 +55,19 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         */
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
         
-        /*
+        //saves image
+        
         let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
         let imageUrl: URL = URL(fileURLWithPath: imagePath)
         let newImage: UIImage = image// create your UIImage here
-            try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
+        try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
         
+        //get image
+        /*
         guard FileManager.default.fileExists(atPath: imagePath),
             let imageData: Data = try? Data(contentsOf: imageUrl),
             let image: UIImage = UIImage(data: imageData) else {
                 return // No image found!
-        }
-        if FileManager.default.fileExists(atPath: imagePath) {
-            ViewController.HappyMoji.image = image
         }
         */
         
@@ -93,20 +93,12 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
      }
      
      downloadtask.resume()
- 
  */
     
     
     @IBAction func cancelButton_tap(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-  
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vController = segue.destination as? ViewController else { return }
-        
-    }
-
-    
  
     /*
     // MARK: - Navigation

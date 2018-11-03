@@ -11,11 +11,7 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
     
     //ib outlet weak var image dragged here (maybe prepare segue?)
     
-    var VController: ViewController! //object representing ViewController for emojis
-    
-    func goBack() {
-        
-    }
+    var libVController: LibraryViewController! //object representing ViewController for emojis
     
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
@@ -40,17 +36,14 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let emojiImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.dismiss(animated: true, completion: {
                 print("SUCCESSFULLY SET IMAGE")
-                
-                
-                //let imageV: UIImageView = UIImageView(image: emojiImage)
-                //imageV.frame = CGRect(origin: CGPoint(x: 0,y: 0), size: CGSize(width: emojiImage.size.width, height: emojiImage.size.height))
+                //let imageV: UIImageView = UIImageView(image: image)
+                //imageV.frame = CGRect(origin: CGPoint(x: 0,y: 0), size: CGSize(width: image.size.width, height: image.size.height))
             
                 //imageView.center = self.view.center
-
-                self.VController.HappyMoji.image = UIImage(data: emojiData as Data, scale: 1.0)
+                //self.libVController.HappyMojiButton.setImage(image, for: .normal)
             })//HappyMoji.image = image
         } else {
             print("ERROR COULD NOT SET IMAGE")

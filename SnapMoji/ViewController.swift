@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     let friends = ["Tommy"]
@@ -18,17 +19,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         UIImage(named: "sadface")!
     ]
     
-    @IBOutlet weak var HappyMoji: UIImageView!
-    
-    var fileName = "emotions.jpg"
-    
-    func goToImageChooserClass() {
-        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVController = mainStoryBoard.instantiateViewController(withIdentifier: "PopUp_ViewController") as! PopUp_ViewController
-        secondVController.VController = self
-        self.present(secondVController, animated: true, completion: nil)
-    }
-    
+
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
