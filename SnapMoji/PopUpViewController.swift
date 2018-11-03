@@ -11,7 +11,7 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
     
     //ib outlet weak var image dragged here (maybe prepare segue?)
     
-    var libVController: LibraryViewController! //object representing ViewController for emojis
+    var fileName = "emotion.jpg"
     
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
@@ -19,8 +19,9 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
         // collectionView.dataSource = self
         //  collectionView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+        print("PopupView"+fileName)
     }
-    
+
     @IBAction func gallery_tap(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
@@ -38,13 +39,16 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.dismiss(animated: true, completion: {
+                /*
+                //saves image in directory
+                let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
+                let imageUrl: URL = URL(fileURLWithPath: imagePath)
+                let newImage: UIImage = image// create your UIImage here
+                try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
+                 */
+                
                 print("SUCCESSFULLY SET IMAGE")
-                //let imageV: UIImageView = UIImageView(image: image)
-                //imageV.frame = CGRect(origin: CGPoint(x: 0,y: 0), size: CGSize(width: image.size.width, height: image.size.height))
-            
-                //imageView.center = self.view.center
-                //self.libVController.HappyMojiButton.setImage(image, for: .normal)
-            })//HappyMoji.image = image
+            })
         } else {
             print("ERROR COULD NOT SET IMAGE")
         }
@@ -54,6 +58,16 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBAction func openCamera_touchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "openCamera_Segue", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is CameraViewController
+        {
+            let vc = segue.destination as? CameraViewController
+            vc?.fileName = fileName
+        }
+    }
+    
     @IBAction func closePopup(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

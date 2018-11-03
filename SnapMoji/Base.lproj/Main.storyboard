@@ -445,30 +445,51 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIP-s3-Npx">
                                 <rect key="frame" x="16" y="486" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ContemptMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="CNF-Af-Z2D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBl-uI-vQX">
                                 <rect key="frame" x="138" y="486" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="NeutralMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="66T-sW-sgW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZf-9q-VYC">
                                 <rect key="frame" x="137" y="162" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="SadMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="v06-TU-EFO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK4-og-ppa">
                                 <rect key="frame" x="258" y="162" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="AngryMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="jyF-QP-KCx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkz-aY-Ifr">
                                 <rect key="frame" x="15" y="315" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="SurpriseMojiTap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="9An-3J-A0m"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyP-bQ-nTT">
                                 <rect key="frame" x="258" y="315" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="FearMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="jnh-a4-Acg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uJ-7K-I85">
                                 <rect key="frame" x="139" y="315" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="DisgustMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="4KD-Hc-Uta"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UA-M9-iek">
                                 <rect key="frame" x="16" y="162" width="100" height="100"/>
@@ -483,8 +504,14 @@
                         <viewLayoutGuide key="safeArea" id="7sp-Tt-sTb"/>
                     </view>
                     <connections>
-                        <outlet property="HappyMoji" destination="mMw-s4-XSc" id="Nuy-VD-B4u"/>
+                        <outlet property="AngryMojiButton" destination="KK4-og-ppa" id="d04-jK-PFc"/>
+                        <outlet property="ContemptMojiButton" destination="bIP-s3-Npx" id="c11-Xb-7w3"/>
+                        <outlet property="DisgustMojiButton" destination="4uJ-7K-I85" id="86t-pX-wes"/>
+                        <outlet property="FearMojiButton" destination="LyP-bQ-nTT" id="hM1-n8-5wU"/>
                         <outlet property="HappyMojiButton" destination="5UA-M9-iek" id="JXR-aX-nv6"/>
+                        <outlet property="NeutralMojiButton" destination="yBl-uI-vQX" id="Km6-th-gbV"/>
+                        <outlet property="SadMojiButton" destination="gZf-9q-VYC" id="ij4-Ml-pJ0"/>
+                        <outlet property="SurpriseMojiButton" destination="mkz-aY-Ifr" id="l7l-al-aBc"/>
                         <segue destination="xJU-tx-heZ" kind="presentation" identifier="libToPopUp_Segue" modalTransitionStyle="crossDissolve" id="ZHV-0E-K1C"/>
                     </connections>
                 </viewController>
