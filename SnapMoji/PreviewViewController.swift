@@ -15,7 +15,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         return Storage.storage().reference().child("images")
     }
     
-    let fileName = "emotions.jpg"
+    var fileName = "happy.jpg"
     
     var image: UIImage!
     
@@ -26,6 +26,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         photo.image = self.image
+        print("PreviewView"+fileName)
     }
     
 
@@ -53,8 +54,16 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         
         uploadTask.resume()
         */
+        
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
- 
+        
+        //saves image in directory
+        let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
+        let imageUrl: URL = URL(fileURLWithPath: imagePath)
+        let newImage: UIImage = image// create your UIImage here
+        try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
+        
+        //transition back to the library
         performSegue(withIdentifier: "showMojiLibrary_Segue", sender: nil)
         //dismiss(animated: true, completion: nil)
     }
@@ -77,20 +86,12 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
      }
      
      downloadtask.resume()
- 
  */
     
     
     @IBAction func cancelButton_tap(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-  
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vController = segue.destination as? ViewController else { return }
-        
-    }
-
-    
  
     /*
     // MARK: - Navigation

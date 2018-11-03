@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="829.60000000000002" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Library View Controller-->
         <scene sceneID="BQ3-il-5xo">
             <objects>
-                <viewController storyboardIdentifier="mojiLibrary" id="yQX-ne-mKL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mojiLibrary" id="yQX-ne-mKL" customClass="LibraryViewController" customModule="SnapMoji" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v5q-q4-Jnk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -446,62 +446,74 @@
                                 <rect key="frame" x="16" y="486" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="xJU-tx-heZ" kind="presentation" modalTransitionStyle="crossDissolve" id="hji-tR-jPC"/>
+                                    <action selector="ContemptMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="CNF-Af-Z2D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBl-uI-vQX">
                                 <rect key="frame" x="138" y="486" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="xJU-tx-heZ" kind="presentation" id="YZE-Zg-VsK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UA-M9-iek">
-                                <rect key="frame" x="15" y="162" width="100" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="xJU-tx-heZ" kind="presentation" modalTransitionStyle="crossDissolve" id="M6h-EO-pTb"/>
+                                    <action selector="NeutralMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="66T-sW-sgW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZf-9q-VYC">
                                 <rect key="frame" x="137" y="162" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="xJU-tx-heZ" kind="presentation" modalTransitionStyle="crossDissolve" id="Td8-1m-JPc"/>
+                                    <action selector="SadMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="v06-TU-EFO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK4-og-ppa">
                                 <rect key="frame" x="258" y="162" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="xJU-tx-heZ" kind="presentation" modalTransitionStyle="crossDissolve" id="iOy-Ce-ySF"/>
+                                    <action selector="AngryMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="jyF-QP-KCx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkz-aY-Ifr">
                                 <rect key="frame" x="15" y="315" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="xJU-tx-heZ" kind="presentation" modalTransitionStyle="crossDissolve" id="kRf-19-cls"/>
+                                    <action selector="SurpriseMojiTap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="9An-3J-A0m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyP-bQ-nTT">
                                 <rect key="frame" x="258" y="315" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="xJU-tx-heZ" kind="presentation" modalTransitionStyle="crossDissolve" id="6Vq-lt-HHU"/>
+                                    <action selector="FearMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="jnh-a4-Acg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uJ-7K-I85">
                                 <rect key="frame" x="139" y="315" width="100" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="xJU-tx-heZ" kind="presentation" modalTransitionStyle="crossDissolve" id="8uI-yB-7hQ"/>
+                                    <action selector="DisgustMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="4KD-Hc-Uta"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UA-M9-iek">
+                                <rect key="frame" x="16" y="162" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="happiness_emoji"/>
+                                <connections>
+                                    <action selector="HappyMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="xjc-lo-GZM"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47450980392156861" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="7sp-Tt-sTb"/>
                     </view>
+                    <connections>
+                        <outlet property="AngryMojiButton" destination="KK4-og-ppa" id="d04-jK-PFc"/>
+                        <outlet property="ContemptMojiButton" destination="bIP-s3-Npx" id="c11-Xb-7w3"/>
+                        <outlet property="DisgustMojiButton" destination="4uJ-7K-I85" id="86t-pX-wes"/>
+                        <outlet property="FearMojiButton" destination="LyP-bQ-nTT" id="hM1-n8-5wU"/>
+                        <outlet property="HappyMojiButton" destination="5UA-M9-iek" id="JXR-aX-nv6"/>
+                        <outlet property="NeutralMojiButton" destination="yBl-uI-vQX" id="Km6-th-gbV"/>
+                        <outlet property="SadMojiButton" destination="gZf-9q-VYC" id="ij4-Ml-pJ0"/>
+                        <outlet property="SurpriseMojiButton" destination="mkz-aY-Ifr" id="l7l-al-aBc"/>
+                        <segue destination="xJU-tx-heZ" kind="presentation" identifier="libToPopUp_Segue" modalTransitionStyle="crossDissolve" id="ZHV-0E-K1C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Qk-iC-hFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -531,6 +543,9 @@
                                         <rect key="frame" x="247" y="34" width="93" height="84"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Gallery" image="gallery"/>
+                                        <connections>
+                                            <action selector="gallery_tap:" destination="xJU-tx-heZ" eventType="touchUpInside" id="RFv-y3-pmH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCX-OA-Enw">
                                         <rect key="frame" x="143" y="157" width="88" height="30"/>
@@ -588,9 +603,8 @@
         <image name="test-icon" width="31" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YZE-Zg-VsK"/>
-        <segue reference="oXE-x9-Zpw"/>
-        <segue reference="KLr-oK-boG"/>
-        <segue reference="j6c-tc-GF0"/>
+        <segue reference="CBy-U3-dFl"/>
+        <segue reference="63o-yf-e3T"/>
+        <segue reference="aaK-GK-FrL"/>
     </inferredMetricsTieBreakers>
 </document>

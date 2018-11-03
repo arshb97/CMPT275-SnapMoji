@@ -21,6 +21,8 @@ class CameraViewController: UIViewController {
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     
     var image: UIImage?
+    
+    var fileName = "emotion.jpg"
  
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
@@ -102,6 +104,7 @@ class CameraViewController: UIViewController {
         if segue.identifier == "previewPhoto_Segue" {
             let previewVC = segue.destination as! PreviewViewController
             previewVC.image = self.image
+            previewVC.fileName = fileName
         }
     }
 

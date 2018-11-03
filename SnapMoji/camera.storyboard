@@ -18,14 +18,6 @@
             </objects>
             <point key="canvasLocation" x="2011" y="590"/>
         </scene>
-        <!--popupID-->
-        <scene sceneID="QNl-xb-prq">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="popupID" id="d1n-yD-snW" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tHY-op-aiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1898" y="768"/>
-        </scene>
         <!--Camera View Controller-->
         <scene sceneID="MWH-aD-LGo">
             <objects>
