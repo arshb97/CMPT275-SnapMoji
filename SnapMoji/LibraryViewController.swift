@@ -21,9 +21,9 @@ class LibraryViewController: UIViewController{
         performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
     }
     
+    let emotions = ["emotions.jpg", "sad.jpg", "angry.jpg", "surprise", "disgust", "fear", "contempt", "neutral"]
     
-    
-    var fileName = "emotions.jpg"
+
     
     func goToImageChooserClass() {
         let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -42,21 +42,24 @@ class LibraryViewController: UIViewController{
         //HappyMojiButton.setImage(image, for: .normal)
         //get image
         //print("LOADED LIBRARY")
-        let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
-        let imageUrl: URL = URL(fileURLWithPath: imagePath)
-        
-        guard FileManager.default.fileExists(atPath: imagePath),
-            let imageData: Data = try? Data(contentsOf: imageUrl),
-            let image: UIImage = UIImage(data: imageData) else {
-                return // No image found!
-        }
-        
-        // check if the image is stored already
-        if FileManager.default.fileExists(atPath: imagePath),
-            let imageData: Data = try? Data(contentsOf: imageUrl),
-            let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
-            HappyMojiButton.setImage(image, for: .normal)
-            print("PHOTO EXISTS")
+        for emotion in emotions {
+            let fileName = emotion
+            let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
+            let imageUrl: URL = URL(fileURLWithPath: imagePath)
+            
+            guard FileManager.default.fileExists(atPath: imagePath),
+                let imageData: Data = try? Data(contentsOf: imageUrl),
+                let image: UIImage = UIImage(data: imageData) else {
+                    return // No image found!
+            }
+            
+            // check if the image is stored already
+            if FileManager.default.fileExists(atPath: imagePath),
+                let imageData: Data = try? Data(contentsOf: imageUrl),
+                let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
+                HappyMojiButton.setImage(image, for: .normal)
+                print("PHOTO EXISTS")
+            }
         }
         /*
         if FileManager.default.fileExists(atPath: imagePath) {
