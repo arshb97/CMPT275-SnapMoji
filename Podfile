@@ -11,6 +11,7 @@ target 'SnapMoji' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'ProjectOxfordFace'
 
   target 'SnapMojiTests' do
     inherit! :search_paths

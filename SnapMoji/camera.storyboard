@@ -114,6 +114,22 @@
                                     <constraint firstAttribute="trailing" secondItem="J7h-O9-5WI" secondAttribute="trailing" constant="8" id="n4a-bF-XKa"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMV-Mg-6bU">
+                                <rect key="frame" x="165" y="507" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="detect"/>
+                                <connections>
+                                    <action selector="detect:" destination="xe6-yV-cLw" eventType="touchUpInside" id="ZIU-B6-ura"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF7-Fg-Ii7">
+                                <rect key="frame" x="150" y="565" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SeeResults"/>
+                                <connections>
+                                    <action selector="seeResults:" destination="xe6-yV-cLw" eventType="touchUpInside" id="cSI-Dn-aLj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -138,6 +154,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vhd-f5-Ynz"/>
+        <segue reference="oHn-LH-0rK"/>
     </inferredMetricsTieBreakers>
 </document>

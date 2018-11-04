@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 
+var detector: DetectFace = DetectFace()
+
 class PreviewViewController: UIViewController, UIApplicationDelegate{
 
     var imageReference: StorageReference {
@@ -87,6 +89,20 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
      
      downloadtask.resume()
  */
+    
+    //I have used this print statement just for reference. API takes 1-2 seconds to return the result. The result will be displayed in console. Once you see that result, press Seeresults button
+    @IBAction func detect(_ sender: Any) {
+        
+        var emotion = detector.detectAction(image)
+        print("emotion: " , emotion)
+    }
+    
+    var emotionResult = ""                  //Variable to store the emotion of the picture given by API
+    
+    @IBAction func seeResults(_ sender: Any) {
+
+        emotionResult = detector.globalVariableGetter()
+    }
     
     
     @IBAction func cancelButton_tap(_ sender: UIButton) {

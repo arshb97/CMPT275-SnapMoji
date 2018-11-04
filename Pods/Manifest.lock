@@ -64,11 +64,13 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - ProjectOxfordFace (1.4.1)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - ProjectOxfordFace
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -84,6 +86,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - ProjectOxfordFace
 
 SPEC CHECKSUMS:
   Firebase: b48f9e653da971ecce5b8c749684bc8bb2d26bd3
@@ -98,7 +101,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  ProjectOxfordFace: fa7d7adbc9a11203be61a6a80511101b5dbf6ce4
 
-PODFILE CHECKSUM: a2f006ddb86c87a570f828d37704c7d5cf0480e6
+PODFILE CHECKSUM: b575726377ad673e7379ea11d2ba27c7bbd9676b
 
 COCOAPODS: 1.5.3
