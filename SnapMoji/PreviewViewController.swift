@@ -17,8 +17,8 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         return Storage.storage().reference().child("images")
     }
     
-    var fileName = "happy.jpg"
-    
+    var emotion = "emotion"
+    var fileName = ".jpg"
     var image: UIImage!
     
     @IBOutlet weak var photo: UIImageView!
@@ -27,6 +27,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         photo.image = self.image
         print("PreviewView"+fileName)
     }
@@ -93,8 +94,8 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     //I have used this print statement just for reference. API takes 1-2 seconds to return the result. The result will be displayed in console. Once you see that result, press Seeresults button
     @IBAction func detect(_ sender: Any) {
         
-        var emotion = detector.detectAction(image)
-        print("emotion: " , emotion)
+        var scannedEmotion = detector.detectAction(image)
+        print("emotion: " , scannedEmotion)
     }
     
     var emotionResult = ""                  //Variable to store the emotion of the picture given by API
