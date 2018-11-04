@@ -11,7 +11,9 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
     
     //ib outlet weak var image dragged here (maybe prepare segue?)
     
-    var fileName = "emotion.jpg"
+    var emotion = "emotion"
+    var fileName = ".jpg"
+
     
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
@@ -20,6 +22,7 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
         //  collectionView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
         print("PopupView"+fileName)
+        
     }
 
     @IBAction func gallery_tap(_ sender: Any) {
@@ -64,6 +67,7 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
         if segue.destination is CameraViewController
         {
             let vc = segue.destination as? CameraViewController
+            vc?.emotion = emotion
             vc?.fileName = fileName
         }
     }

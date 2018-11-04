@@ -147,10 +147,10 @@
 			children = (
 				73D60F332183BFB1001AAA21 /* AppDelegate.swift */,
 				73D60F352183BFB1001AAA21 /* ViewController.swift */,
-				034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */,
-				034D0CDE21868196005CC0CB /* PreviewViewController.swift */,
 				03638D73218D3986004A5DBF /* LibraryViewController.swift */,
+				034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */,
 				034D0CE221868322005CC0CB /* CameraViewController.swift */,
+				034D0CDE21868196005CC0CB /* PreviewViewController.swift */,
 				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
 				73D60F372183BFB1001AAA21 /* Main.storyboard */,
 				BA3A06AF218917870034EDDE /* camera.storyboard */,
@@ -604,7 +604,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28Z8D273QE;
+				DEVELOPMENT_TEAM = 722KSG7FLT;
 				INFOPLIST_FILE = SnapMoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,7 +628,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28Z8D273QE;
+				DEVELOPMENT_TEAM = 722KSG7FLT;
 				INFOPLIST_FILE = SnapMoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

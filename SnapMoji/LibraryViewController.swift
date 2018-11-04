@@ -63,11 +63,12 @@ class LibraryViewController: UIViewController{
         if segue.destination is PopUp_ViewController
         {
             let vc = segue.destination as? PopUp_ViewController
-            vc?.fileName = setEmotion
+            vc?.emotion = setEmotion
+            vc?.fileName = setEmotion + ".jpg"
         }
     }
     
-    let emotions = ["happy.jpg", "sad.jpg", "angry.jpg", "surprise.jpg", "disgust.jpg", "fear.jpg", "contempt.jpg", "neutral.jpg"]
+    let emotions = ["happiness", "sadness", "angrer", "surprise", "disgust", "fear", "contempt", "neutral"]
     
     //to let other classes access members of this class
     /*
@@ -92,7 +93,7 @@ class LibraryViewController: UIViewController{
         print("LOADED LIBRARY")
         //get image
         for emotion in emotions {
-            let fileName = emotion
+            let fileName = emotion + ".jpg"
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             
@@ -102,11 +103,11 @@ class LibraryViewController: UIViewController{
                 let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
                 //figure out how to change which moji button we are changing
                 switch fileName {
-                    case "happy.jpg":
+                    case "happiness.jpg":
                     HappyMojiButton.setImage(image, for: .normal)
-                    case "sad.jpg":
+                    case "sadness.jpg":
                     SadMojiButton.setImage(image, for: .normal)
-                    case "angry.jpg":
+                    case "anger.jpg":
                     AngryMojiButton.setImage(image, for: .normal)
                     case "surprise.jpg":
                     SurpriseMojiButton.setImage(image, for: .normal)
