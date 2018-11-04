@@ -448,6 +448,7 @@
                                 <state key="normal" image="surprise_emoji"/>
                                 <connections>
                                     <action selector="SurpriseMojiTap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="9An-3J-A0m"/>
+                                    <action selector="SurpriseMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="jYO-CW-ufF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyP-bQ-nTT">

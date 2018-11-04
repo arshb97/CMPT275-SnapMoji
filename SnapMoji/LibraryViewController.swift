@@ -82,7 +82,6 @@ class LibraryViewController: UIViewController{
     
 
     
-    
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
@@ -102,23 +101,32 @@ class LibraryViewController: UIViewController{
                 let imageData: Data = try? Data(contentsOf: imageUrl),
                 let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
                 //figure out how to change which moji button we are changing
+                let rotatedImage = image.rotate(radians: .pi / 2)
                 switch fileName {
                     case "happiness.jpg":
-                    HappyMojiButton.setImage(image, for: .normal)
+                    HappyMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
                     case "sadness.jpg":
-                    SadMojiButton.setImage(image, for: .normal)
+                    SadMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
                     case "anger.jpg":
-                    AngryMojiButton.setImage(image, for: .normal)
+                    AngryMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
                     case "surprise.jpg":
-                    SurpriseMojiButton.setImage(image, for: .normal)
+                    SurpriseMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
                     case "disgust.jpg":
-                    DisgustMojiButton.setImage(image, for: .normal)
+                    DisgustMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
                     case "fear.jpg":
-                    FearMojiButton.setImage(image, for: .normal)
+                    FearMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
                     case "contempt.jpg":
-                    ContemptMojiButton.setImage(image, for: .normal)
+                    ContemptMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
                     case "neutral.jpg":
-                    NeutralMojiButton.setImage(image, for: .normal)
+                    NeutralMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
                     default:
                     print("NO IMAGE AVAILABLE FOR " + fileName)
                 }
@@ -132,3 +140,27 @@ class LibraryViewController: UIViewController{
     }
     
 }
+
+extension UIImage {
+    func rotate(radians: CGFloat) -> UIImage {
+        let rotatedSize = CGRect(origin: .zero, size: size)
+            .applying(CGAffineTransform(rotationAngle: CGFloat(radians)))
+            .integral.size
+        UIGraphicsBeginImageContext(rotatedSize)
+        if let context = UIGraphicsGetCurrentContext() {
+            let origin = CGPoint(x: rotatedSize.width / 2.0,
+                                 y: rotatedSize.height / 2.0)
+            context.translateBy(x: origin.x, y: origin.y)
+            context.rotate(by: radians)
+            draw(in: CGRect(x: -origin.x, y: -origin.y,
+                            width: size.width, height: size.height))
+            let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            return rotatedImage ?? self
+        }
+        
+        return self
+    }
+}
+
