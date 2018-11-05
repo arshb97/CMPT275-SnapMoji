@@ -61,10 +61,13 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
         
         //saves image in directory
-        let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
-        let imageUrl: URL = URL(fileURLWithPath: imagePath)
-        let newImage: UIImage = image// create your UIImage here
-        try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
+        emotionResult = detector.globalVariableGetter()
+        if emotionResult == emotion {
+            let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
+            let imageUrl: URL = URL(fileURLWithPath: imagePath)
+            let newImage: UIImage = image// create your UIImage here
+            try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
+        }
         
         //transition back to the library
         performSegue(withIdentifier: "showMojiLibrary_Segue", sender: nil)
