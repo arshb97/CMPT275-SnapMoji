@@ -43,8 +43,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccE-z8-wCZ">
-                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <rect key="frame" x="16" y="19" width="30" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <state key="normal" title="&lt;">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -82,8 +83,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eO9-a9-tvX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-ZF-Dqf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <view alpha="0.5" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-ZF-Dqf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-O9-5WI">
                                         <rect key="frame" x="333" y="28" width="34" height="30"/>
@@ -114,18 +115,20 @@
                                     <constraint firstAttribute="trailing" secondItem="J7h-O9-5WI" secondAttribute="trailing" constant="8" id="n4a-bF-XKa"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMV-Mg-6bU">
-                                <rect key="frame" x="165" y="507" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="detect"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMV-Mg-6bU">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <state key="normal" title="Detect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="detect:" destination="xe6-yV-cLw" eventType="touchUpInside" id="ZIU-B6-ura"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF7-Fg-Ii7">
-                                <rect key="frame" x="150" y="565" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SeeResults"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF7-Fg-Ii7">
+                                <rect key="frame" x="278" y="617" width="81" height="30"/>
+                                <state key="normal" title="See Results">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="seeResults:" destination="xe6-yV-cLw" eventType="touchUpInside" id="cSI-Dn-aLj"/>
                                 </connections>
@@ -133,7 +136,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xDK-pR-7Ki" firstAttribute="trailing" secondItem="yF7-Fg-Ii7" secondAttribute="trailing" constant="16" id="9aZ-qG-6ve"/>
+                            <constraint firstItem="xDK-pR-7Ki" firstAttribute="bottom" secondItem="HMV-Mg-6bU" secondAttribute="bottom" constant="20" id="BdV-re-qbC"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="top" secondItem="WSJ-at-tOa" secondAttribute="top" id="Bx0-P7-FYs"/>
+                            <constraint firstItem="xDK-pR-7Ki" firstAttribute="bottom" secondItem="yF7-Fg-Ii7" secondAttribute="bottom" constant="20" id="M8j-3Z-Pnp"/>
+                            <constraint firstItem="HMV-Mg-6bU" firstAttribute="leading" secondItem="xDK-pR-7Ki" secondAttribute="leading" constant="16" id="PIE-jI-DhU"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="leading" secondItem="xDK-pR-7Ki" secondAttribute="leading" id="WBw-uY-Qvy"/>
                             <constraint firstItem="fRd-ZF-Dqf" firstAttribute="leading" secondItem="xDK-pR-7Ki" secondAttribute="leading" id="bss-qp-74q"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="trailing" secondItem="xDK-pR-7Ki" secondAttribute="trailing" id="czA-bw-DWX"/>
