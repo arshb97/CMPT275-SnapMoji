@@ -19,54 +19,6 @@ let the user know what emotion is present in the image. SnapMoji is for anyone t
 trouble differentiating emotions in facial expressions and want to work toward developing this
 skill.
 
-## About the Team Members
-
-Every member in the team is a current SFU computer engineering student going on their third or
-fourth year. They have all gained work experience through previous internships and range in
-their technological skill set.
-
-Merna Zaki
-Merna’s previous experience involves an eight month
-internship at CA Technologies as a Software Engineer. She
-worked for the Mobile Client Team and specialized in
-Android. Her preferred coding environment is C/C++ and Java
-in windows or Linux.
-
-Josh Baltar
-Josh worked at Gumstix Inc for eight months as a hardware
-designer intern. He has also completed numerous projects
-using C/C++, matlab and VHDL. Josh’s skills also extend to
-communication as well as teamwork skills.
-
-Arshdeep Bhullar
-Arshdeep’s previous experience involves developing native
-iOS apps as his side projects as well as coding in C++, Java,
-Python and Swift. He also loves to practice programming in
-his free time and has developed strong backend programming
-skills.
-
-Evan Lam
-Evan’s previous internship was at the RCMP as a Radio
-engineer. He is comfortable applying both his hardware and
-software skills that he has acquired from studying at SFU. His
-preferred coding language is C/C++ and he also enjoys testing
-and documentation roles.
-
-Jiung Choi
-Jiung enjoys spending his free time practicing different coding
-languages, resulting in his strong ability to work with
-object-oriented programming. In addition, he is comfortable
-with using pointer-based data structures, and performing
-manual memory management for dynamic allocation and
-deallocation in C/C++.
-
-Zidong (Jon) Zhang
-Jon completed his previous internship at Foocan Power Inc as
-a hardware (PCB) designer and tester. He has completed many
-course projects using different languages such as C/C++. He
-enjoys working in windows and linux and has experience
-working with MySQL.
-
 ## Coding Standards
 Provided below are the standards that are followed while coding SnapMoji.   
 
