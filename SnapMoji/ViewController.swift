@@ -1,8 +1,16 @@
 //
 //  ViewController.swift
 //  SnapMoji
+//  Worked on by: Josh Baltar, Jiung Choi, Merna Zaki
+//
+//  Changelog:
+//  1.0 - This is the initial commit of our view controller
+//
+//  Known bugs:
+//  There are no known bugs related to the ViewController.swift
 //
 //  Created by Evan Lam on 10/26/18.
+//  Worked on by: Josh Baltar, Jon Zhang, Arshdeep
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //
 
@@ -13,8 +21,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //var friends is unused, used possibly for future versions
     let friends = ["Tommy"]
-    
+    //var friends is unused, used possibly for future versions
     let friendImages: [UIImage] = [
         UIImage(named: "sadface")!
     ]
@@ -34,11 +43,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
 
-    
+    //this is unused, used possibly for future versions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return friends.count
         
     }
+    //this is unused, used possibly for future versions
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         cell.tommyLabel.text=friends[indexPath.item]

@@ -2,6 +2,21 @@
 //  LibraryViewController.swift
 //  SnapMoji
 //
+//  Description of LibraryViewController:
+//  This file has not been implemented yet, but is for the display of the friends in the
+//  friend section
+//
+//  Worked on by: Josh Baltar, Merna Zaki
+//
+//  Changelog:
+//  1.0 - Initial commit layout and segues finished
+//  1.1 - Camera working and storing photos to phone and firebase
+//  1.2 - Emotions passed through view controllers, Microsoft emotion API implemented
+//
+//  Known bugs:
+//  No warning as to when an emoji is not replaced when an image is selected
+//  Gallery does not save the photo
+//
 //  Created by Josh Baltar on 2018-11-02.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //
@@ -14,7 +29,8 @@ class LibraryViewController: UIViewController{
     //@IBOutlet weak var HappyMojiButton: UIButton!
     
     var setEmotion = "emotion"
-
+    
+    //buttons initialized
     @IBOutlet weak var HappyMojiButton: UIButton!
     @IBOutlet weak var SadMojiButton: UIButton!
     @IBOutlet weak var AngryMojiButton: UIButton!
@@ -58,16 +74,20 @@ class LibraryViewController: UIViewController{
         setEmotion = emotions[6]
         performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
     }
+    
+    //prepare emotion variable to send to the next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is PopUp_ViewController
+        if segue.destination is PopUpViewController
         {
-            let vc = segue.destination as? PopUp_ViewController
+            let vc = segue.destination as? PopUpViewController
             vc?.emotion = setEmotion
             vc?.fileName = setEmotion + ".jpg"
         }
     }
     
+    //array of supported emotions by SnapMoji defined by the emotions supported by the
+    //Microsoft Emotion API
     let emotions = ["happiness", "sadness", "angrer", "surprise", "disgust", "fear", "contempt", "neutral"]
     
     //to let other classes access members of this class
@@ -81,7 +101,7 @@ class LibraryViewController: UIViewController{
     */
     
 
-    
+    //while view loads, load photos of emotions if they exist
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
@@ -141,6 +161,8 @@ class LibraryViewController: UIViewController{
     
 }
 
+//extension of emoji UIImage to rotate on load
+//rotate necessary when saving as jpg since rotate flag is set when stored
 extension UIImage {
     func rotate(radians: CGFloat) -> UIImage {
         let rotatedSize = CGRect(origin: .zero, size: size)
