@@ -2,19 +2,30 @@
 //  PopUpViewController.swift
 //
 //
+//
+//  Worked on by: Josh Baltar, Jiung Choi
+//
+//  Changelog:
+//  1.0 - Initial commit layout and segues finished
+//  1.1 - Emotions passed through view controllers, gallery support implemented, but doesn't save photo
+//
+//  Known bugs:
+//  Gallery does not save image when an image is selected
+//
 //  Created by Josh Baltar on 2018-10-28.
 //
 
 import UIKit
 
-class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+class PopUpViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
-    //ib outlet weak var image dragged here (maybe prepare segue?)
+    //ib outlet weak var image dragged here (maybe         repare segue?)
     
+    //Variables to be passed to other view controllers initialized
     var emotion = "emotion"
     var fileName = ".jpg"
 
-    
+    //output current emotion
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
@@ -24,7 +35,8 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
         print("PopupView"+fileName)
         
     }
-
+    
+    //function to open gallery when clicked
     @IBAction func gallery_tap(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
@@ -39,6 +51,7 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     
+    //function to save the photo that gets clicked
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.dismiss(animated: true, completion: {
@@ -58,20 +71,23 @@ class PopUp_ViewController: UIViewController, UINavigationControllerDelegate, UI
         self.dismiss(animated:true, completion: nil)
     }
     
+    //function to open the camera when tapped
     @IBAction func openCamera_touchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "openCamera_Segue", sender: nil)
     }
     
+    //prepares variables to be sent to other view controllers
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is CameraViewController
         {
-            let vc = segue.destination as? CameraViewController
-            vc?.emotion = emotion
-            vc?.fileName = fileName
+            let popUpViewController = segue.destination as? CameraViewController
+            popUpViewController?.emotion = emotion
+            popUpViewController?.fileName = fileName
         }
     }
     
+    //function to close the view when tapping cancel button
     @IBAction func closePopup(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

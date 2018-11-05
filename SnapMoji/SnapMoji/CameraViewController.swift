@@ -2,6 +2,17 @@
 //  CameraViewController.swift
 //  SnapMoji
 //
+//
+//  Worked on by: Josh Baltar
+//
+//  Changelog:
+//  1.0 - Initial commit layout and segues finished
+//  1.1 - Camera working and storing photos to phone and firebase
+//  1.2 - Emotions passed through view controllers, Microsoft emotion API implemented
+//
+//  Known bugs:
+//  There are no known bugs related to the CameraViewController.swift
+//
 //  Created by Josh Baltar on 2018-10-28.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //
@@ -25,6 +36,7 @@ class CameraViewController: UIViewController {
     var emotion = "emotion"
     var fileName = ".jpg"
  
+    //load the camera and display what the camera sees on loading the view
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
@@ -36,10 +48,12 @@ class CameraViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //function to capture the session
     func setupCaptureSession() {
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
     }
     
+    //function to prepare the device for camera display
     func setupDevice() {
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes:[AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
         let devices = deviceDiscoverySession.devices
@@ -55,6 +69,7 @@ class CameraViewController: UIViewController {
         currentCamera = backCamera
     }
     
+    //function to prepare input and output
     func setupInputOutput() {
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
@@ -68,6 +83,7 @@ class CameraViewController: UIViewController {
         
     }
     
+    //function to prepare what will be sent to the preview of the photo
     func setupPreviewLayer() {
         cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
@@ -76,13 +92,17 @@ class CameraViewController: UIViewController {
         self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
     }
     
+    //function to implement the back button
     @IBAction func backButton_tap(_ sender: Any) {
         performSegue(withIdentifier: "cameraBackButton_Segue", sender: nil)
     }
+    //function to start the camera after being set up
     func startRunningCaptureSession() {
         captureSession.startRunning()
     }
     
+    
+    //function to take the photo
     @IBAction func cameraButton_touchUpInside(_ sender: Any) {
         //performSegue(withIdentifier: "showPhoto_Segue", sender: nil)
         let settings = AVCapturePhotoSettings()
@@ -100,7 +120,8 @@ class CameraViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    //prepare what will be sent to the next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "previewPhoto_Segue" {
             let previewVC = segue.destination as! PreviewViewController
@@ -112,6 +133,7 @@ class CameraViewController: UIViewController {
 
 }
 
+//extend the cameraViewController to output photos
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let imageData = photo.fileDataRepresentation() {

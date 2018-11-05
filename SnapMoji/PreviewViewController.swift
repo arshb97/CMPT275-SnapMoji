@@ -2,6 +2,17 @@
 //  PreviewViewController.swift
 //  SnapMoji
 //
+//
+//  Worked on by: Josh Baltar, Arshdeep Bhullar, Merna Zaki
+//
+//  Changelog:
+//  1.0 - Initial commit layout and segues finished
+//  1.1 - Camera working and storing photos to phone and firebase
+//  1.2 - Emotions passed through view controllers, Microsoft emotion API implemented
+//
+//  Known bugs:
+//  There are no known bugs related to the PreviewViewController.swift
+//
 //  Created by Josh Baltar on 2018-10-28.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //
@@ -9,20 +20,25 @@
 import UIKit
 import Firebase
 
+//global variable for the microsoft emotion api
 var detector: DetectFace = DetectFace()
 
 class PreviewViewController: UIViewController, UIApplicationDelegate{
 
+    //variables to store to firebase
     var imageReference: StorageReference {
         return Storage.storage().reference().child("images")
     }
     
+    //variables to prepare sending to the next view controller
     var emotion = "emotion"
     var fileName = ".jpg"
     var image: UIImage!
     
+    //reference for the photo
     @IBOutlet weak var photo: UIImageView!
     
+    //load the image when page is loaded from the camera
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
@@ -32,7 +48,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         print("PreviewView"+fileName)
     }
     
-
+    //function to implement the save button
     @IBAction func savePhoto_tap(_ sender: UIButton) {
         // USE THIS IMAGE
         guard let imageToSave = image else { return }
@@ -95,20 +111,23 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
  */
     
     //I have used this print statement just for reference. API takes 1-2 seconds to return the result. The result will be displayed in console. Once you see that result, press Seeresults button
+    //sends the image to the microsoft emotion api
     @IBAction func detect(_ sender: Any) {
         
         var scannedEmotion = detector.detectAction(image)
         print("emotion: " , scannedEmotion)
     }
     
+    //variable to store what the emotion returns
     var emotionResult = ""                  //Variable to store the emotion of the picture given by API
     
+    //function to see results of the emotion api
     @IBAction func seeResults(_ sender: Any) {
 
         emotionResult = detector.globalVariableGetter()
     }
     
-    
+    // function to implement the cancel button
     @IBAction func cancelButton_tap(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
