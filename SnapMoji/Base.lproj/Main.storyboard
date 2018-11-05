@@ -119,13 +119,20 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <tabBarItem title="Friends" image="friends" id="Cap-Xe-RNs">
+                                    <tabBarItem title="" image="friends" id="Cap-Xe-RNs">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                         <color key="badgeColor" red="0.098039215690000001" green="0.2901960784" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                                     </tabBarItem>
-                                    <tabBarItem title="Test" image="test-icon" id="NJT-3G-mpR"/>
-                                    <tabBarItem title="Statistics" image="stats" id="mtm-cP-bbJ"/>
-                                    <tabBarItem title="Information" image="info" id="7dX-h5-rAs"/>
+                                    <tabBarItem title="" image="test-icon" id="NJT-3G-mpR">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="stats" id="mtm-cP-bbJ">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="info" id="7dX-h5-rAs">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tabBar>
@@ -188,13 +195,21 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <tabBarItem title="Friends" image="friends" id="Rct-SH-OzW">
+                                    <tabBarItem title="" image="friends" id="Rct-SH-OzW">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                        <inset key="landscapeImageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                                         <color key="badgeColor" red="0.098039215690000001" green="0.2901960784" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                                     </tabBarItem>
-                                    <tabBarItem title="Test" image="test-icon" id="Qas-U9-8Ln"/>
-                                    <tabBarItem title="Statistics" image="stats" id="Nak-OC-Si3"/>
-                                    <tabBarItem title="Information" image="info" id="BcE-4a-b4z"/>
+                                    <tabBarItem title="" image="test-icon" id="Qas-U9-8Ln">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="stats" id="Nak-OC-Si3">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="info" id="BcE-4a-b4z">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tabBar>
@@ -309,10 +324,18 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <tabBarItem title="Friends" image="friends" id="E1M-Ko-dTZ"/>
-                                    <tabBarItem title="Test" image="test-icon" id="ltZ-Ix-xFw"/>
-                                    <tabBarItem title="Statistics" image="stats" id="Mjr-Lq-zVF"/>
-                                    <tabBarItem title="Information" image="info" id="TIg-KK-zxN"/>
+                                    <tabBarItem title="" image="friends" id="E1M-Ko-dTZ">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="test-icon" id="ltZ-Ix-xFw">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="stats" id="Mjr-Lq-zVF">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="" image="info" id="TIg-KK-zxN">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
                                 </items>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wA-UZ-6du">
@@ -578,7 +601,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="soC-be-xo6"/>
-        <segue reference="KLr-oK-boG"/>
-        <segue reference="e9f-3y-7Ef"/>
+        <segue reference="VXQ-Sq-hVJ"/>
+        <segue reference="MeE-IV-n2c"/>
     </inferredMetricsTieBreakers>
 </document>
