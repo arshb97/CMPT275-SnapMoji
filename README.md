@@ -28,5 +28,6 @@ The identifiers are descriptive enough to minimize the need for comments; howeve
 * classes: classes start with an upper-case letter and are also letter-case separated ie. "ThreeWords"
 * methods: methods follow the same naming convention as variables 
 * files: files follow the same naming convention as classes
+* segues: segues will be identified with the same letter-case seperation suffixed with _Segue
   * source code will have a header to list the programmers that worked on it, a changelog, and a list of known bugs 
 Indents in the code are 4 spaces. 
