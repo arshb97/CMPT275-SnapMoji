@@ -23,6 +23,7 @@
 		73D60F542183BFB3001AAA21 /* SnapMojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F532183BFB3001AAA21 /* SnapMojiUITests.swift */; };
 		7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E7218EC50D002EE0D1 /* PersonFace.m */; };
 		7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E9218EC50E002EE0D1 /* DetectFace.m */; };
+		AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */; };
 		BA3A06B0218917870034EDDE /* camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A06AF218917870034EDDE /* camera.storyboard */; };
 		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
 		FE65EEA9756AB3BE5B52FC3D /* Pods_SnapMojiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */; };
@@ -73,6 +74,7 @@
 		7D1C93E8218EC50E002EE0D1 /* PersonFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonFace.h; sourceTree = "<group>"; };
 		7D1C93E9218EC50E002EE0D1 /* DetectFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectFace.m; sourceTree = "<group>"; };
 		A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSectionViewController.swift; sourceTree = "<group>"; };
 		B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A06AF218917870034EDDE /* camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = camera.storyboard; sourceTree = "<group>"; };
 		BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				034D0CDE21868196005CC0CB /* PreviewViewController.swift */,
 				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
 				73D60F372183BFB1001AAA21 /* Main.storyboard */,
+				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
 				BA3A06AF218917870034EDDE /* camera.storyboard */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
@@ -421,6 +424,7 @@
 			files = (
 				73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */,
 				7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */,
+				AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */,
 				034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */,
 				73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */,
 				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
