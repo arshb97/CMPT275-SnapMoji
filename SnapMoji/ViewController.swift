@@ -17,17 +17,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    //var friends is unused, used possibly for future versions
-    let friends = ["Tommy"]
-    //var friends is unused, used possibly for future versions
-    let friendImages: [UIImage] = [
-        UIImage(named: "sadface")!
-    ]
-    
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
@@ -42,19 +32,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Dispose of any resources that can be recreated.
     }
     
-
-    //this is unused, used possibly for future versions
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return friends.count
-        
-    }
-    //this is unused, used possibly for future versions
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-        cell.tommyLabel.text=friends[indexPath.item]
-        cell.tommyProfile.image=friendImages[indexPath.item]
-        return cell
-    }
 
 }
 

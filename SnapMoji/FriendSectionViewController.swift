@@ -9,19 +9,42 @@
 import UIKit
 
 
-class FriendSectionViewController: UIViewController {
-    
-    
+class FriendSectionViewController:  UIViewController, UICollectionViewDelegate,
+UICollectionViewDataSource {
+
     @IBOutlet weak var addFriend: UIButton!
+    private var name = ""
+    private var friends = ["Sample"]
+    
+    @IBOutlet weak var collection: UICollectionView!
     
     @IBAction func addFriend_tab(_ sender: Any) {
-        let alert = UIAlertController(title: "Add Friend", message: "Please type the name of your friend", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Add", style: UIAlertActionStyle.default, handler: nil))
-        alert.addTextField(configurationHandler: {(textField: UITextField!) in
-            textField.placeholder = "Type name here"
-            textField.isSecureTextEntry = true // for password input
+        let alertController = UIAlertController(title: "Add New Friend", message: "Type your friends name below", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler: { alert -> Void in
+            let text = alertController.textFields![0] as UITextField
+            self.name = text.text!
+            if self.name == ""{
+                // do something here to prevent user from exiting
+            }
+            print("NAME: ", self.name)
+            self.friends.append(self.name)
+            self.collection.reloadData()
         })
-        self.present(alert, animated: true, completion: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: {
+            (action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+
+    @objc private func buttonAction(sender: UIButton!) {
+        print("Button tapped")
     }
     
     override func viewDidLoad() {
@@ -35,7 +58,6 @@ class FriendSectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -46,4 +68,25 @@ class FriendSectionViewController: UIViewController {
     }
     */
 
+}
+
+extension FriendSectionViewController {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize{
+        return CGSize(width: 100, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("here")
+        return friends.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        cell.friendName.text = friends[indexPath.row]
+        let image = UIImage(named: "friends.png") as UIImage?
+        cell.profileButton.setImage(image, for: [])
+        return cell
+    }
+    
 }

@@ -198,22 +198,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.3006075621" green="0.59006965160000002" blue="0.95690423250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d17-IE-Cnx">
-                                <rect key="frame" x="26" y="181" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="John-Doe"/>
-                                <connections>
-                                    <action selector="HappyMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="r0W-0F-q1a"/>
-                                    <segue destination="yQX-ne-mKL" kind="presentation" modalTransitionStyle="crossDissolve" id="soC-be-xo6"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQZ-dm-VLu">
-                                <rect key="frame" x="16" y="269" width="100" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMQ-0l-Oah">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -292,12 +276,60 @@
                                     <segue destination="EZr-Hp-mCQ" kind="presentation" id="e9f-3y-7Ef"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tJi-rH-AJi">
+                                <rect key="frame" x="0.0" y="158" width="375" height="385"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47450980390000003" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Rm-81-QVU">
+                                    <size key="itemSize" width="116" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="JQZ-4a-pnN" customClass="CollectionViewCell" customModule="SnapMoji" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d17-IE-Cnx">
+                                                    <rect key="frame" x="16" y="0.0" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="John-Doe"/>
+                                                    <connections>
+                                                        <action selector="HappyMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="r0W-0F-q1a"/>
+                                                        <segue destination="yQX-ne-mKL" kind="presentation" modalTransitionStyle="crossDissolve" id="soC-be-xo6"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQZ-dm-VLu">
+                                                    <rect key="frame" x="8" y="91" width="100" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="friendName" destination="GQZ-dm-VLu" id="EAx-co-6hg"/>
+                                            <outlet property="profileButton" destination="d17-IE-Cnx" id="eJO-lX-Hht"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="h6t-Jd-oMD" id="Mhv-QG-ZJg"/>
+                                    <outlet property="delegate" destination="h6t-Jd-oMD" id="EZ0-14-JUk"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47450980392156861" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="f9s-NM-AtL"/>
                     </view>
                     <connections>
-                        <outlet property="addFriend" destination="PFL-sV-HmJ" id="53S-Ks-qDU"/>
+                        <outlet property="addFriend" destination="PFL-sV-HmJ" id="UlI-8q-JK6"/>
+                        <outlet property="collection" destination="tJi-rH-AJi" id="5Xd-Jr-GRR"/>
                         <outlet property="searchDisplayController" destination="J5h-eD-zxY" id="l9k-KL-Cro"/>
                     </connections>
                 </viewController>
@@ -963,10 +995,9 @@
         <image name="test-icon" width="31" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LDa-h5-J36"/>
-        <segue reference="9x3-PJ-LaP"/>
+        <segue reference="na3-Vi-bvP"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="m1F-Ac-QCp"/>
-        <segue reference="aVL-UN-XPk"/>
+        <segue reference="KLr-oK-boG"/>
+        <segue reference="e9f-3y-7Ef"/>
     </inferredMetricsTieBreakers>
 </document>
