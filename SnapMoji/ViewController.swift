@@ -51,8 +51,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //this is unused, used possibly for future versions
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-        cell.tommyLabel.text=friends[indexPath.item]
-        cell.tommyProfile.image=friendImages[indexPath.item]
+        //cell.tommyLabel.text=friends[indexPath.item]
+        //cell.tommyProfile.image=friendImages[indexPath.item]
         return cell
     }
 

@@ -24,8 +24,8 @@
 		7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E7218EC50D002EE0D1 /* PersonFace.m */; };
 		7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E9218EC50E002EE0D1 /* DetectFace.m */; };
 		AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */; };
+		AAB1695021953B3E00E39715 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1694F21953B3E00E39715 /* CollectionViewCell.swift */; };
 		BA3A06B0218917870034EDDE /* camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A06AF218917870034EDDE /* camera.storyboard */; };
-		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
 		FE65EEA9756AB3BE5B52FC3D /* Pods_SnapMojiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,9 +75,9 @@
 		7D1C93E9218EC50E002EE0D1 /* DetectFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectFace.m; sourceTree = "<group>"; };
 		A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSectionViewController.swift; sourceTree = "<group>"; };
+		AAB1694F21953B3E00E39715 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A06AF218917870034EDDE /* camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = camera.storyboard; sourceTree = "<group>"; };
-		BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BF2225CE33CB98F019DE517A /* Pods-SnapMoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.release.xcconfig"; sourceTree = "<group>"; };
 		C5D196F872C9F0108FEBE27F /* Pods-SnapMojiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiTests/Pods-SnapMojiTests.release.xcconfig"; sourceTree = "<group>"; };
 		F322DF366EC37112FFFC322E /* Pods_SnapMoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +153,6 @@
 				034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */,
 				034D0CE221868322005CC0CB /* CameraViewController.swift */,
 				034D0CDE21868196005CC0CB /* PreviewViewController.swift */,
-				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
 				73D60F372183BFB1001AAA21 /* Main.storyboard */,
 				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
 				BA3A06AF218917870034EDDE /* camera.storyboard */,
@@ -166,6 +165,7 @@
 				7D1C93E8218EC50E002EE0D1 /* PersonFace.h */,
 				7D1C93E7218EC50D002EE0D1 /* PersonFace.m */,
 				7D1C93E5218EC50C002EE0D1 /* SnapMoji-Bridging-Header.h */,
+				AAB1694F21953B3E00E39715 /* CollectionViewCell.swift */,
 			);
 			path = SnapMoji;
 			sourceTree = "<group>";
@@ -427,11 +427,11 @@
 				AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */,
 				034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */,
 				73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */,
-				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
 				03638D74218D3986004A5DBF /* LibraryViewController.swift in Sources */,
 				7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */,
 				034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */,
 				034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */,
+				AAB1695021953B3E00E39715 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
