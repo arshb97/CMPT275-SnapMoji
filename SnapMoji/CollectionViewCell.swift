@@ -23,7 +23,6 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var tommyProfile: UIImageView!
-    @IBOutlet weak var tommyLabel: UILabel!
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var friendName: UILabel!
 }
