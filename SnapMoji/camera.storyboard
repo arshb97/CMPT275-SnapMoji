@@ -124,6 +124,13 @@
                                     <action selector="seeResults:" destination="xe6-yV-cLw" eventType="touchUpInside" id="cSI-Dn-aLj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDC-u4-mIQ">
+                                <rect key="frame" x="153" y="543" width="182" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -140,6 +147,7 @@
                         <viewLayoutGuide key="safeArea" id="xDK-pR-7Ki"/>
                     </view>
                     <connections>
+                        <outlet property="apiEmotionValue" destination="NDC-u4-mIQ" id="u0L-Di-ozr"/>
                         <outlet property="photo" destination="eO9-a9-tvX" id="XpI-Gf-vAs"/>
                         <segue destination="tBz-Lj-VCq" kind="presentation" identifier="showMojiLibrary_Segue" id="oHn-LH-0rK"/>
                     </connections>

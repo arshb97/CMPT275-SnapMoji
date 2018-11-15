@@ -38,6 +38,8 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     //reference for the photo
     @IBOutlet weak var photo: UIImageView!
     
+    @IBOutlet weak var apiEmotionValue: UILabel!
+    
     //load the image when page is loaded from the camera
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
@@ -127,7 +129,11 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     @IBAction func seeResults(_ sender: Any) {
 
         emotionResult = detector.globalVariableGetter()
+        
         print (emotionResult)
+        
+        apiEmotionValue.text = emotionResult
+        
     }
     
     // function to implement the cancel button
