@@ -123,11 +123,35 @@ class LibraryViewController: UIViewController{
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             
+            
+            
             // check if the image is stored already
             if FileManager.default.fileExists(atPath: imagePath),
                 let imageData: Data = try? Data(contentsOf: imageUrl),
-                let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
+                var image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
                 //figure out how to change which moji button we are changing
+                
+                if (Name == "Sample"){
+                    image = UIImage(named: "Samplehappiness")!
+                    HappyMojiButton.setImage(image, for: .normal)
+                    print("sample!@)$(#*)$(*$")
+                    image = UIImage(named: "Samplesadness")!
+                    SadMojiButton.setImage(image, for: .normal)
+                    image = UIImage(named: "Sampleanger")!
+                    AngryMojiButton.setImage(image, for: .normal)
+                    image = UIImage(named: "Samplesurprise")!
+                    SurpriseMojiButton.setImage(image, for: .normal)
+                    image = UIImage(named: "Sampledisgust")!
+                    DisgustMojiButton.setImage(image, for: .normal)
+                    image = UIImage(named: "Samplefear")!
+                    FearMojiButton.setImage(image, for: .normal)
+                    image = UIImage(named: "Samplecontempt")!
+                    ContemptMojiButton.setImage(image, for: .normal)
+                    image = UIImage(named: "Sampleneutral")!
+                    NeutralMojiButton.setImage(image, for: .normal)
+                }
+                
+        
                 let rotatedImage = image.rotate(radians: .pi / 2)
                 switch fileName {
                 case Name + "happiness.jpg":
