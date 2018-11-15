@@ -23,7 +23,7 @@ extern NSString *mYGlobalVariable = @"";                  //global variable
 - (NSString *) detectAction: (UIImage *) image  {
     _selectedImage = image;
     
-    static NSString *const ProjectOxfordFaceSubscriptionKey = @"a8d235f69b7f4267a6deb68881987c59";
+    static NSString *const ProjectOxfordFaceSubscriptionKey = @"1b46b1e1a8784524a56c1bf76e4549f8";
     static NSString *const ProjectOxfordFaceEndpoint = @"https://westcentralus.api.cognitive.microsoft.com/face/v1.0";
     __block NSString *emotion = @"";
     

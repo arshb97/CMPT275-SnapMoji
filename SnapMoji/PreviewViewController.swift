@@ -46,6 +46,8 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         
         photo.image = self.image
         print("PreviewView"+fileName)
+        
+         var scannedEmotion = detector.detectAction(image)
     }
     
     //function to implement the save button
@@ -112,11 +114,11 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     
     //I have used this print statement just for reference. API takes 1-2 seconds to return the result. The result will be displayed in console. Once you see that result, press Seeresults button
     //sends the image to the microsoft emotion api
-    @IBAction func detect(_ sender: Any) {
-        
-        var scannedEmotion = detector.detectAction(image)
-        print("emotion: " , scannedEmotion)
-    }
+//    @IBAction func detect(_ sender: Any) {
+//        
+//        var scannedEmotion = detector.detectAction(image)
+//        print("emotion: " , scannedEmotion)
+//    }
     
     //variable to store what the emotion returns
     var emotionResult = ""                  //Variable to store the emotion of the picture given by API
@@ -125,6 +127,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     @IBAction func seeResults(_ sender: Any) {
 
         emotionResult = detector.globalVariableGetter()
+        print (emotionResult)
     }
     
     // function to implement the cancel button
