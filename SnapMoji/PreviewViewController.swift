@@ -47,7 +47,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         // Do any additional setup after loading the view.
         
         photo.image = self.image
-        print("PreviewView"+fileName)
+        print("PreviewView "+fileName)
         
          var scannedEmotion = detector.detectAction(image)
     }
@@ -82,12 +82,13 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         
         //saves image in directory
         emotionResult = detector.globalVariableGetter()
-        if emotionResult == emotion {
+        print("Saving file as " + fileName)
+        //if emotionResult == emotion {
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             let newImage: UIImage = image// create your UIImage here
             try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
-        }
+        //}
         
         //transition back to the library
         performSegue(withIdentifier: "showMojiLibrary_Segue", sender: nil)

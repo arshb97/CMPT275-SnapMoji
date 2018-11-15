@@ -6,7 +6,7 @@
 //  This file has not been implemented yet, but is for the display of the friends in the
 //  friend section
 //
-//  Worked on by: Josh Baltar, Merna Zaki
+//  Worked on by:   sh Baltar, Merna Zaki
 //
 //  Changelog:
 //  1.0 - Initial commit layout and segues finished
@@ -23,6 +23,8 @@
 
 import UIKit
 import FirebaseDatabase
+
+var Name = ""
 
 class LibraryViewController: UIViewController{
 
@@ -85,13 +87,13 @@ class LibraryViewController: UIViewController{
         {
             let vc = segue.destination as? PopUpViewController
             vc?.emotion = setEmotion
-            vc?.fileName = setEmotion + ".jpg"
+            vc?.fileName = Name + setEmotion + ".jpg"
         }
     }
     
     //array of supported emotions by SnapMoji defined by the emotions supported by the
     //Microsoft Emotion API
-    let emotions = ["happiness", "sadness", "angrer", "surprise", "disgust", "fear", "contempt", "neutral"]
+    let emotions = ["happiness", "sadness", "anger", "surprise", "disgust", "fear", "contempt", "neutral"]
     
     //to let other classes access members of this class
     /*
@@ -102,26 +104,22 @@ class LibraryViewController: UIViewController{
         self.present(secondVController, animated: true, completion: nil)
     }
     */
-    
-
-    //while view loads, load photos of emotions if they exist
-    override func viewDidLoad() {
-        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
-        super.viewDidLoad()
-        // collectionView.dataSource = self
-        //  collectionView.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //Change the label to the name of the friend (name retrieved from firebase)
+    func getName() {
         let ref = Database.database().reference()
         ref.child("currentFriend/name").observeSingleEvent(of: .value) { (snapshot) in
             self.FriendName.text = snapshot.value as? String
+            Name = (snapshot.value as? String)!
+            print("Name is: " + Name)
+            print("self.FriendName.text is: " + self.FriendName.text!)
+            self.getImages()
         }
-        
-        print("LOADED LIBRARY")
-        //get image
+
+    }
+    
+    func getImages() {
         for emotion in emotions {
-            let fileName = emotion + ".jpg"
+            let fileName = Name + emotion + ".jpg"
+            print(fileName)
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             
@@ -132,35 +130,51 @@ class LibraryViewController: UIViewController{
                 //figure out how to change which moji button we are changing
                 let rotatedImage = image.rotate(radians: .pi / 2)
                 switch fileName {
-                    case "happiness.jpg":
+                case Name + "happiness.jpg":
                     HappyMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "sadness.jpg":
+                case Name + "sadness.jpg":
                     SadMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "anger.jpg":
+                case Name + "anger.jpg":
                     AngryMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "surprise.jpg":
+                case Name + "surprise.jpg":
                     SurpriseMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "disgust.jpg":
+                case self.FriendName.text! + "disgust.jpg":
                     DisgustMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "fear.jpg":
+                case self.FriendName.text! + "fear.jpg":
                     FearMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "contempt.jpg":
+                case self.FriendName.text! + "contempt.jpg":
                     ContemptMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "neutral.jpg":
+                case self.FriendName.text! + "neutral.jpg":
                     NeutralMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    default:
-                    print("NO IMAGE AVAILABLE FOR " + fileName)
+                default:
+                    print("NO IMAGE AVAILABLE FOR " + self.FriendName.text! + fileName)
                 }
             }
         }
+    }
+
+    //while view loads, load photos of emotions if they exist
+    override func viewDidLoad() {
+        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
+        super.viewDidLoad()
+        // collectionView.dataSource = self
+        //  collectionView.delegate = self
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Change the label to the name of the friend (name retrieved from firebase)
+        getName()
+        //getImages()
+        print("LOADED LIBRARY")
+        //get image
+
     }
     
     override func didReceiveMemoryWarning() {
