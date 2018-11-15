@@ -31,7 +31,6 @@ class LibraryViewController: UIViewController{
     
     
     @IBOutlet weak var FriendName: UITextField!
-    
     var setEmotion = "emotion"
     
     //buttons initialized
