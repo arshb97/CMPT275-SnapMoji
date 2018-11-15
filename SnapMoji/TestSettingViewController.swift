@@ -9,62 +9,8 @@
 import UIKit
 
 class TestSettingViewController: UIViewController {
-    var isOn = false
-    
-    @IBAction func EASY(_ sender: UIButton) {
-        isOn = !isOn
-        if isOn{
-            sender.setTitleColor(UIColor(red:0.00, green:0.47, blue:0.75, alpha:1.0), for: .normal)
-            sender.backgroundColor = UIColor.white
-        }
-        else{
-            sender.setTitleColor(UIColor.white, for: .normal)
-            sender.backgroundColor = .clear
-        }
-        
-        
-    }
-    
-    @IBAction func MEDIUM(_ sender: UIButton) {
-        isOn = !isOn
-        if isOn{
-            sender.setTitleColor(UIColor(red:0.00, green:0.47, blue:0.75, alpha:1.0), for: .normal)
-            sender.backgroundColor = UIColor.white
-        }
-        else{
-            sender.setTitleColor(UIColor.white, for: .normal)
-            sender.backgroundColor = .clear
-        }
-        
-        
-    }
     
     
-    @IBAction func HARD(_ sender: UIButton) {
-        isOn = !isOn
-        if isOn{
-            sender.setTitleColor(UIColor(red:0.00, green:0.47, blue:0.75, alpha:1.0), for: .normal)
-            sender.backgroundColor = UIColor.white
-        }
-        else{
-            sender.setTitleColor(UIColor.white, for: .normal)
-            sender.backgroundColor = .clear
-        }
-        
-    }
-    
-    @IBAction func DESCRIPTION(_ sender: UIButton) {
-        isOn = !isOn
-        if isOn{
-            sender.setTitleColor(UIColor(red:0.00, green:0.47, blue:0.75, alpha:1.0), for: .normal)
-            sender.backgroundColor = UIColor.white
-        }
-        else{
-            sender.setTitleColor(UIColor.white, for: .normal)
-            sender.backgroundColor = .clear
-        }
-        
-    }
     
     
     
