@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032A6936219D5A600089BCB2 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A6935219D5A600089BCB2 /* Questions.swift */; };
+		032A6938219D5C1E0089BCB2 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A6937219D5C1E0089BCB2 /* QuestionBank.swift */; };
 		034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CDE21868196005CC0CB /* PreviewViewController.swift */; };
 		034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE221868322005CC0CB /* CameraViewController.swift */; };
 		034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032A6935219D5A600089BCB2 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		032A6937219D5C1E0089BCB2 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		034D0CDE21868196005CC0CB /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		034D0CE221868322005CC0CB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = SnapMoji/CameraViewController.swift; sourceTree = "<group>"; };
 		034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */,
 				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
 				BA3A06AF218917870034EDDE /* camera.storyboard */,
+				032A6935219D5A600089BCB2 /* Questions.swift */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
 				73D60F3F2183BFB2001AAA21 /* Info.plist */,
@@ -177,6 +182,7 @@
 				7D1C93E8218EC50E002EE0D1 /* PersonFace.h */,
 				7D1C93E7218EC50D002EE0D1 /* PersonFace.m */,
 				7D1C93E5218EC50C002EE0D1 /* SnapMoji-Bridging-Header.h */,
+				032A6937219D5C1E0089BCB2 /* QuestionBank.swift */,
 			);
 			path = SnapMoji;
 			sourceTree = "<group>";
@@ -436,10 +442,12 @@
 				73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */,
 				7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */,
 				AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */,
+				032A6936219D5A600089BCB2 /* Questions.swift in Sources */,
 				F44CF60B21950B0600B722B6 /* TestingViewController.swift in Sources */,
 				034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */,
 				73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */,
 				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
+				032A6938219D5C1E0089BCB2 /* QuestionBank.swift in Sources */,
 				03638D74218D3986004A5DBF /* LibraryViewController.swift in Sources */,
 				7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */,
 				732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */,
@@ -622,13 +630,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28Z8D273QE;
+				DEVELOPMENT_TEAM = 722KSG7FLT;
 				INFOPLIST_FILE = SnapMoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = deepbb;
+				PRODUCT_BUNDLE_IDENTIFIER = MM.Snap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapMoji/SnapMoji-Bridging-Header.h";
@@ -646,13 +654,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28Z8D273QE;
+				DEVELOPMENT_TEAM = 722KSG7FLT;
 				INFOPLIST_FILE = SnapMoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = deepbb;
+				PRODUCT_BUNDLE_IDENTIFIER = MM.Snap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapMoji/SnapMoji-Bridging-Header.h";
