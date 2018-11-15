@@ -24,13 +24,13 @@
 
 import UIKit
 
+private var friends = ["Sample"] //array of friends
 
 class FriendSectionViewController:  UIViewController, UICollectionViewDelegate,
 UICollectionViewDataSource {
 
     @IBOutlet weak var addFriend: UIButton!
     private var name = ""
-    private var friends = ["Sample"]
     
     @IBOutlet weak var collection: UICollectionView!
     
@@ -48,7 +48,7 @@ UICollectionViewDataSource {
                 // do something here to prevent user from exiting
             }
             print("NAME: ", self.name)
-            self.friends.append(self.name) //save the users input
+            friends.append(self.name) //save the users input
             self.collection.reloadData()
         })
         //cancel button

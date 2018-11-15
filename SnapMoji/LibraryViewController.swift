@@ -22,11 +22,15 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class LibraryViewController: UIViewController{
 
     
     //@IBOutlet weak var HappyMojiButton: UIButton!
+    
+    
+    @IBOutlet weak var FriendName: UITextField!
     
     var setEmotion = "emotion"
     
@@ -108,6 +112,12 @@ class LibraryViewController: UIViewController{
         // collectionView.dataSource = self
         //  collectionView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //Change the label to the name of the friend (name retrieved from firebase)
+        let ref = Database.database().reference()
+        ref.child("currentFriend/name").observeSingleEvent(of: .value) { (snapshot) in
+            self.FriendName.text = snapshot.value as? String
+        }
         
         print("LOADED LIBRARY")
         //get image

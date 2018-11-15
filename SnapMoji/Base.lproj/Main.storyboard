@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3fi-VD-TwX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3fi-VD-TwX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -299,6 +300,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="John-Doe"/>
                                                     <connections>
+                                                        <action selector="FriendButton_tab:" destination="JQZ-4a-pnN" eventType="touchUpInside" id="KNJ-5D-4O6"/>
                                                         <action selector="HappyMoji_tap:" destination="yQX-ne-mKL" eventType="touchUpInside" id="r0W-0F-q1a"/>
                                                         <segue destination="yQX-ne-mKL" kind="presentation" modalTransitionStyle="crossDissolve" id="soC-be-xo6"/>
                                                     </connections>
@@ -592,6 +594,7 @@
                         <outlet property="ContemptMojiButton" destination="bIP-s3-Npx" id="c11-Xb-7w3"/>
                         <outlet property="DisgustMojiButton" destination="4uJ-7K-I85" id="86t-pX-wes"/>
                         <outlet property="FearMojiButton" destination="LyP-bQ-nTT" id="hM1-n8-5wU"/>
+                        <outlet property="FriendName" destination="iYv-iP-lFJ" id="Di1-sh-vkK"/>
                         <outlet property="HappyMojiButton" destination="5UA-M9-iek" id="JXR-aX-nv6"/>
                         <outlet property="NeutralMojiButton" destination="yBl-uI-vQX" id="Km6-th-gbV"/>
                         <outlet property="SadMojiButton" destination="gZf-9q-VYC" id="ij4-Ml-pJ0"/>
@@ -1018,6 +1021,7 @@
         <image name="test-icon" width="31" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ZHV-0E-K1C"/>
         <segue reference="Oux-ZH-ClW"/>
         <segue reference="oXE-x9-Zpw"/>
         <segue reference="63o-yf-e3T"/>
