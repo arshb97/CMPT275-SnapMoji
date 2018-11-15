@@ -170,6 +170,7 @@
 				F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */,
 				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
 				BA3A06AF218917870034EDDE /* camera.storyboard */,
+				032A6937219D5C1E0089BCB2 /* QuestionBank.swift */,
 				032A6935219D5A600089BCB2 /* Questions.swift */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
@@ -182,7 +183,6 @@
 				7D1C93E8218EC50E002EE0D1 /* PersonFace.h */,
 				7D1C93E7218EC50D002EE0D1 /* PersonFace.m */,
 				7D1C93E5218EC50C002EE0D1 /* SnapMoji-Bridging-Header.h */,
-				032A6937219D5C1E0089BCB2 /* QuestionBank.swift */,
 			);
 			path = SnapMoji;
 			sourceTree = "<group>";

@@ -12,6 +12,6 @@ class QuestionBank{
     var list = [Question]()
     
     init() {
-        list.append(Question(image: "happiness", questionText: "What emotion is this?", userChoiceA: "Happiness", userChoiceB: "Sadness", userChoiceC: "Anger", userChoiceD: "Surprise", answer: 1))
+        list.append(Question(image: "happiness_emoji", questionText: "What emotion is this?", userChoiceA: "Happiness", userChoiceB: "Sadness", userChoiceC: "Anger", userChoiceD: "Surprise", answer: 1))
     }
 }
