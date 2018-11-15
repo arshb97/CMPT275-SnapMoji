@@ -24,6 +24,8 @@ import Firebase
 var detector: DetectFace = DetectFace()
 
 class PreviewViewController: UIViewController, UIApplicationDelegate{
+    
+    var friendName = ""
 
     //variables to store to firebase
     var imageReference: StorageReference {
@@ -72,7 +74,13 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         }
         
         uploadTask.resume()
-        */
+         */
+ 
+        
+        let ref = Database.database().reference()
+        ref.child("currentFriend/name").observeSingleEvent(of: .value) { (snapshot) in
+            self.friendName = (snapshot.value as? String)!
+        }
         
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
         

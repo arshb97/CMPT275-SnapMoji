@@ -24,6 +24,8 @@
 		7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E7218EC50D002EE0D1 /* PersonFace.m */; };
 		7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E9218EC50E002EE0D1 /* DetectFace.m */; };
 		AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */; };
+		AA7BC7FD219D1DED00BA576A /* Samplehappiness.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA7BC7FC219D1DEC00BA576A /* Samplehappiness.jpg */; };
+		AAED8A66219D1052004CEB2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAED8A65219D1052004CEB2B /* MainViewController.swift */; };
 		BA3A06B0218917870034EDDE /* camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A06AF218917870034EDDE /* camera.storyboard */; };
 		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
 		F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */; };
@@ -77,6 +79,8 @@
 		7D1C93E9218EC50E002EE0D1 /* DetectFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectFace.m; sourceTree = "<group>"; };
 		A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSectionViewController.swift; sourceTree = "<group>"; };
+		AA7BC7FC219D1DEC00BA576A /* Samplehappiness.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Samplehappiness.jpg; path = ../../../../Users/mzaki/Downloads/Samplehappiness.jpg; sourceTree = "<group>"; };
+		AAED8A65219D1052004CEB2B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A06AF218917870034EDDE /* camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = camera.storyboard; sourceTree = "<group>"; };
 		BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -168,10 +172,12 @@
 				73D60F3F2183BFB2001AAA21 /* Info.plist */,
 				03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */,
 				7D1C93E6218EC50D002EE0D1 /* DetectFace.h */,
+				AA7BC7FC219D1DEC00BA576A /* Samplehappiness.jpg */,
 				7D1C93E9218EC50E002EE0D1 /* DetectFace.m */,
 				7D1C93E8218EC50E002EE0D1 /* PersonFace.h */,
 				7D1C93E7218EC50D002EE0D1 /* PersonFace.m */,
 				7D1C93E5218EC50C002EE0D1 /* SnapMoji-Bridging-Header.h */,
+				AAED8A65219D1052004CEB2B /* MainViewController.swift */,
 			);
 			path = SnapMoji;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D60F3E2183BFB2001AAA21 /* LaunchScreen.storyboard in Resources */,
+				AA7BC7FD219D1DED00BA576A /* Samplehappiness.jpg in Resources */,
 				03C6A2512184EA2800F5FFB2 /* GoogleService-Info.plist in Resources */,
 				73D60F3B2183BFB2001AAA21 /* Assets.xcassets in Resources */,
 				73D60F392183BFB1001AAA21 /* Main.storyboard in Resources */,
@@ -429,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */,
+				AAED8A66219D1052004CEB2B /* MainViewController.swift in Sources */,
 				7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */,
 				AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */,
 				F44CF60B21950B0600B722B6 /* TestingViewController.swift in Sources */,

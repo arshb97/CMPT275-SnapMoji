@@ -86,7 +86,7 @@ class LibraryViewController: UIViewController{
         {
             let vc = segue.destination as? PopUpViewController
             vc?.emotion = setEmotion
-            vc?.fileName = setEmotion + ".jpg"
+            vc?.fileName = self.FriendName.text! + setEmotion + ".jpg"
         }
     }
     
@@ -133,28 +133,28 @@ class LibraryViewController: UIViewController{
                 //figure out how to change which moji button we are changing
                 let rotatedImage = image.rotate(radians: .pi / 2)
                 switch fileName {
-                    case "happiness.jpg":
+                    case self.FriendName.text!+"happiness.jpg":
                     HappyMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "sadness.jpg":
+                    case self.FriendName.text!+"sadness.jpg":
                     SadMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "anger.jpg":
+                    case self.FriendName.text!+"anger.jpg":
                     AngryMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "surprise.jpg":
+                    case self.FriendName.text!+"surprise.jpg":
                     SurpriseMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "disgust.jpg":
+                    case self.FriendName.text!+"disgust.jpg":
                     DisgustMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "fear.jpg":
+                    case self.FriendName.text!+"fear.jpg":
                     FearMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "contempt.jpg":
+                    case self.FriendName.text!+"contempt.jpg":
                     ContemptMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
-                    case "neutral.jpg":
+                    case self.FriendName.text!+"neutral.jpg":
                     NeutralMojiButton.setImage(rotatedImage, for: .normal)
                     print("Image set for " + fileName)
                     default:
