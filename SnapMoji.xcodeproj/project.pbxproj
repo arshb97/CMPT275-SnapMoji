@@ -14,6 +14,7 @@
 		03C6A2512184EA2800F5FFB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */; };
 		370506BB0884C843BD804D6E /* Pods_SnapMoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F322DF366EC37112FFFC322E /* Pods_SnapMoji.framework */; };
 		46C4ACFA34692B56761B32E4 /* Pods_SnapMojiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */; };
+		732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 732C7860219D0EA400558B5D /* DLRadioButton.m */; };
 		73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F332183BFB1001AAA21 /* AppDelegate.swift */; };
 		73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F352183BFB1001AAA21 /* ViewController.swift */; };
 		73D60F392183BFB1001AAA21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D60F372183BFB1001AAA21 /* Main.storyboard */; };
@@ -57,6 +58,8 @@
 		2EEA0527C87C8E9907A5F479 /* Pods-SnapMoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.debug.xcconfig"; sourceTree = "<group>"; };
 		46F5568E803BE46E003256EA /* Pods-SnapMojiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiUITests/Pods-SnapMojiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C48B220DB147743CC8E0B8D /* Pods-SnapMojiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiTests/Pods-SnapMojiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		732C785F219D0EA400558B5D /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		732C7860219D0EA400558B5D /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		73D60F302183BFB0001AAA21 /* SnapMoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapMoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D60F332183BFB1001AAA21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73D60F352183BFB1001AAA21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
 				73D60F3F2183BFB2001AAA21 /* Info.plist */,
 				03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */,
+				732C785F219D0EA400558B5D /* DLRadioButton.h */,
+				732C7860219D0EA400558B5D /* DLRadioButton.m */,
 				7D1C93E6218EC50D002EE0D1 /* DetectFace.h */,
 				7D1C93E9218EC50E002EE0D1 /* DetectFace.m */,
 				7D1C93E8218EC50E002EE0D1 /* PersonFace.h */,
@@ -437,6 +442,7 @@
 				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
 				03638D74218D3986004A5DBF /* LibraryViewController.swift in Sources */,
 				7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */,
+				732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */,
 				034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */,
 				034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */,
 				F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */,
