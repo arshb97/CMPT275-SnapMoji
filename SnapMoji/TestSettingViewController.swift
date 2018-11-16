@@ -10,7 +10,7 @@ import UIKit
 
 class TestSettingViewController: UIViewController {
     
-    var difficulty = 0
+    //var difficulty = 0
     
     
     @IBOutlet weak var easyMode: UIButton!
@@ -45,8 +45,8 @@ class TestSettingViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is TestingViewController
         {
-            let vc = segue.destination as? TestingViewController
-            vc?.difficulty = difficulty
+            //let vc = segue.destination as? TestingViewController
+            //vc?.difficulty = difficulty
             print("Sending difficulty ", difficulty, " to test")
         }
     }

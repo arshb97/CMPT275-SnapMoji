@@ -1058,8 +1058,8 @@
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="2xl-2S-doy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39g-fd-54j">
-                                <rect key="frame" x="7.5" y="575.5" width="360" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39g-fd-54j">
+                                <rect key="frame" x="7.5" y="576" width="360" height="35"/>
                                 <color key="backgroundColor" red="0.91123362819999998" green="0.91123362819999998" blue="0.91123362819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Next"/>
@@ -1097,6 +1097,7 @@
                             <constraint firstItem="DYD-lR-BRP" firstAttribute="top" secondItem="aoL-8a-9HR" secondAttribute="bottom" constant="3" id="Vtb-Wf-49V"/>
                             <constraint firstItem="Wlw-ol-vyj" firstAttribute="centerX" secondItem="GXU-Rq-v27" secondAttribute="centerX" id="W3U-Iz-Ryi"/>
                             <constraint firstItem="nOg-ge-PaW" firstAttribute="top" secondItem="giW-vj-n97" secondAttribute="top" constant="2" id="WS5-9C-HP8"/>
+                            <constraint firstItem="39g-fd-54j" firstAttribute="centerY" secondItem="GXU-Rq-v27" secondAttribute="centerY" constant="260" id="YHJ-SN-BXo"/>
                             <constraint firstItem="DYD-lR-BRP" firstAttribute="centerX" secondItem="GXU-Rq-v27" secondAttribute="centerX" id="bxr-Bf-oZH"/>
                             <constraint firstItem="giW-vj-n97" firstAttribute="trailing" secondItem="aoL-8a-9HR" secondAttribute="trailing" constant="7.5" id="cIV-FV-0Io"/>
                             <constraint firstItem="oNb-sq-eVA" firstAttribute="top" secondItem="giW-vj-n97" secondAttribute="top" constant="13" id="g3T-I2-bvY"/>
@@ -1162,10 +1163,9 @@
         <image name="test-icon" width="31" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Kr-VW-A4c"/>
         <segue reference="QoY-sn-dRK"/>
         <segue reference="oXE-x9-Zpw"/>
-        <segue reference="m1F-Ac-QCp"/>
-        <segue reference="amC-9T-ikt"/>
+        <segue reference="JyB-It-oLx"/>
+        <segue reference="2IL-Hp-fQV"/>
     </inferredMetricsTieBreakers>
 </document>

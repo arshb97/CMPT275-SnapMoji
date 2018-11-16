@@ -18,9 +18,11 @@
 
 import UIKit
 
+var difficulty = 0
+
 class TestingViewController: UIViewController {
 
-    var difficulty = 0
+
     var pickedAnswer = 0
     
     @IBOutlet weak var questionCounter: UILabel!
@@ -77,7 +79,7 @@ class TestingViewController: UIViewController {
     
     func updateQuestion(){
         if questionNumber <= allQuestions.list.count - 1 {
-            questionImageView.image = UIImage(named:(allQuestions.list[questionNumber].questionImage))
+            questionImageView.image = (allQuestions.list[questionNumber].questionImage)
             questionLabel.text = allQuestions.list[questionNumber].question
             choiceA.setTitle(allQuestions.list[questionNumber].choiceA, for: UIControlState.normal)
             choiceB.setTitle(allQuestions.list[questionNumber].choiceB, for: UIControlState.normal)
