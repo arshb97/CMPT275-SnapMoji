@@ -24,7 +24,7 @@
 
 import UIKit
 
-private var friends = ["Sample"] //array of friends
+public var friends = ["Sample"] //array of friends
 
 class FriendSectionViewController:  UIViewController, UICollectionViewDelegate,
 UICollectionViewDataSource {

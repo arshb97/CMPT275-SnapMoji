@@ -2,6 +2,15 @@
 //  TestingViewController.swift
 //  SnapMoji
 //
+//  Worked on by: Josh Baltar
+//
+//  Changelog:
+//  2.0 - Initial commit layout and segues finished
+//  2.1 - Generates working quiz template
+//  2.2 - Quizzes generated with sample images
+//
+//  Known bugs:
+//  Gallery does not save image when an image is selected
 //  Created by zza92 on 2018-11-08.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //
@@ -9,8 +18,12 @@
 
 import UIKit
 
+var difficulty = 0
+
 class TestingViewController: UIViewController {
 
+
+    var pickedAnswer = 0
     
     @IBOutlet weak var questionCounter: UILabel!
     @IBOutlet weak var friendName: NSLayoutConstraint!
@@ -45,21 +58,28 @@ class TestingViewController: UIViewController {
     }
     
     @IBAction func answerPressed(_ sender: UIButton) {
-        if sender.tag == selectedAnswer {
+        pickedAnswer =  sender.tag
+        
+    }
+    
+    @IBAction func submitAnswer(_ sender: UIButton) {
+        if pickedAnswer == selectedAnswer {
             print("correct")
             score += 1
+        } else if pickedAnswer == 0 {
+            print ("no answer selected")
         } else {
             print("wrong")
         }
         
         questionNumber += 1
         updateQuestion()
-        
     }
+    
     
     func updateQuestion(){
         if questionNumber <= allQuestions.list.count - 1 {
-            questionImageView.image = UIImage(named:(allQuestions.list[questionNumber].questionImage))
+            questionImageView.image = (allQuestions.list[questionNumber].questionImage)
             questionLabel.text = allQuestions.list[questionNumber].question
             choiceA.setTitle(allQuestions.list[questionNumber].choiceA, for: UIControlState.normal)
             choiceB.setTitle(allQuestions.list[questionNumber].choiceB, for: UIControlState.normal)
@@ -67,7 +87,8 @@ class TestingViewController: UIViewController {
             choiceD.setTitle(allQuestions.list[questionNumber].choiceD, for: UIControlState.normal)
             selectedAnswer = allQuestions.list[questionNumber].correctAnswer
         } else {
-            let alert = UIAlertController(title: "Nice", message: "You have finished the quiz!", preferredStyle: .alert)
+            let finishMessage = "You got \(score)/\(allQuestions.list.count)!"
+            let alert = UIAlertController(title: "Nice job!", message: finishMessage, preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
             alert.addAction(restartAction)
             present(alert, animated:true, completion: nil)
