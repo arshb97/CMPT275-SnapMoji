@@ -90,6 +90,7 @@ class QuestionBank {
                     randChoices.append(upperCaseEmotion)
                     if randChoices[i] == randomEmotion {
                         randAnswer = i + 1
+                        print("Answer Set to ", randAnswer)
                     }
                     randChoiceArray.remove(at: randIndex)
                     
@@ -139,7 +140,7 @@ class QuestionBank {
                     randChoices.append(upperCaseEmotion)
                     if randChoices[i] == randomEmotion {
                         randAnswer = i + 1
-                        print("Answer Set to ", randAnswer)
+                        print("Sample: Answer Set to ", randAnswer)
                     }
                     randChoiceArray.remove(at: randIndex)
                     
