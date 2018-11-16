@@ -52,9 +52,9 @@ class QuestionBank {
                 case 1:
                     image = rotatedImage
                     print("Full face image set")
-                case 2:
-                    image = topHalfImage!
                 case 3:
+                    image = topHalfImage!
+                case 2:
                     image = bottomHalfImage!
                     
                 default:
@@ -66,7 +66,22 @@ class QuestionBank {
             } else {
                 //need to implement sample pictures
                 let randAns = sample + randomEmotion
-                let image: UIImage = UIImage(named: randAns)!
+                var image: UIImage = UIImage(named: randAns)!
+                //let rotatedImage = image.rotate(radians: .pi / 2)
+                let topHalfImage = image.topHalf
+                let bottomHalfImage = image.bottomHalf
+                
+                switch difficulty {
+                case 1:
+                    //image = rotatedImage
+                    print("Full face image set")
+                case 3:
+                    image = topHalfImage!
+                case 2:
+                    image = bottomHalfImage!
+                default:
+                    print("Difficulty not selected. Error setting image for question")
+                }
                 list.append(Question(image: image, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: randomEmotion, userChoiceC: "anger", userChoiceD: "surprise", answer: 2, chosenDifficulty: difficulty))
             }
         }
