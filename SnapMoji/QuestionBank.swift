@@ -2,6 +2,17 @@
 //  QuestionBank.swift
 //  SnapMoji
 //
+//  Worked on by: Josh Baltar
+//
+//  Changelog:
+//  1.0 - Initial commit layout and segues finished
+//  2.0 - Easy difficulty finished; Sample test implemented
+//  2.1 - All difficulties implemented
+//  2.2 - Options are now unique when generated; answers are random
+//
+//  Known bugs:
+//
+//
 //  Created by Josh Baltar on 2018-11-14.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //
@@ -75,7 +86,8 @@ class QuestionBank {
                 var randChoices = Array<String>()
                 for i in 0 ... 3 {
                     let randIndex = Int(arc4random_uniform(UInt32(randChoiceArray.count)))
-                    randChoices.append(randChoiceArray[randIndex])
+                    let upperCaseEmotion = randChoiceArray[randIndex].capitalizingFirstLetter()
+                    randChoices.append(upperCaseEmotion)
                     if randChoices[i] == randomEmotion {
                         randAnswer = i + 1
                     }
@@ -123,7 +135,8 @@ class QuestionBank {
                 var randChoices = Array<String>()
                 for i in 0 ... 3 {
                     let randIndex = Int(arc4random_uniform(UInt32(randChoiceArray.count)))
-                    randChoices.append(randChoiceArray[randIndex])
+                    let upperCaseEmotion = randChoiceArray[randIndex].capitalizingFirstLetter()
+                    randChoices.append(upperCaseEmotion)
                     if randChoices[i] == randomEmotion {
                         randAnswer = i + 1
                         print("Answer Set to ", randAnswer)
@@ -161,5 +174,15 @@ extension UIImage {
         guard let cgImage = cgImage, let image = cgImage.cropping(to: CGRect(origin: CGPoint(x: CGFloat(Int(size.width)-Int((size.width/2))), y: 0), size: CGSize(width: CGFloat(Int(size.width)-Int((size.width/2))), height: size.height)))
             else { return nil }
         return UIImage(cgImage: image)
+    }
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
     }
 }
