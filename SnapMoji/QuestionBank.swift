@@ -20,18 +20,16 @@ class QuestionBank {
     //use sample if less than 5 images exist
     
     init() {
-        //randomly pick an emotion and mark it to exclude it from the quiz
-        let randEmotion = [emotions.randomElement()!, emotions.randomElement()!, emotions.randomElement()!, emotions.randomElement()!, emotions.randomElement()!]
+        //randomly pick 5 unique emotions
+        var randEmotionSet = Set<String>() //a set can can only contain unique elements
         
-        //make array
+        while randEmotionSet.count < 5 {
+            let randIndex = Int(arc4random_uniform(UInt32(emotions.count)))
+            randEmotionSet.insert(emotions[randIndex])
+        }
         
-        //let randAns2 = sample + randEmotion[1]
-        //let randAns3 = sample + randEmotion[2]
-        //let randAns4 = sample + randEmotion[3]
-        //let randAns5 = sample + randEmotion[4]
-        
-        //getting image
-        for randomEmotion in randEmotion {
+        //generating a random question
+        for randomEmotion in randEmotionSet {
             let fileName = friends.randomElement()! + randomEmotion + ".jpg"
             print(fileName + " being loaded into question")
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
@@ -48,6 +46,7 @@ class QuestionBank {
                 let topHalfImage = rotatedImage.topHalf
                 let bottomHalfImage = rotatedImage.bottomHalf
                 
+                //difficulty is changed globally
                 switch difficulty {
                 case 1:
                     image = rotatedImage
@@ -61,8 +60,34 @@ class QuestionBank {
                     print("Difficulty not selected. Error setting image for question")
                 }
                 
-                list.append(Question(image: image, questionText: "What emotion is this?", userChoiceA: randomEmotion, userChoiceB: "sadness", userChoiceC: "anger", userChoiceD: "surprise", answer: 1, chosenDifficulty: difficulty))
-                print("Looped ", randomEmotion)
+                //generate a random set of choices of emotions
+                var randChoiceSet = Set<String>()
+                var randAnswer = Int()
+                randChoiceSet.insert(randomEmotion)
+                
+                while randChoiceSet.count < 4 {
+                    let randIndex = Int(arc4random_uniform(UInt32(emotions.count)))
+                    randChoiceSet.insert(emotions[randIndex])
+                }
+                
+                //randomly assign solution
+                var randChoiceArray = Array(randChoiceSet)
+                var randChoices = Array<String>()
+                for i in 0 ... 3 {
+                    let randIndex = Int(arc4random_uniform(UInt32(randChoiceArray.count)))
+                    randChoices.append(randChoiceArray[randIndex])
+                    if randChoices[i] == randomEmotion {
+                        randAnswer = i + 1
+                    }
+                    randChoiceArray.remove(at: randIndex)
+                    
+                }
+                
+                //set the answer to the random set
+                
+                
+                list.append(Question(image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
+                //print("Looped ", randomEmotion)
             } else {
                 //need to implement sample pictures
                 let randAns = sample + randomEmotion
@@ -82,7 +107,32 @@ class QuestionBank {
                 default:
                     print("Difficulty not selected. Error setting image for question")
                 }
-                list.append(Question(image: image, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: randomEmotion, userChoiceC: "anger", userChoiceD: "surprise", answer: 2, chosenDifficulty: difficulty))
+                
+                //generate a random set of choices of emotions
+                var randChoiceSet = Set<String>()
+                var randAnswer = Int()
+                randChoiceSet.insert(randomEmotion)
+                
+                while randChoiceSet.count < 4 {
+                    let randIndex = Int(arc4random_uniform(UInt32(emotions.count)))
+                    randChoiceSet.insert(emotions[randIndex])
+                }
+                
+                //randomly assign solution
+                var randChoiceArray = Array(randChoiceSet)
+                var randChoices = Array<String>()
+                for i in 0 ... 3 {
+                    let randIndex = Int(arc4random_uniform(UInt32(randChoiceArray.count)))
+                    randChoices.append(randChoiceArray[randIndex])
+                    if randChoices[i] == randomEmotion {
+                        randAnswer = i + 1
+                        print("Answer Set to ", randAnswer)
+                    }
+                    randChoiceArray.remove(at: randIndex)
+                    
+                }
+                
+                list.append(Question(image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
             }
         }
         //list.append(Question(image: randAns2, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: randEmotion[1], userChoiceC: "anger", userChoiceD: "surprise", answer: 2, chosenDifficulty: difficulty))
