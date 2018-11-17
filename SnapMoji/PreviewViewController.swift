@@ -38,18 +38,18 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     //reference for the photo
     @IBOutlet weak var photo: UIImageView!
     
+    //label to print emotion returned by API
     @IBOutlet weak var apiEmotionValue: UILabel!
+//    [label setFont:[UIFont systemFontOfSize:35]]
     
     //load the image when page is loaded from the camera
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         photo.image = self.image
-        print("PreviewView "+fileName)
-        
-         var scannedEmotion = detector.detectAction(image)
+        print("PreviewView"+fileName)
+        var scannedEmotion = detector.detectAction(image)
     }
     
     //function to implement the save button
@@ -82,13 +82,12 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         
         //saves image in directory
         emotionResult = detector.globalVariableGetter()
-        print("Saving file as " + fileName)
-        //if emotionResult == emotion {
+        if emotionResult == emotion {
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             let newImage: UIImage = image// create your UIImage here
             try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
-        //}
+        }
         
         //transition back to the library
         performSegue(withIdentifier: "showMojiLibrary_Segue", sender: nil)
@@ -128,14 +127,10 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     
     //function to see results of the emotion api
     @IBAction func seeResults(_ sender: Any) {
-
         emotionResult = detector.globalVariableGetter()
-        
         print (emotionResult)
-        
         apiEmotionValue.text = emotionResult
-        
-    }
+        }
     
     // function to implement the cancel button
     @IBAction func cancelButton_tap(_ sender: UIButton) {

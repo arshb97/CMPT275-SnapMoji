@@ -35,5 +35,4 @@ class CollectionViewCell: UICollectionViewCell {
      ref.child("currentFriend/name").setValue(self.friendName.text)
      print("NAME PRESSED: ", self.friendName.text ?? "")
     }
-    
 }

@@ -6,7 +6,7 @@
 //  This file has not been implemented yet, but is for the display of the friends in the
 //  friend section
 //
-//  Worked on by:   sh Baltar, Merna Zaki
+//  Worked on by: Josh Baltar, Merna Zaki
 //
 //  Changelog:
 //  1.0 - Initial commit layout and segues finished
@@ -23,8 +23,6 @@
 
 import UIKit
 import FirebaseDatabase
-
-var Name = ""
 
 class LibraryViewController: UIViewController{
 
@@ -87,13 +85,13 @@ class LibraryViewController: UIViewController{
         {
             let vc = segue.destination as? PopUpViewController
             vc?.emotion = setEmotion
-            vc?.fileName = Name + setEmotion + ".jpg"
+            vc?.fileName = setEmotion + ".jpg"
         }
     }
     
     //array of supported emotions by SnapMoji defined by the emotions supported by the
     //Microsoft Emotion API
-    let emotions = ["happiness", "sadness", "anger", "surprise", "disgust", "fear", "contempt", "neutral"]
+    let emotions = ["happiness", "sadness", "angrer", "surprise", "disgust", "fear", "contempt", "neutral"]
     
     //to let other classes access members of this class
     /*
@@ -104,84 +102,7 @@ class LibraryViewController: UIViewController{
         self.present(secondVController, animated: true, completion: nil)
     }
     */
-    func getName() {
-        let ref = Database.database().reference()
-        ref.child("currentFriend/name").observeSingleEvent(of: .value) { (snapshot) in
-            self.FriendName.text = snapshot.value as? String
-            Name = (snapshot.value as? String)!
-            print("Name is: " + Name)
-            print("self.FriendName.text is: " + self.FriendName.text!)
-            self.getImages()
-        }
-
-    }
     
-    func getImages() {
-        for emotion in emotions {
-            let fileName = Name + emotion + ".jpg"
-            print(fileName)
-            let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
-            let imageUrl: URL = URL(fileURLWithPath: imagePath)
-            
-            // check if the image is stored already
-            if FileManager.default.fileExists(atPath: imagePath),
-                let imageData: Data = try? Data(contentsOf: imageUrl),
-                let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
-                //figure out how to change which moji button we are changing
-        
-                let rotatedImage = image.rotate(radians: .pi / 2)
-                switch fileName {
-                case Name + "happiness.jpg":
-                    HappyMojiButton.setImage(rotatedImage, for: .normal)
-                    print("Image set for " + fileName)
-                case Name + "sadness.jpg":
-                    SadMojiButton.setImage(rotatedImage, for: .normal)
-                    print("Image set for " + fileName)
-                case Name + "anger.jpg":
-                    AngryMojiButton.setImage(rotatedImage, for: .normal)
-                    print("Image set for " + fileName)
-                case Name + "surprise.jpg":
-                    SurpriseMojiButton.setImage(rotatedImage, for: .normal)
-                    print("Image set for " + fileName)
-                case self.FriendName.text! + "disgust.jpg":
-                    DisgustMojiButton.setImage(rotatedImage, for: .normal)
-                    print("Image set for " + fileName)
-                case self.FriendName.text! + "fear.jpg":
-                    FearMojiButton.setImage(rotatedImage, for: .normal)
-                    print("Image set for " + fileName)
-                case self.FriendName.text! + "contempt.jpg":
-                    ContemptMojiButton.setImage(rotatedImage, for: .normal)
-                    print("Image set for " + fileName)
-                case self.FriendName.text! + "neutral.jpg":
-                    NeutralMojiButton.setImage(rotatedImage, for: .normal)
-                    print("Image set for " + fileName)
-                default:
-                    print("NO IMAGE AVAILABLE FOR " + self.FriendName.text! + fileName)
-                }
-            }else{
-                    //Set the default images for Sample
-                    if (Name == "Sample"){
-                        var image = UIImage(named: "Samplehappiness")!
-                        HappyMojiButton.setImage(image, for: .normal)
-                        print("sample!@)$(#*)$(*$")
-                        image = UIImage(named: "Samplesadness")!
-                        SadMojiButton.setImage(image, for: .normal)
-                        image = UIImage(named: "Sampleanger")!
-                        AngryMojiButton.setImage(image, for: .normal)
-                        image = UIImage(named: "Samplesurprise")!
-                        SurpriseMojiButton.setImage(image, for: .normal)
-                        image = UIImage(named: "Sampledisgust")!
-                        DisgustMojiButton.setImage(image, for: .normal)
-                        image = UIImage(named: "Samplefear")!
-                        FearMojiButton.setImage(image, for: .normal)
-                        image = UIImage(named: "Samplecontempt")!
-                        ContemptMojiButton.setImage(image, for: .normal)
-                        image = UIImage(named: "Sampleneutral")!
-                        NeutralMojiButton.setImage(image, for: .normal)
-                    }
-            }
-        }
-    }
 
     //while view loads, load photos of emotions if they exist
     override func viewDidLoad() {
@@ -192,11 +113,54 @@ class LibraryViewController: UIViewController{
         // Do any additional setup after loading the view, typically from a nib.
         
         //Change the label to the name of the friend (name retrieved from firebase)
-        getName()
-        //getImages()
+        let ref = Database.database().reference()
+        ref.child("currentFriend/name").observeSingleEvent(of: .value) { (snapshot) in
+            self.FriendName.text = snapshot.value as? String
+        }
+        
         print("LOADED LIBRARY")
         //get image
-
+        for emotion in emotions {
+            let fileName = emotion + ".jpg"
+            let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
+            let imageUrl: URL = URL(fileURLWithPath: imagePath)
+            
+            // check if the image is stored already
+            if FileManager.default.fileExists(atPath: imagePath),
+                let imageData: Data = try? Data(contentsOf: imageUrl),
+                let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
+                //figure out how to change which moji button we are changing
+                let rotatedImage = image.rotate(radians: .pi / 2)
+                switch fileName {
+                    case "happiness.jpg":
+                    HappyMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
+                    case "sadness.jpg":
+                    SadMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
+                    case "anger.jpg":
+                    AngryMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
+                    case "surprise.jpg":
+                    SurpriseMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
+                    case "disgust.jpg":
+                    DisgustMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
+                    case "fear.jpg":
+                    FearMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
+                    case "contempt.jpg":
+                    ContemptMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
+                    case "neutral.jpg":
+                    NeutralMojiButton.setImage(rotatedImage, for: .normal)
+                    print("Image set for " + fileName)
+                    default:
+                    print("NO IMAGE AVAILABLE FOR " + fileName)
+                }
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {

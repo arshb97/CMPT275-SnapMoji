@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		032A6936219D5A600089BCB2 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A6935219D5A600089BCB2 /* Questions.swift */; };
-		032A6938219D5C1E0089BCB2 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A6937219D5C1E0089BCB2 /* QuestionBank.swift */; };
-		032A693E219F3BB10089BCB2 /* sampleQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A693D219F3BB00089BCB2 /* sampleQuestion.swift */; };
 		034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CDE21868196005CC0CB /* PreviewViewController.swift */; };
 		034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE221868322005CC0CB /* CameraViewController.swift */; };
 		034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */; };
@@ -27,6 +24,7 @@
 		73D60F542183BFB3001AAA21 /* SnapMojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F532183BFB3001AAA21 /* SnapMojiUITests.swift */; };
 		7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E7218EC50D002EE0D1 /* PersonFace.m */; };
 		7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E9218EC50E002EE0D1 /* DetectFace.m */; };
+		7DB210B0219E0ED600317727 /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB210AF219E0ED600317727 /* Preview.storyboard */; };
 		AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */; };
 		BA3A06B0218917870034EDDE /* camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A06AF218917870034EDDE /* camera.storyboard */; };
 		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
@@ -53,9 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		032A6935219D5A600089BCB2 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
-		032A6937219D5C1E0089BCB2 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
-		032A693D219F3BB00089BCB2 /* sampleQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleQuestion.swift; sourceTree = "<group>"; };
 		034D0CDE21868196005CC0CB /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		034D0CE221868322005CC0CB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = SnapMoji/CameraViewController.swift; sourceTree = "<group>"; };
 		034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +79,7 @@
 		7D1C93E7218EC50D002EE0D1 /* PersonFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonFace.m; sourceTree = "<group>"; };
 		7D1C93E8218EC50E002EE0D1 /* PersonFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonFace.h; sourceTree = "<group>"; };
 		7D1C93E9218EC50E002EE0D1 /* DetectFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectFace.m; sourceTree = "<group>"; };
+		7DB210AF219E0ED600317727 /* Preview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
 		A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSectionViewController.swift; sourceTree = "<group>"; };
 		B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,13 +164,11 @@
 				034D0CDE21868196005CC0CB /* PreviewViewController.swift */,
 				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
 				73D60F372183BFB1001AAA21 /* Main.storyboard */,
-				F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */,
+				7DB210AF219E0ED600317727 /* Preview.storyboard */,
 				F44CF60A21950B0600B722B6 /* TestingViewController.swift */,
+				F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */,
 				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
 				BA3A06AF218917870034EDDE /* camera.storyboard */,
-				032A6937219D5C1E0089BCB2 /* QuestionBank.swift */,
-				032A6935219D5A600089BCB2 /* Questions.swift */,
-				032A693D219F3BB00089BCB2 /* sampleQuestion.swift */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
 				73D60F3F2183BFB2001AAA21 /* Info.plist */,
@@ -335,6 +329,7 @@
 				73D60F3B2183BFB2001AAA21 /* Assets.xcassets in Resources */,
 				73D60F392183BFB1001AAA21 /* Main.storyboard in Resources */,
 				BA3A06B0218917870034EDDE /* camera.storyboard in Resources */,
+				7DB210B0219E0ED600317727 /* Preview.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,13 +440,10 @@
 				73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */,
 				7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */,
 				AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */,
-				032A6936219D5A600089BCB2 /* Questions.swift in Sources */,
 				F44CF60B21950B0600B722B6 /* TestingViewController.swift in Sources */,
 				034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */,
 				73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */,
 				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
-				032A6938219D5C1E0089BCB2 /* QuestionBank.swift in Sources */,
-				032A693E219F3BB10089BCB2 /* sampleQuestion.swift in Sources */,
 				03638D74218D3986004A5DBF /* LibraryViewController.swift in Sources */,
 				7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */,
 				732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */,
@@ -634,13 +626,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 722KSG7FLT;
+				DEVELOPMENT_TEAM = 28Z8D273QE;
 				INFOPLIST_FILE = SnapMoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MM.Snap;
+				PRODUCT_BUNDLE_IDENTIFIER = deepbb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapMoji/SnapMoji-Bridging-Header.h";
@@ -658,13 +650,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 722KSG7FLT;
+				DEVELOPMENT_TEAM = 28Z8D273QE;
 				INFOPLIST_FILE = SnapMoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MM.Snap;
+				PRODUCT_BUNDLE_IDENTIFIER = deepbb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapMoji/SnapMoji-Bridging-Header.h";
