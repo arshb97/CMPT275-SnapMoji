@@ -9,6 +9,8 @@
 //  1.0 - Initial commit layout and segues finished
 //  1.1 - Camera working and storing photos to phone and firebase
 //  1.2 - Emotions passed through view controllers, Microsoft emotion API implemented
+//  2.0 - Gallery now sends the image to this view to approve with the MS emotion API
+//  2.1 - Emotion is displayed on the screen when submitted
 //
 //  Known bugs:
 //  There are no known bugs related to the PreviewViewController.swift
