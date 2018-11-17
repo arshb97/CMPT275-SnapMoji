@@ -78,7 +78,7 @@ class TestingViewController: UIViewController {
     
     
     func updateQuestion(){
-        if questionNumber <= allQuestions.list.count - 1 {
+        if questionNumber < allQuestions.list.count  {
             questionImageView.image = (allQuestions.list[questionNumber].questionImage)
             questionLabel.text = allQuestions.list[questionNumber].question
             choiceA.setTitle(allQuestions.list[questionNumber].choiceA, for: UIControlState.normal)
