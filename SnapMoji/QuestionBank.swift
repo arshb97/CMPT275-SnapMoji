@@ -136,12 +136,16 @@ class QuestionBank {
                 var randChoices = Array<String>()
                 for i in 0 ... 3 {
                     let randIndex = Int(arc4random_uniform(UInt32(randChoiceArray.count)))
-                    let upperCaseEmotion = randChoiceArray[randIndex].capitalizingFirstLetter()
-                    randChoices.append(upperCaseEmotion)
-                    if randChoices[i] == randomEmotion {
+                    let upperCaseEmotion = randChoiceArray[randIndex]
+                    //check if this emotion is the answer
+                    if upperCaseEmotion == randomEmotion {
                         randAnswer = i + 1
                         print("Sample: Answer Set to ", randAnswer)
                     }
+                    //set the first letter capital before storing to array
+                    randChoices.append(upperCaseEmotion.capitalizingFirstLetter())
+                    print(randChoiceArray[randIndex])
+                    
                     randChoiceArray.remove(at: randIndex)
                     
                 }
