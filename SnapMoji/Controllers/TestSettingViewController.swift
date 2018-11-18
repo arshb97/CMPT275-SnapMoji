@@ -32,11 +32,25 @@ class TestSettingViewController: UIViewController {
         // Do any additional setup after loading the view.
         // hide filterView on load
         //filterView.isHidden = true //attempt 1
+        //() //attempt 2
     }
     
     //Starts the test with the selected filters/difficulties
     @IBAction func startTest_tap(_ sender: UIButton) {
         performSegue(withIdentifier: "startTest_Segue", sender: nil)
+    }
+    
+    @IBAction func filterFriends_tap(_ sender: UIButton) {
+        //performSegue(withIdentifier: "filterView_Segue", sender: nil)
+        let filterVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "filter_ViewController") as! FiltersViewController
+        
+        self.addChildViewController(filterVC)
+        
+        filterVC.view.frame = self.view.frame
+        
+        self.view.addSubview(filterVC.view)
+        
+        filterVC.didMove(toParentViewController: self)
     }
     
     /* //attempt 1
@@ -77,11 +91,9 @@ class TestSettingViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is TestingViewController
+        if segue.destination is FilterViewController
         {
-            //let vc = segue.destination as? TestingViewController
-            //vc?.difficulty = difficulty
-            print("Sending difficulty ", difficulty, " to test")
+            
         }
     }
 

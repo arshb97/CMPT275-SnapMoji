@@ -876,6 +876,7 @@
                         <outlet property="mediumMode" destination="sgX-Gp-EEO" id="efx-Xg-W6t"/>
                         <outlet property="searchDisplayController" destination="4R9-7I-4rg" id="nHy-AO-EyL"/>
                         <segue destination="9f1-Ce-LGf" kind="presentation" identifier="startTest_Segue" modalTransitionStyle="crossDissolve" id="4Kr-VW-A4c"/>
+                        <segue destination="iWr-hB-Ob0" kind="presentation" identifier="filterView_Segue" id="yMA-L5-mpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dv-dP-KHy" sceneMemberID="firstResponder"/>
@@ -889,6 +890,50 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1912.8" y="1100.5997001499252"/>
+        </scene>
+        <!--Filters View Controller-->
+        <scene sceneID="Qrh-i4-lnb">
+            <objects>
+                <viewController storyboardIdentifier="filter_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iWr-hB-Ob0" customClass="FiltersViewController" customModule="SnapMoji" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nes-eV-Zhz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HP7-mr-LAx">
+                                <rect key="frame" x="20" y="75" width="335" height="487"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ood-Ub-3OA">
+                                        <rect key="frame" x="235" y="439" width="34" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButton_tap:" destination="iWr-hB-Ob0" eventType="touchUpInside" id="Hb8-V2-Mn4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xve-o8-jtZ">
+                                        <rect key="frame" x="58" y="439" width="48" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButton_tap:" destination="iWr-hB-Ob0" eventType="touchUpInside" id="gQF-oa-SfA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2412043214" green="0.47370857" blue="0.76473885770000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2hs-g5-nHD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFH-lR-uBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912.8" y="1817.5412293853076"/>
         </scene>
         <!--Testing View Controller-->
         <scene sceneID="GUI-q9-rwy">
@@ -1144,7 +1189,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="9x3-PJ-LaP"/>
         <segue reference="oXE-x9-Zpw"/>
-        <segue reference="JyB-It-oLx"/>
-        <segue reference="Flw-BE-8dL"/>
+        <segue reference="cY2-ij-WmK"/>
+        <segue reference="aVL-UN-XPk"/>
     </inferredMetricsTieBreakers>
 </document>
