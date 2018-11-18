@@ -3,7 +3,7 @@
 //
 //
 //
-//  Worked on by: Josh Baltar, Jiung Choi
+//  Worked on by: Josh Baltar, Jiung Choi, Arshdeep Bhullar
 //
 //  Changelog:
 //  1.0 - Initial commit layout and segues finished

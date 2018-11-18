@@ -24,13 +24,14 @@ class TestSettingViewController: UIViewController {
     
     //* filter code *//
     //hidden popup view
-    private var filterView: UIView!
-
+    //private var filterView: UIView! // attempt 1
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // hide filterView on load
-        filterView.isHidden = true
+        //filterView.isHidden = true //attempt 1
     }
     
     //Starts the test with the selected filters/difficulties
@@ -38,6 +39,11 @@ class TestSettingViewController: UIViewController {
         performSegue(withIdentifier: "startTest_Segue", sender: nil)
     }
     
+    /* //attempt 1
+    @IBAction func filterFriends_tap(_ sender: UIButton) {
+        loadFilterViewIntoController()
+    }
+
     //load the view
     private func loadFilterViewIntoController() {
         let filterViewFrame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 200)
@@ -62,7 +68,9 @@ class TestSettingViewController: UIViewController {
     @objc func didPressButtonFromFilterView(sender: UIButton) {
         //do stuff
         //make view disappear again, or remove from its superview
+        filterView.isHidden = true
     }
+    */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

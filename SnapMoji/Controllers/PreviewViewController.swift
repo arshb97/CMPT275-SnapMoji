@@ -51,7 +51,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         photo.image = self.image
         print("PreviewView "+fileName)
         
-         var scannedEmotion = detector.detectAction(image)
+         //var scannedEmotion = detector.detectAction(image)
     }
     
     //function to implement the save button
