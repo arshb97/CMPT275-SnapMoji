@@ -10,6 +10,7 @@
 		032A6936219D5A600089BCB2 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A6935219D5A600089BCB2 /* Questions.swift */; };
 		032A6938219D5C1E0089BCB2 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A6937219D5C1E0089BCB2 /* QuestionBank.swift */; };
 		032A694621A10E240089BCB2 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A694521A10E240089BCB2 /* FiltersViewController.swift */; };
+		032A694821A110770089BCB2 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A694721A110770089BCB2 /* CheckBox.swift */; };
 		034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CDE21868196005CC0CB /* PreviewViewController.swift */; };
 		034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE221868322005CC0CB /* CameraViewController.swift */; };
 		034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */; };
@@ -56,6 +57,7 @@
 		032A6935219D5A600089BCB2 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		032A6937219D5C1E0089BCB2 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		032A694521A10E240089BCB2 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		032A694721A110770089BCB2 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		034D0CDE21868196005CC0CB /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		034D0CE221868322005CC0CB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
 				032A6937219D5C1E0089BCB2 /* QuestionBank.swift */,
 				032A6935219D5A600089BCB2 /* Questions.swift */,
+				032A694721A110770089BCB2 /* CheckBox.swift */,
 				73D60F372183BFB1001AAA21 /* Main.storyboard */,
 				BA3A06AF218917870034EDDE /* Camera.storyboard */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
@@ -460,6 +463,7 @@
 				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
 				032A6938219D5C1E0089BCB2 /* QuestionBank.swift in Sources */,
 				03638D74218D3986004A5DBF /* LibraryViewController.swift in Sources */,
+				032A694821A110770089BCB2 /* CheckBox.swift in Sources */,
 				7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */,
 				732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */,
 				034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */,

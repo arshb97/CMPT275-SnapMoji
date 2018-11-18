@@ -91,7 +91,7 @@ class TestSettingViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is FilterViewController
+        if segue.destination is FiltersViewController
         {
             
         }

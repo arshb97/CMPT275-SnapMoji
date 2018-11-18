@@ -10,7 +10,8 @@
 //  2.2 - Quizzes generated with sample images
 //
 //  Known bugs:
-//  Gallery does not save image when an image is selected
+//
+//
 //  Created by zza92 on 2018-11-08.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //

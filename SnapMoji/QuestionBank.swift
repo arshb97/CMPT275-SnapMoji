@@ -20,6 +20,8 @@
 
 import Foundation
 
+var friendsFiltered = Array<String>()
+
 class QuestionBank {
     var list = [Question]()
     
@@ -42,7 +44,10 @@ class QuestionBank {
         
         //generating a random question
         for randomEmotion in randEmotionSet {
-            let fileName = friends.randomElement()! + randomEmotion + ".jpg"
+            if friendsFiltered.count == 0 {
+                friendsFiltered = friends
+            }
+            let fileName = friendsFiltered.randomElement()! + randomEmotion + ".jpg"
             print(fileName + " being loaded into question")
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
