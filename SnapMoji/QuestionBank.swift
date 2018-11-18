@@ -9,6 +9,7 @@
 //  2.0 - Easy difficulty finished; Sample test implemented
 //  2.1 - All difficulties implemented
 //  2.2 - Options are now unique when generated; answers are random
+//  2.3 - Added filters to choose certain friends on load
 //
 //  Known bugs:
 //
@@ -18,6 +19,8 @@
 //
 
 import Foundation
+
+var friendsFiltered = Array<String>()
 
 class QuestionBank {
     var list = [Question]()
@@ -41,7 +44,10 @@ class QuestionBank {
         
         //generating a random question
         for randomEmotion in randEmotionSet {
-            let fileName = friends.randomElement()! + randomEmotion + ".jpg"
+            if friendsFiltered.count == 0 {
+                friendsFiltered = friends
+            }
+            let fileName = friendsFiltered.randomElement()! + randomEmotion + ".jpg"
             print(fileName + " being loaded into question")
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)

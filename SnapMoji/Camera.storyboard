@@ -75,7 +75,7 @@
         <!--Preview View Controller-->
         <scene sceneID="PAf-PE-41q">
             <objects>
-                <viewController id="xe6-yV-cLw" customClass="PreviewViewController" customModule="SnapMoji" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="previewID" id="xe6-yV-cLw" customClass="PreviewViewController" customModule="SnapMoji" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WSJ-at-tOa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

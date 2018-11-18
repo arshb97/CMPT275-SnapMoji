@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrB-uo-j1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.60000000000002" y="1149.1754122938532"/>
+            <point key="canvasLocation" x="870" y="1101"/>
         </scene>
         <!--Friend Section View Controller-->
         <scene sceneID="qWb-oN-hYR">
@@ -659,16 +659,25 @@
                     </view>
                     <connections>
                         <segue destination="rsO-FF-lTN" kind="presentation" identifier="openCamera_Segue" id="9qa-gZ-kCf"/>
+                        <segue destination="rvV-JF-Drz" kind="presentation" identifier="previewGallery_segue" id="MRo-FK-ZJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOj-Ni-9uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2684" y="133.5832083958021"/>
         </scene>
+        <!--previewID-->
+        <scene sceneID="iah-ce-d4v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="previewID" id="rvV-JF-Drz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8X-L1-cuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3235" y="10"/>
+        </scene>
         <!--cameraID-->
         <scene sceneID="ci2-Y2-rlv">
             <objects>
-                <viewControllerPlaceholder storyboardName="camera" referencedIdentifier="cameraID" id="rsO-FF-lTN" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="cameraID" id="rsO-FF-lTN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJ7-Zj-T7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3383" y="114"/>
@@ -745,6 +754,9 @@
                                 <state key="normal" title="SELECT FRIENDS">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="filterFriends_tap:" destination="LAc-Nd-gRC" eventType="touchUpInside" id="ySX-bP-kqp"/>
+                                </connections>
                             </button>
                             <navigationBar alpha="0.69999998807907104" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JEo-O6-Dpv">
                                 <rect key="frame" x="0.0" y="22" width="375" height="44"/>
@@ -864,6 +876,7 @@
                         <outlet property="mediumMode" destination="sgX-Gp-EEO" id="efx-Xg-W6t"/>
                         <outlet property="searchDisplayController" destination="4R9-7I-4rg" id="nHy-AO-EyL"/>
                         <segue destination="9f1-Ce-LGf" kind="presentation" identifier="startTest_Segue" modalTransitionStyle="crossDissolve" id="4Kr-VW-A4c"/>
+                        <segue destination="iWr-hB-Ob0" kind="presentation" identifier="filterView_Segue" id="yMA-L5-mpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dv-dP-KHy" sceneMemberID="firstResponder"/>
@@ -877,6 +890,92 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1912.8" y="1100.5997001499252"/>
+        </scene>
+        <!--Filters View Controller-->
+        <scene sceneID="Qrh-i4-lnb">
+            <objects>
+                <viewController storyboardIdentifier="filter_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iWr-hB-Ob0" customClass="FiltersViewController" customModule="SnapMoji" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nes-eV-Zhz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HP7-mr-LAx">
+                                <rect key="frame" x="20" y="75" width="335" height="487"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xve-o8-jtZ">
+                                        <rect key="frame" x="56" y="449" width="48" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButton_tap:" destination="iWr-hB-Ob0" eventType="touchUpInside" id="gQF-oa-SfA"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-9F-tkG" userLabel="friendTableView">
+                                        <rect key="frame" x="8" y="8" width="319" height="423"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" id="fY0-vu-upP" userLabel="friendCell">
+                                                <rect key="frame" x="0.0" y="28" width="319" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fY0-vu-upP" id="os0-Rv-FyZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4X-Jx-Wao">
+                                                            <rect key="frame" x="280" y="7" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="30" id="Dnv-BL-66x"/>
+                                                                <constraint firstAttribute="height" constant="30" id="uUc-Ys-upv"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button" image="ButtonUnclicked"/>
+                                                            <state key="selected" image="ButtonClicked"/>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bz-Pf-CpI">
+                                                            <rect key="frame" x="10" y="0.0" width="42" height="43.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="0Bz-Pf-CpI" secondAttribute="bottom" id="7Vu-5F-5Bg"/>
+                                                        <constraint firstItem="0Bz-Pf-CpI" firstAttribute="top" secondItem="os0-Rv-FyZ" secondAttribute="top" id="DD0-Gz-cja"/>
+                                                        <constraint firstAttribute="trailing" secondItem="s4X-Jx-Wao" secondAttribute="trailing" constant="9" id="IQT-Nt-QqQ"/>
+                                                        <constraint firstItem="s4X-Jx-Wao" firstAttribute="centerY" secondItem="os0-Rv-FyZ" secondAttribute="centerY" id="Ml0-wh-ePB"/>
+                                                        <constraint firstItem="0Bz-Pf-CpI" firstAttribute="leading" secondItem="os0-Rv-FyZ" secondAttribute="leading" constant="10" id="YEA-1m-OEw"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ood-Ub-3OA">
+                                        <rect key="frame" x="240" y="449" width="34" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButton_tap:" destination="iWr-hB-Ob0" eventType="touchUpInside" id="Hb8-V2-Mn4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2412043214" green="0.47370857" blue="0.76473885770000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2hs-g5-nHD"/>
+                    </view>
+                    <connections>
+                        <outlet property="friendsTableView" destination="F9B-9F-tkG" id="zs1-QW-kgd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFH-lR-uBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912.8" y="1817.5412293853076"/>
         </scene>
         <!--Testing View Controller-->
         <scene sceneID="GUI-q9-rwy">
@@ -1105,10 +1204,12 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3084" y="1076.311844077961"/>
+            <point key="canvasLocation" x="2964" y="1101"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ButtonClicked" width="75" height="75"/>
+        <image name="ButtonUnclicked" width="75" height="75"/>
         <image name="John-Doe" width="498" height="480"/>
         <image name="add" width="449" height="285"/>
         <image name="angry_emoji" width="160" height="160"/>
@@ -1130,9 +1231,10 @@
         <image name="test-icon" width="31" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QoY-sn-dRK"/>
+        <segue reference="ZHV-0E-K1C"/>
+        <segue reference="Oux-ZH-ClW"/>
         <segue reference="oXE-x9-Zpw"/>
-        <segue reference="JyB-It-oLx"/>
-        <segue reference="2IL-Hp-fQV"/>
+        <segue reference="63o-yf-e3T"/>
+        <segue reference="aaK-GK-FrL"/>
     </inferredMetricsTieBreakers>
 </document>

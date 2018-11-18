@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		032A6936219D5A600089BCB2 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A6935219D5A600089BCB2 /* Questions.swift */; };
 		032A6938219D5C1E0089BCB2 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A6937219D5C1E0089BCB2 /* QuestionBank.swift */; };
-		032A693E219F3BB10089BCB2 /* sampleQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A693D219F3BB00089BCB2 /* sampleQuestion.swift */; };
+		032A694621A10E240089BCB2 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A694521A10E240089BCB2 /* FiltersViewController.swift */; };
+		032A694821A110770089BCB2 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032A694721A110770089BCB2 /* CheckBox.swift */; };
 		034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CDE21868196005CC0CB /* PreviewViewController.swift */; };
 		034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE221868322005CC0CB /* CameraViewController.swift */; };
 		034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */; };
@@ -28,7 +29,7 @@
 		7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E7218EC50D002EE0D1 /* PersonFace.m */; };
 		7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E9218EC50E002EE0D1 /* DetectFace.m */; };
 		AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */; };
-		BA3A06B0218917870034EDDE /* camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A06AF218917870034EDDE /* camera.storyboard */; };
+		BA3A06B0218917870034EDDE /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A06AF218917870034EDDE /* Camera.storyboard */; };
 		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
 		F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */; };
 		F44CF60B21950B0600B722B6 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF60A21950B0600B722B6 /* TestingViewController.swift */; };
@@ -55,9 +56,10 @@
 /* Begin PBXFileReference section */
 		032A6935219D5A600089BCB2 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		032A6937219D5C1E0089BCB2 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
-		032A693D219F3BB00089BCB2 /* sampleQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleQuestion.swift; sourceTree = "<group>"; };
+		032A694521A10E240089BCB2 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		032A694721A110770089BCB2 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		034D0CDE21868196005CC0CB /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
-		034D0CE221868322005CC0CB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = SnapMoji/CameraViewController.swift; sourceTree = "<group>"; };
+		034D0CE221868322005CC0CB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		03638D73218D3986004A5DBF /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSectionViewController.swift; sourceTree = "<group>"; };
 		B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA3A06AF218917870034EDDE /* camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = camera.storyboard; sourceTree = "<group>"; };
+		BA3A06AF218917870034EDDE /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BF2225CE33CB98F019DE517A /* Pods-SnapMoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.release.xcconfig"; sourceTree = "<group>"; };
 		C5D196F872C9F0108FEBE27F /* Pods-SnapMojiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiTests/Pods-SnapMojiTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032A694021A0FF4A0089BCB2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				73D60F352183BFB1001AAA21 /* ViewController.swift */,
+				03638D73218D3986004A5DBF /* LibraryViewController.swift */,
+				034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */,
+				034D0CE221868322005CC0CB /* CameraViewController.swift */,
+				034D0CDE21868196005CC0CB /* PreviewViewController.swift */,
+				F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */,
+				032A694521A10E240089BCB2 /* FiltersViewController.swift */,
+				F44CF60A21950B0600B722B6 /* TestingViewController.swift */,
+				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		25E1A898408376F596B9C25D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,20 +179,13 @@
 			isa = PBXGroup;
 			children = (
 				73D60F332183BFB1001AAA21 /* AppDelegate.swift */,
-				73D60F352183BFB1001AAA21 /* ViewController.swift */,
-				03638D73218D3986004A5DBF /* LibraryViewController.swift */,
-				034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */,
-				034D0CE221868322005CC0CB /* CameraViewController.swift */,
-				034D0CDE21868196005CC0CB /* PreviewViewController.swift */,
+				032A694021A0FF4A0089BCB2 /* Controllers */,
 				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
-				73D60F372183BFB1001AAA21 /* Main.storyboard */,
-				F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */,
-				F44CF60A21950B0600B722B6 /* TestingViewController.swift */,
-				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
-				BA3A06AF218917870034EDDE /* camera.storyboard */,
 				032A6937219D5C1E0089BCB2 /* QuestionBank.swift */,
 				032A6935219D5A600089BCB2 /* Questions.swift */,
-				032A693D219F3BB00089BCB2 /* sampleQuestion.swift */,
+				032A694721A110770089BCB2 /* CheckBox.swift */,
+				73D60F372183BFB1001AAA21 /* Main.storyboard */,
+				BA3A06AF218917870034EDDE /* Camera.storyboard */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
 				73D60F3F2183BFB2001AAA21 /* Info.plist */,
@@ -334,7 +345,7 @@
 				03C6A2512184EA2800F5FFB2 /* GoogleService-Info.plist in Resources */,
 				73D60F3B2183BFB2001AAA21 /* Assets.xcassets in Resources */,
 				73D60F392183BFB1001AAA21 /* Main.storyboard in Resources */,
-				BA3A06B0218917870034EDDE /* camera.storyboard in Resources */,
+				BA3A06B0218917870034EDDE /* Camera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,12 +462,13 @@
 				73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */,
 				BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */,
 				032A6938219D5C1E0089BCB2 /* QuestionBank.swift in Sources */,
-				032A693E219F3BB10089BCB2 /* sampleQuestion.swift in Sources */,
 				03638D74218D3986004A5DBF /* LibraryViewController.swift in Sources */,
+				032A694821A110770089BCB2 /* CheckBox.swift in Sources */,
 				7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */,
 				732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */,
 				034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */,
 				034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */,
+				032A694621A10E240089BCB2 /* FiltersViewController.swift in Sources */,
 				F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

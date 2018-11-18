@@ -51,32 +51,32 @@ class LibraryViewController: UIViewController{
     }
     
     @IBAction func SadMoji_tap(_ sender: Any) {
-        setEmotion = emotions[0]
-        performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
-    }
-    @IBAction func AngryMoji_tap(_ sender: Any) {
         setEmotion = emotions[1]
         performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
     }
-    @IBAction func SurpriseMoji_tap(_ sender: Any) {
+    @IBAction func AngryMoji_tap(_ sender: Any) {
         setEmotion = emotions[2]
         performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
     }
-    @IBAction func DisgustMoji_tap(_ sender: Any) {
+    @IBAction func SurpriseMoji_tap(_ sender: Any) {
         setEmotion = emotions[3]
+        performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
+    }
+    @IBAction func DisgustMoji_tap(_ sender: Any) {
+        setEmotion = emotions[4]
         performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
     }
     
     @IBAction func FearMoji_tap(_ sender: Any) {
-        setEmotion = emotions[4]
-        performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
-    }
-    @IBAction func ContemptMoji_tap(_ sender: Any) {
         setEmotion = emotions[5]
         performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
     }
-    @IBAction func NeutralMoji_tap(_ sender: Any) {
+    @IBAction func ContemptMoji_tap(_ sender: Any) {
         setEmotion = emotions[6]
+        performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
+    }
+    @IBAction func NeutralMoji_tap(_ sender: Any) {
+        setEmotion = emotions[7]
         performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
     }
     
