@@ -659,11 +659,20 @@
                     </view>
                     <connections>
                         <segue destination="rsO-FF-lTN" kind="presentation" identifier="openCamera_Segue" id="9qa-gZ-kCf"/>
+                        <segue destination="rvV-JF-Drz" kind="presentation" identifier="previewGallery_segue" id="MRo-FK-ZJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOj-Ni-9uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2684" y="133.5832083958021"/>
+        </scene>
+        <!--previewID-->
+        <scene sceneID="iah-ce-d4v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="camera" referencedIdentifier="previewID" id="rvV-JF-Drz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8X-L1-cuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3235" y="10"/>
         </scene>
         <!--cameraID-->
         <scene sceneID="ci2-Y2-rlv">
@@ -1130,9 +1139,9 @@
         <image name="test-icon" width="31" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QoY-sn-dRK"/>
+        <segue reference="na3-Vi-bvP"/>
         <segue reference="oXE-x9-Zpw"/>
-        <segue reference="JyB-It-oLx"/>
-        <segue reference="2IL-Hp-fQV"/>
+        <segue reference="63o-yf-e3T"/>
+        <segue reference="9PS-iu-eOx"/>
     </inferredMetricsTieBreakers>
 </document>

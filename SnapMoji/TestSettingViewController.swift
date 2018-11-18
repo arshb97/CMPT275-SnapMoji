@@ -10,33 +10,59 @@ import UIKit
 
 class TestSettingViewController: UIViewController {
     
-    //var difficulty = 0
-    
-    
+    //* difficulty code *//
+    //easy, medium, hard buttons to set difficulty
     @IBOutlet weak var easyMode: UIButton!
-    
     @IBOutlet weak var mediumMode: UIButton!
-    
     @IBOutlet weak var hardMode: UIButton!
     
-    
+    //function to set difficulty with easy, med, hard buttons
     @IBAction func setDifficulty(_ sender: UIButton) {
         difficulty = sender.tag
         print("Difficulty set to " , difficulty)
     }
     
+    //* filter code *//
+    //hidden popup view
+    private var filterView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        // hide filterView on load
+        filterView.isHidden = true
     }
-
-
+    
+    //Starts the test with the selected filters/difficulties
     @IBAction func startTest_tap(_ sender: UIButton) {
         performSegue(withIdentifier: "startTest_Segue", sender: nil)
     }
     
+    //load the view
+    private func loadFilterViewIntoController() {
+        let filterViewFrame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 200)
+        filterView = UIView(frame: filterViewFrame)
+        
+        view.addSubview(filterView)
+        
+        filterView.isHidden = false
+        
+        //all other objects should be tied to this view as superView
+        //ie this okayButton
+        
+        let okayButtonFrame = CGRect(x: 40, y: 100, width: 50, height: 50)
+        let okayButton = UIButton(frame: okayButtonFrame)
+        
+        //adding the button its superView
+        filterView.addSubview(okayButton)
+        okayButton.addTarget(self, action: #selector(self.didPressButtonFromFilterView), for: .touchUpInside)
+    }
+    
+   
+    @objc func didPressButtonFromFilterView(sender: UIButton) {
+        //do stuff
+        //make view disappear again, or remove from its superview
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

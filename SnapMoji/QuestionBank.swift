@@ -9,6 +9,7 @@
 //  2.0 - Easy difficulty finished; Sample test implemented
 //  2.1 - All difficulties implemented
 //  2.2 - Options are now unique when generated; answers are random
+//  2.3 - Added filters to choose certain friends on load
 //
 //  Known bugs:
 //
