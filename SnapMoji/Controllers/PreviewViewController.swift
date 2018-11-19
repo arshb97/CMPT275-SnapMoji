@@ -27,10 +27,11 @@ var detector: DetectFace = DetectFace()
 
 class PreviewViewController: UIViewController, UIApplicationDelegate{
 
-    //variables to store to firebase
+  //  variables to store to firebase
     var imageReference: StorageReference {
         return Storage.storage().reference().child("images")
     }
+
     
     //variables to prepare sending to the next view controller
     var emotion = "emotion"
@@ -52,7 +53,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         photo.image = self.image
         print("PreviewView "+fileName)
         
-         //var scannedEmotion = detector.detectAction(image)
+         var scannedEmotion = detector.detectAction(image)
     }
     
     //function to implement the save button
