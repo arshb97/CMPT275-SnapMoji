@@ -89,10 +89,13 @@ class TestingViewController: UIViewController {
             selectedAnswer = allQuestions.list[questionNumber].correctAnswer
         } else {
             let finishMessage = "You got \(score)/\(allQuestions.list.count)!"
+            
             let alert = UIAlertController(title: "Nice job!", message: finishMessage, preferredStyle: .alert)
+            
             let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
             alert.addAction(restartAction)
             present(alert, animated:true, completion: nil)
+            pickedAnswer = 0
         }
         updateUI()
     }

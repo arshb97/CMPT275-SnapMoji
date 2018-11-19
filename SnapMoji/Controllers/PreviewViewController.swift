@@ -36,6 +36,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     var emotion = "emotion"
     var fileName = ".jpg"
     var image: UIImage!
+    var fromGallery = false
     
     //reference for the photo
     @IBOutlet weak var photo: UIImageView!
@@ -85,12 +86,17 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         //saves image in directory
         emotionResult = detector.globalVariableGetter()
         print("Saving file as " + fileName)
-        //if emotionResult == emotion {
+        if emotionResult == emotion {
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
-            let newImage: UIImage = image// create your UIImage here
-            try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
-        //}
+            if fromGallery {
+                let newImage: UIImage = image.rotate(radians: 3 * .pi / 2)// create your UIImage here
+                try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
+            } else {
+                let newImage: UIImage = image// create your UIImage here
+                try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
+            }
+        }
         
         //transition back to the library
         performSegue(withIdentifier: "showMojiLibrary_Segue", sender: nil)

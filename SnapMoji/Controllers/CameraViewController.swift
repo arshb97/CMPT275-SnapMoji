@@ -128,6 +128,7 @@ class CameraViewController: UIViewController {
             previewVC.image = self.image
             previewVC.emotion = emotion
             previewVC.fileName = fileName
+            previewVC.fromGallery = false
         }
     }
 
