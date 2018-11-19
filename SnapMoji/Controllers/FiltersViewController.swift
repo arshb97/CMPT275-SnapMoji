@@ -5,10 +5,11 @@
 //  Worked on by: Josh Baltar
 //
 //  Changelog:
-//  
+//  1.0 - Initial commit of UI and segues
+//  2.0 - Added feature of filtering friends in the tests
 //
 //  Known bugs:
-//  There must be a photo for every emotion for the sample photos to be excluded
+//  Cancel button does not reset the changes made by the filter
 //
 //  Created by Josh Baltar on 2018-11-17.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
@@ -18,11 +19,11 @@ import UIKit
 
 class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
-    
+    //needed functions for using UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friends.count
     }
-    
+    //function for input of tableView cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "friendCell")
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath)
@@ -37,6 +38,8 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    // function for when the row is selected by the user
+    //checks and unchecks the boxes (also includes or excludes friends from test)
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             if selectedDataArray.contains(self.dataArray.object(at: indexPath.row) as! String)
@@ -65,6 +68,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     
+    //variables needed
     @IBOutlet weak var friendsTableView: UITableView!
     var dataArray: NSMutableArray = NSMutableArray()
     var selectedDataArray: NSMutableArray = NSMutableArray()
@@ -80,7 +84,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         removeAnimate()
     }
     
-    
+    //load the table when view opened
     override func viewDidLoad() {
         super.viewDidLoad()
         showAnimate()
@@ -92,10 +96,12 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         //displayFriendsSelection()
     }
     
+    //to delete a friend from the array when excluded in the filter
     func delete(element: String) {
         friendsFiltered = friendsFiltered.filter() { $0 != element }
     }
     
+    //opening the view
     func showAnimate()
     {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -105,7 +111,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
-    
+    //closing the view
     func removeAnimate()
     {
         UIView.animate(withDuration: 0.25, animations: {
@@ -120,19 +126,4 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         })
     }
-    
-    /*
-    func displayFriendsSelection() {
-        print("Displaying friends to filter")
-        let index = friends.count
-        for i in 0..<index {
-            let checkbox = CheckBox(frame: CGRect(x: 0, y: i * 40, width: 40, height: 40))
-            checkbox.tag = 1
-            self.view.addSubview(checkbox)
-            print("Looping: Display ", friends[i])
-        }
-    }
-    */
-
-
 }

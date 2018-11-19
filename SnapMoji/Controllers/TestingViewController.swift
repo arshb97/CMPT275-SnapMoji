@@ -8,9 +8,12 @@
 //  2.0 - Initial commit layout and segues finished
 //  2.1 - Generates working quiz template
 //  2.2 - Quizzes generated with sample images
+//  2.3 - Quizzes generated with friends/sample images
+//  2.4 - Quizzes can now have difficulties: easy, medium, hard
+//  2.5 - Quizzes can now be filtered with separate array of friends
 //
 //  Known bugs:
-//
+//  When quiz is finished, the question counter is incremented to 6/5 instead of just 5/5 
 //
 //  Created by zza92 on 2018-11-08.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
@@ -23,7 +26,7 @@ var difficulty = 0
 
 class TestingViewController: UIViewController {
 
-
+    // Initialize variables
     var pickedAnswer = 0
     
     @IBOutlet weak var questionCounter: UILabel!
@@ -63,6 +66,7 @@ class TestingViewController: UIViewController {
         
     }
     
+    //function: when next is pressed, move onto next question
     @IBAction func submitAnswer(_ sender: UIButton) {
         if pickedAnswer == selectedAnswer {
             print("correct")
@@ -78,6 +82,7 @@ class TestingViewController: UIViewController {
     }
     
     
+    //changing the question when the next question is needed
     func updateQuestion(){
         if questionNumber < allQuestions.list.count  {
             questionImageView.image = (allQuestions.list[questionNumber].questionImage)
@@ -95,31 +100,23 @@ class TestingViewController: UIViewController {
             let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
             alert.addAction(restartAction)
             present(alert, animated:true, completion: nil)
-            pickedAnswer = 0
+            pickedAnswer = 0 //reset choice when restarting quiz (maybe move to restart quiz func)
         }
         updateUI()
     }
     
+    //update the values for when the next question is needed
     func updateUI(){
         scoreLabel.text = "Score: \(score)"
         questionCounter.text = "\(questionNumber + 1)/\(allQuestions.list.count)"
         progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
     }
     
+    //start the quiz again when finished
     func restartQuiz(){
         score = 0
         questionNumber = 0
         updateQuestion()
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

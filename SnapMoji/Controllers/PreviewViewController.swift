@@ -13,7 +13,7 @@
 //  2.1 - Emotion is displayed on the screen when submitted
 //
 //  Known bugs:
-//  There are no known bugs related to the PreviewViewController.swift
+//  Preview crops the image to accomodate screen size when sent from the gallery
 //
 //  Created by Josh Baltar on 2018-10-28.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
@@ -53,7 +53,9 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         photo.image = self.image
         print("PreviewView "+fileName)
         
-         var scannedEmotion = detector.detectAction(image)
+
+        var scannedEmotion = detector.detectAction(image)
+
     }
     
     //function to implement the save button
