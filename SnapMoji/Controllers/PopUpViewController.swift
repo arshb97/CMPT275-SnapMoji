@@ -91,6 +91,7 @@ class PopUpViewController: UIViewController, UINavigationControllerDelegate, UII
             previewVC?.image = selectedImage
             previewVC?.emotion = emotion
             previewVC?.fileName = fileName
+            previewVC?.fromGallery = true
         }
     }
     
