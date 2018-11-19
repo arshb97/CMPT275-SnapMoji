@@ -1,5 +1,14 @@
 #import <UIKit/UIKit.h>
 
+//
+//  Worked on by: Evan Lam
+//
+//  Changelog:
+//  1.0 - Initial commit
+//
+//  Known bugs:
+//  No known bugs
+
 /**
  * A hightly customizable Radio Button for iOS.
  */

@@ -2,6 +2,16 @@
 //  CheckBox.swift
 //  SnapMoji
 //
+//
+//  Worked on by: Josh Baltar
+//
+//  Changelog:
+//  1.0 - Initial commit of variables and images
+//  2.0 - This class is now depricated and will be removed in a future version
+//
+//  Known bugs:
+//  No known bugs for this class
+//
 //  Created by Josh Baltar on 2018-11-17.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //

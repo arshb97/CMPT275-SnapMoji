@@ -1,5 +1,13 @@
 #import "DLRadioButton.h"
 
+//  Worked on by: Evan Lam
+//
+//  Changelog:
+//  1.0 - Initial commit
+//
+//  Known bugs:
+//  No known bugs
+
 static const CGFloat kDefaultIconSize = 15.0;
 static const CGFloat kDefaultMarginWidth = 5.0;
 static const CFTimeInterval kDefaultAnimationDuration = 0.3;

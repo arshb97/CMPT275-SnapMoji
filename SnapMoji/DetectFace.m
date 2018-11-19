@@ -12,6 +12,13 @@
 #import "PersonFace.h"
 //#import "ImageHelper.h"
 
+//  Worked on by: Arshdeep Bhullar
+//
+//  Changelog:
+//  1.0 - Initial commit
+//
+//  Known bugs:
+//  No known bugs
 
 @implementation DetectFace : NSObject
 

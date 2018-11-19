@@ -12,7 +12,7 @@
 //  2.3 - Added filters to choose certain friends on load
 //
 //  Known bugs:
-//
+//  No known bugs for this class
 //
 //  Created by Josh Baltar on 2018-11-14.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.

@@ -8,9 +8,12 @@
 //  2.0 - Initial commit layout and segues finished
 //  2.1 - Generates working quiz template
 //  2.2 - Quizzes generated with sample images
+//  2.3 - Quizzes generated with friends/sample images
+//  2.4 - Quizzes can now have difficulties: easy, medium, hard
+//  2.5 - Quizzes can now be filtered with separate array of friends
 //
 //  Known bugs:
-//
+//  When quiz is finished, the question counter is incremented to 6/5 instead of just 5/5 
 //
 //  Created by zza92 on 2018-11-08.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
