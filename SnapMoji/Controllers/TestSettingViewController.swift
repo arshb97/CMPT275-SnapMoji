@@ -2,6 +2,17 @@
 //  TestSettingViewController.swift
 //  SnapMoji
 //
+//  Worked on by: Josh Baltar
+//
+//  Changelog:
+//  1.0 - Initial commit layout and segues finished
+//  2.0 - Difficulty buttons replaced with DLRadio buttons
+//  2.1 - Difficulty setting implemented
+//  2.2 - Filter setting implemented
+//
+//  Known bugs:
+//  No known bugs for this controller
+//
 //  Created by zza92 on 2018-11-08.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //

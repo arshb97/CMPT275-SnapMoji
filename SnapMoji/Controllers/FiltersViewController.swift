@@ -5,10 +5,11 @@
 //  Worked on by: Josh Baltar
 //
 //  Changelog:
-//  
+//  1.0 - Initial commit of UI and segues
+//  2.0 - Added feature of filtering friends in the tests
 //
 //  Known bugs:
-//  There must be a photo for every emotion for the sample photos to be excluded
+//  Cancel button does not reset the changes made by the filter
 //
 //  Created by Josh Baltar on 2018-11-17.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
