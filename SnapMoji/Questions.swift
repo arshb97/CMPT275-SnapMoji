@@ -18,6 +18,7 @@
 
 import Foundation
 
+
 class Question {
     var difficulty: Int
     let questionImage: UIImage

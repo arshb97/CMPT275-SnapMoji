@@ -168,6 +168,7 @@ class QuestionBank {
     }
 }
 
+//needed to cut image in half 
 extension UIImage {
     var topHalf: UIImage? {
         guard let cgImage = cgImage, let image = cgImage.cropping(to: CGRect(origin: .zero, size: CGSize(width: size.width, height: size.height/2))) else { return nil }
