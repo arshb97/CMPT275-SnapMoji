@@ -1,12 +1,13 @@
 //
 //  LibraryViewController.swift
-//  SnapMoji
+//  SnapMoji - Team 10 
 //
 //  Description of LibraryViewController:
-//  This file has not been implemented yet, but is for the display of the friends in the
-//  friend section
+//  Receives the friend name from FriendSectionViewController and emotion to the other
+//  controllers so proper images are loaded.  Loads images from firebase/assets.
 //
-//  Worked on by:   sh Baltar, Merna Zaki
+//
+//  Worked on by:   Josh Baltar, Merna Zaki
 //
 //  Changelog:
 //  1.0 - Initial commit layout and segues finished
@@ -24,6 +25,7 @@
 import UIKit
 import FirebaseDatabase
 
+//globally change name so other controllers can access it
 var Name = ""
 
 class LibraryViewController: UIViewController{
@@ -95,15 +97,7 @@ class LibraryViewController: UIViewController{
     //Microsoft Emotion API
     let emotions = ["happiness", "sadness", "anger", "surprise", "disgust", "fear", "contempt", "neutral"]
     
-    //to let other classes access members of this class
-    /*
-    func goToImageChooserClass() {
-        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVController = mainStoryBoard.instantiateViewController(withIdentifier: "PopUp_ViewController") as! PopUp_ViewController
-        secondVController.libVController = self
-        self.present(secondVController, animated: true, completion: nil)
-    }
-    */
+    //gets the name of the selected friend in the library
     func getName() {
         let ref = Database.database().reference()
         ref.child("currentFriend/name").observeSingleEvent(of: .value) { (snapshot) in
@@ -116,10 +110,12 @@ class LibraryViewController: UIViewController{
 
     }
     
+    // searches for and loads images if they exist, else use default
     func getImages() {
         for emotion in emotions {
             let fileName = Name + emotion + ".jpg"
             print(fileName)
+            
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             
@@ -187,13 +183,12 @@ class LibraryViewController: UIViewController{
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
+        
+        //may be needed for collectionView
         // collectionView.dataSource = self
         //  collectionView.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
         
-        //Change the label to the name of the friend (name retrieved from firebase)
-        getName()
-        //getImages()
+        getName() //Change the label to the name of the friend (name retrieved from firebase)
         print("LOADED LIBRARY")
         //get image
 

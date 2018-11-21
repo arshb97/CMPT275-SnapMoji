@@ -1,6 +1,6 @@
 //
 //  PreviewViewController.swift
-//  SnapMoji
+//  SnapMoji - Team 10 
 //
 //
 //  Worked on by: Josh Baltar, Arshdeep Bhullar, Merna Zaki
@@ -54,7 +54,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         print("PreviewView "+fileName)
         
 
-        var scannedEmotion = detector.detectAction(image)
+        var _ = detector.detectAction(image)
 
     }
     
@@ -64,7 +64,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         guard let imageToSave = image else { return }
         
         //uncomment this to upload to firebase
-        /*
+        
         //turn the image into data
         guard let imageData = UIImageJPEGRepresentation(image, 1) else { return }
         
@@ -82,7 +82,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         }
         
         uploadTask.resume()
-        */
+        
         
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
         

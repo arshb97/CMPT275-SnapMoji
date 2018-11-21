@@ -1,7 +1,10 @@
 //
 //  PopUpViewController.swift
+//  SnapMoji - Team 10 
 //
-//
+//  Description of PopUpViewController:
+//  Receives the friend name and emotion clicked from LibraryViewController.
+//  User has the option to either send an image to the app via gallery or camera
 //
 //  Worked on by: Josh Baltar, Jiung Choi, Arshdeep Bhullar
 //

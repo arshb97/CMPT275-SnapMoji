@@ -1,6 +1,6 @@
 //
 //  FriendSectionViewController.swift
-//  SnapMoji
+//  SnapMoji - Team 10 
 //
 //  Created by Mirna Zaki on 2018-11-08.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.

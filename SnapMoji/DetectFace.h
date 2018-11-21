@@ -18,6 +18,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+//  SnapMoji - Team 10 
 
 NS_ASSUME_NONNULL_BEGIN
 

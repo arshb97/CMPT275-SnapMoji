@@ -1,7 +1,10 @@
 //
 //  ViewController.swift
-//  SnapMoji
+//  SnapMoji - Team 10 
 //  Worked on by: Josh Baltar, Jiung Choi, Merna Zaki
+//
+//  Description of ViewController.swift:
+//  Main pages controlled by segues leading to the main pages. 
 //
 //  Changelog:
 //  1.0 - This is the initial commit of our view controller
@@ -18,7 +21,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
