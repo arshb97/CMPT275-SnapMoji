@@ -31,3 +31,11 @@ The identifiers are descriptive enough to minimize the need for comments; howeve
 * segues: segues will be identified with the same letter-case seperation suffixed with _Segue
   * source code will have a header to list the programmers that worked on it, a changelog, and a list of known bugs 
 Indents in the code are 4 spaces. 
+
+## How to run Snapmoji
+An iPhone 7 or iPhone 8 will be needed to use Snapmoji with the camera. After cloning the repo follow these steps to run Snapmoji: 
+
+1. Configure the bundle identifier (can be anything) and developer team (your team) 
+2. Make sure you are connected to WiFi on the device and verify the developer app from the phone's general settings
+3. The app should be ready to use, so click run. 
+4. If the Microsoft Emotions API is not working when a picture is taken, a new API key can be acquired from the microsoft website: https://azure.microsoft.com/en-us/services/cognitive-services/emotion/
