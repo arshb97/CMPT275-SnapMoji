@@ -10,9 +10,17 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
     
+    var Emotion = ""
+    
     
     @IBOutlet weak var HappinessButton: UIButton!
-    
+    @IBOutlet weak var NeutralButton: UIButton!
+    @IBOutlet weak var ContemptButton: UIButton!
+    @IBOutlet weak var FearButton: UIButton!
+    @IBOutlet weak var DisgustButton: UIButton!
+    @IBOutlet weak var SurpriseButton: UIButton!
+    @IBOutlet weak var AngryButton: UIButton!
+    @IBOutlet weak var SadnessButton: UIButton!
     
     //prepare emotion variable to send to the next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -20,11 +28,41 @@ class DescriptionViewController: UIViewController {
         if segue.destination is EmotionDescriptionViewController
         {
             let vc = segue.destination as? EmotionDescriptionViewController
-            vc?.EmotionLabel = "Happiness"
+            vc?.EmotionLabel = self.Emotion
         }
     }
     
+    //One of the 8 emotions (buttons) are pressed
+    @IBAction func NeutralPressed(_ sender: Any) {
+        self.Emotion = "Neutral"
+        performSegue(withIdentifier: "DescriptionSeg", sender: nil)
+    }
+    @IBAction func ContemptPressed(_ sender: Any) {
+        self.Emotion = "Contempt"
+        performSegue(withIdentifier: "DescriptionSeg", sender: nil)
+    }
+    @IBAction func FearPressed(_ sender: Any) {
+        self.Emotion = "Fear"
+        performSegue(withIdentifier: "DescriptionSeg", sender: nil)
+    }
+    @IBAction func DisgustPressed(_ sender: Any) {
+        self.Emotion = "Disgust"
+        performSegue(withIdentifier: "DescriptionSeg", sender: nil)
+    }
+    @IBAction func SurprisedPressed(_ sender: Any) {
+        self.Emotion = "Surprised"
+        performSegue(withIdentifier: "DescriptionSeg", sender: nil)
+    }
+    @IBAction func AngryPressed(_ sender: Any) {
+        self.Emotion = "Angry"
+        performSegue(withIdentifier: "DescriptionSeg", sender: nil)
+    }
+    @IBAction func SadnessPressed(_ sender: Any) {
+        self.Emotion = "Sadness"
+        performSegue(withIdentifier: "DescriptionSeg", sender: nil)
+    }
     @IBAction func HappinessPressed(_ sender: Any) {
+        self.Emotion = "Happiness"
         performSegue(withIdentifier: "DescriptionSeg", sender: nil)
     }
     
