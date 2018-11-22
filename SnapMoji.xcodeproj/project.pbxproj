@@ -33,6 +33,7 @@
 		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
 		F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */; };
 		F44CF60B21950B0600B722B6 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF60A21950B0600B722B6 /* TestingViewController.swift */; };
+		F4ACC21421A7473200EC3DAF /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC21321A7473200EC3DAF /* DescriptionViewController.swift */; };
 		FE65EEA9756AB3BE5B52FC3D /* Pods_SnapMojiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		F322DF366EC37112FFFC322E /* Pods_SnapMoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingViewController.swift; sourceTree = "<group>"; };
 		F44CF60A21950B0600B722B6 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
+		F4ACC21321A7473200EC3DAF /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		FA4BA06EFA0822E50315B809 /* Pods-SnapMojiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiUITests/Pods-SnapMojiUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 				032A6935219D5A600089BCB2 /* Questions.swift */,
 				032A694721A110770089BCB2 /* CheckBox.swift */,
 				73D60F372183BFB1001AAA21 /* Main.storyboard */,
+				F4ACC21321A7473200EC3DAF /* DescriptionViewController.swift */,
 				BA3A06AF218917870034EDDE /* Camera.storyboard */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
@@ -468,6 +471,7 @@
 				732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */,
 				034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */,
 				034D0CE321868322005CC0CB /* CameraViewController.swift in Sources */,
+				F4ACC21421A7473200EC3DAF /* DescriptionViewController.swift in Sources */,
 				032A694621A10E240089BCB2 /* FiltersViewController.swift in Sources */,
 				F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */,
 			);
