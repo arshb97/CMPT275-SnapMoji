@@ -50,7 +50,7 @@ class DescriptionViewController: UIViewController {
         performSegue(withIdentifier: "DescriptionSeg", sender: nil)
     }
     @IBAction func SurprisedPressed(_ sender: Any) {
-        self.Emotion = "Surprised"
+        self.Emotion = "Surprise"
         performSegue(withIdentifier: "DescriptionSeg", sender: nil)
     }
     @IBAction func AngryPressed(_ sender: Any) {

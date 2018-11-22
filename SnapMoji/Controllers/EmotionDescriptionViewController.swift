@@ -20,6 +20,8 @@ class EmotionDescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("EMOTION: "+EmotionLabel)
+        
         //set the label of the page to the emotion
         Label.text = EmotionLabel
         

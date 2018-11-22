@@ -1351,7 +1351,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="EfJ-Z6-fGx"/>
                                     <action selector="SadnessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="b6D-k3-8jw"/>
                                 </connections>
                             </button>
@@ -1383,7 +1382,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="V8C-7O-IYD"/>
                                     <action selector="SurprisedPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="rpQ-BD-saf"/>
                                 </connections>
                             </button>
@@ -1458,7 +1456,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="woG-4a-giV"/>
                                     <action selector="NeutralPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="ThB-gK-1Hu"/>
                                 </connections>
                             </button>
@@ -1935,11 +1932,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BAh-lh-hr2"/>
-        <segue reference="ral-ou-vRU"/>
-        <segue reference="Mt1-DI-Kb4"/>
-        <segue reference="S32-iO-u3Z"/>
+        <segue reference="lGY-WR-2kZ"/>
+        <segue reference="IhN-sp-Mka"/>
+        <segue reference="QQY-oq-lOX"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="VMh-T3-DHA"/>
-        <segue reference="vvF-7Q-bMa"/>
+        <segue reference="IdQ-e8-fcd"/>
+        <segue reference="B3C-Tm-rNk"/>
     </inferredMetricsTieBreakers>
 </document>
