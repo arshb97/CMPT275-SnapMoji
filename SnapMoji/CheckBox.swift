@@ -1,6 +1,6 @@
 //
 //  CheckBox.swift
-//  SnapMoji
+//  SnapMoji - Team 10 
 //
 //
 //  Worked on by: Josh Baltar

@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+//  SnapMoji - Team 10
 //
 //  Worked on by: Evan Lam
 //

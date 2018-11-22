@@ -1,6 +1,6 @@
 //
 //  CollectionViewCell.swift
-//  SnapMoji
+//  SnapMoji - Team 10 
 //
 //  Description of CollectionViewCell:
 //  Contains a button and a label for each friend that is created in the friend seciton

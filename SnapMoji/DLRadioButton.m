@@ -1,5 +1,4 @@
-#import "DLRadioButton.h"
-
+//  SnapMoji - Team 10
 //  Worked on by: Evan Lam
 //
 //  Changelog:
@@ -7,6 +6,8 @@
 //
 //  Known bugs:
 //  No known bugs
+
+#import "DLRadioButton.h"
 
 static const CGFloat kDefaultIconSize = 15.0;
 static const CGFloat kDefaultMarginWidth = 5.0;

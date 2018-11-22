@@ -1,6 +1,15 @@
 //
+//  SnapMoji - Team 10
 //  DetectFace.m
 //  SnapMoji
+//
+//  Worked on by: Arshdeep Bhullar
+//
+//  Changelog:
+//  1.0 - Initial commit
+//
+//  Known bugs:
+//  No known bugs
 //
 //  Created by Arshdeep Singh Bhullar on 2018-11-01.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
@@ -12,17 +21,12 @@
 #import "PersonFace.h"
 //#import "ImageHelper.h"
 
-//  Worked on by: Arshdeep Bhullar
-//
-//  Changelog:
-//  1.0 - Initial commit
-//
-//  Known bugs:
-//  No known bugs
+
 
 @implementation DetectFace : NSObject
 
 extern NSString *mYGlobalVariable = @"";                  //global variable
+
 
     UIImage * _selectedImage;
     NSMutableArray * _detectionFaces;

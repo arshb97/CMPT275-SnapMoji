@@ -1,9 +1,11 @@
 //
 //  CameraViewController.swift
-//  SnapMoji
-//
+//  SnapMoji - Team 10 
 //
 //  Worked on by: Josh Baltar
+//
+//  Description of CameraViewControlelr:
+//  Sets up camera to display what the camera can seeSends photo to the PreviewViewController
 //
 //  Changelog:
 //  1.0 - Initial commit layout and segues finished
@@ -109,17 +111,6 @@ class CameraViewController: UIViewController {
         self.photoOutput?.capturePhoto(with: settings, delegate: self)
         //needed to add 'as! AVCapturePhotoCaptureDelegate' to fix error in above line
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     //prepare what will be sent to the next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
