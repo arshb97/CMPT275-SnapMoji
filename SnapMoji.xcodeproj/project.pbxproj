@@ -29,6 +29,7 @@
 		7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E7218EC50D002EE0D1 /* PersonFace.m */; };
 		7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C93E9218EC50E002EE0D1 /* DetectFace.m */; };
 		AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */; };
+		AA95396D21A75A11006B83C4 /* EmotionDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA95396C21A75A11006B83C4 /* EmotionDescriptionViewController.swift */; };
 		BA3A06B0218917870034EDDE /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A06AF218917870034EDDE /* Camera.storyboard */; };
 		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
 		F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */; };
@@ -89,6 +90,7 @@
 		7D1C93E9218EC50E002EE0D1 /* DetectFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectFace.m; sourceTree = "<group>"; };
 		A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSectionViewController.swift; sourceTree = "<group>"; };
+		AA95396C21A75A11006B83C4 /* EmotionDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDescriptionViewController.swift; sourceTree = "<group>"; };
 		B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A06AF218917870034EDDE /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -138,9 +140,11 @@
 				034D0CE221868322005CC0CB /* CameraViewController.swift */,
 				034D0CDE21868196005CC0CB /* PreviewViewController.swift */,
 				F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */,
+				F4ACC21321A7473200EC3DAF /* DescriptionViewController.swift */,
 				032A694521A10E240089BCB2 /* FiltersViewController.swift */,
 				F44CF60A21950B0600B722B6 /* TestingViewController.swift */,
 				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
+				AA95396C21A75A11006B83C4 /* EmotionDescriptionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,7 +191,6 @@
 				032A6935219D5A600089BCB2 /* Questions.swift */,
 				032A694721A110770089BCB2 /* CheckBox.swift */,
 				73D60F372183BFB1001AAA21 /* Main.storyboard */,
-				F4ACC21321A7473200EC3DAF /* DescriptionViewController.swift */,
 				BA3A06AF218917870034EDDE /* Camera.storyboard */,
 				73D60F3A2183BFB2001AAA21 /* Assets.xcassets */,
 				73D60F3C2183BFB2001AAA21 /* LaunchScreen.storyboard */,
@@ -458,6 +461,7 @@
 			files = (
 				73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */,
 				7D1C93EB218EC50E002EE0D1 /* DetectFace.m in Sources */,
+				AA95396D21A75A11006B83C4 /* EmotionDescriptionViewController.swift in Sources */,
 				AA6466102194C6E4007A93E1 /* FriendSectionViewController.swift in Sources */,
 				032A6936219D5A600089BCB2 /* Questions.swift in Sources */,
 				F44CF60B21950B0600B722B6 /* TestingViewController.swift in Sources */,
