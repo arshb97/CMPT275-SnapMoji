@@ -1347,11 +1347,109 @@
                                     <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="430-M3-Oux"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUU-43-tUK">
+                                <rect key="frame" x="15" y="145" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2305413261" green="0.62773848369999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Sadness">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="EfJ-Z6-fGx"/>
+                                    <action selector="SadnessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="b6D-k3-8jw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMq-V4-sid">
+                                <rect key="frame" x="15" y="211" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2305413261" green="0.62773848369999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Angry">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="AngryPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="Ue1-UU-adl"/>
+                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="rxc-ZJ-yPi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI0-Bh-fBV">
+                                <rect key="frame" x="15" y="277" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2305413261" green="0.62773848369999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Surprise">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="V8C-7O-IYD"/>
+                                    <action selector="SurprisedPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="rpQ-BD-saf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fZ-f1-grU">
+                                <rect key="frame" x="15" y="343" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2305413261" green="0.62773848369999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Disgust">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="DisgustPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="2Mr-do-4UC"/>
+                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="Til-3a-DeT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrW-YA-gbj">
+                                <rect key="frame" x="15" y="409" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2305413261" green="0.62773848369999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Fear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="FearPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="3De-cE-Pgn"/>
+                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="6Pf-df-a4B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgw-QD-zBv">
+                                <rect key="frame" x="15" y="475" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2305413261" green="0.62773848369999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Contempt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ContemptPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="iKx-Ae-Mfq"/>
+                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="cTH-H3-hFI"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rU-53-CRS" userLabel="information">
                                 <rect key="frame" x="299" y="618" width="75" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="EZr-Hp-mCQ" kind="presentation" modalTransitionStyle="crossDissolve" id="vvF-7Q-bMa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tx-YN-MSF">
+                                <rect key="frame" x="16" y="541" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2305413261" green="0.62773848369999996" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Neutral">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="HappinessPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="woG-4a-giV"/>
+                                    <action selector="NeutralPressed:" destination="nCm-2J-twT" eventType="touchUpInside" id="ThB-gK-1Hu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1363,7 +1461,14 @@
                         <viewLayoutGuide key="safeArea" id="9KQ-7V-UfL"/>
                     </view>
                     <connections>
+                        <outlet property="AngryButton" destination="TMq-V4-sid" id="PGo-0M-bN6"/>
+                        <outlet property="ContemptButton" destination="hgw-QD-zBv" id="QP9-Ny-Is2"/>
+                        <outlet property="DisgustButton" destination="6fZ-f1-grU" id="yYn-cH-Sy5"/>
+                        <outlet property="FearButton" destination="ZrW-YA-gbj" id="CGG-oY-8Zj"/>
                         <outlet property="HappinessButton" destination="N6W-bx-VRh" id="7zZ-u8-G24"/>
+                        <outlet property="NeutralButton" destination="3tx-YN-MSF" id="vav-wC-EaW"/>
+                        <outlet property="SadnessButton" destination="GUU-43-tUK" id="CRL-qY-YBA"/>
+                        <outlet property="SurpriseButton" destination="nI0-Bh-fBV" id="erd-6T-1sT"/>
                         <outlet property="searchDisplayController" destination="4R9-7I-4rg" id="zTe-GY-Muy"/>
                         <segue destination="CeL-Gc-2E0" kind="presentation" identifier="DescriptionSeg" id="YlK-PS-U7N"/>
                     </connections>
@@ -1505,7 +1610,7 @@
         <image name="test-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mt1-DI-Kb4"/>
+        <segue reference="ZvP-IR-TGS"/>
         <segue reference="S32-iO-u3Z"/>
         <segue reference="soC-be-xo6"/>
         <segue reference="VMh-T3-DHA"/>
