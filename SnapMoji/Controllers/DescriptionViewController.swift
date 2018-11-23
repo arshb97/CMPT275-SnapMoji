@@ -1,6 +1,14 @@
 //
 //  DescriptionViewController.swift
 //  SnapMoji
+//  Worked on by: Merna Zaki
+//
+//  Changelog:
+//  1.0 - Initial commit of UI and segues
+//  2.0 - All buttons give proper descriptions/causes
+//
+//  Known bugs:
+//
 //
 //  Created by zza92 on 11/22/18.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.

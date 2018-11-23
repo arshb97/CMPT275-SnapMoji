@@ -1012,7 +1012,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="377" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items/>
-                                <color key="barTintColor" red="0.3006075621" green="0.59006965160000002" blue="0.95690423250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.070588235289999995" green="0.47843137250000001" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.070588235289999995" green="0.47843137250000001" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tabBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KZ-eB-bGo">
                                 <rect key="frame" x="0.0" y="22" width="377" height="44"/>
@@ -1091,7 +1092,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.070588235294117646" green="0.47843137254901963" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Lwn-ff-KaO" firstAttribute="centerX" secondItem="m6B-ZV-Z3V" secondAttribute="centerX" id="0cD-cT-IgA"/>
                                             <constraint firstAttribute="height" constant="300" id="Rre-kU-WBX"/>
@@ -1104,7 +1105,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91123362815924702" green="0.91123362815924702" blue="0.91123362815924702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="A."/>
+                                <state key="normal" title="A.">
+                                    <color key="titleColor" red="0.070588235289999995" green="0.47843137250000001" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="ZBl-ZO-N5H"/>
                                 </connections>
@@ -1114,7 +1117,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91123362819999998" green="0.91123362819999998" blue="0.91123362819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="B."/>
+                                <state key="normal" title="B.">
+                                    <color key="titleColor" red="0.070588235289999995" green="0.47843137250000001" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="4yI-Hx-bXe"/>
                                 </connections>
@@ -1124,7 +1129,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91123362819999998" green="0.91123362819999998" blue="0.91123362819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="C."/>
+                                <state key="normal" title="C.">
+                                    <color key="titleColor" red="0.070588235289999995" green="0.47843137250000001" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="Cxs-b1-teW"/>
                                 </connections>
@@ -1134,7 +1141,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91123362819999998" green="0.91123362819999998" blue="0.91123362819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="D."/>
+                                <state key="normal" title="D.">
+                                    <color key="titleColor" red="0.070588235289999995" green="0.47843137250000001" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="2xl-2S-doy"/>
                                 </connections>
@@ -1144,12 +1153,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91123362819999998" green="0.91123362819999998" blue="0.91123362819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.070588235289999995" green="0.47843137250000001" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="submitAnswer:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="hzX-Nd-c5D"/>
                                 </connections>
                             </button>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUj-Rx-d4l">
+                            <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUj-Rx-d4l">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1189,13 +1200,6 @@
                                     <segue destination="nCm-2J-twT" kind="presentation" modalTransitionStyle="crossDissolve" id="Mt1-DI-Kb4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aw4-p6-WeY" userLabel="information">
-                                <rect key="frame" x="300" y="618" width="75" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="EZr-Hp-mCQ" kind="presentation" modalTransitionStyle="crossDissolve" id="Rbu-dB-wCn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuu-7h-2jM" userLabel="friends">
                                 <rect key="frame" x="0.0" y="618" width="75" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1210,8 +1214,15 @@
                                     <segue destination="Vll-YC-1Fo" kind="presentation" modalTransitionStyle="crossDissolve" id="McK-So-z3i"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aw4-p6-WeY" userLabel="information">
+                                <rect key="frame" x="300" y="617" width="75" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="EZr-Hp-mCQ" kind="presentation" modalTransitionStyle="crossDissolve" id="Rbu-dB-wCn"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="giW-vj-n97"/>
                     </view>
                     <connections>
@@ -1303,19 +1314,12 @@
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tabBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1E-dY-nc4" userLabel="tests">
-                                <rect key="frame" x="74" y="618" width="75" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="LAc-Nd-gRC" kind="presentation" modalTransitionStyle="crossDissolve" id="S32-iO-u3Z"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egS-2h-QSe" userLabel="description">
                                 <rect key="frame" x="224" y="618" width="75" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoT-yB-jDl" userLabel="friends">
-                                <rect key="frame" x="-1" y="618" width="75" height="50"/>
+                                <rect key="frame" x="-1" y="590" width="75" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="h6t-Jd-oMD" kind="presentation" modalTransitionStyle="crossDissolve" id="VMh-T3-DHA"/>
@@ -1479,6 +1483,13 @@
                                 <rect key="frame" x="304" y="560" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1E-dY-nc4" userLabel="tests">
+                                <rect key="frame" x="-1" y="618" width="75" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="LAc-Nd-gRC" kind="presentation" modalTransitionStyle="crossDissolve" id="S32-iO-u3Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.47843137254901963" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1932,11 +1943,12 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BAh-lh-hr2"/>
-        <segue reference="lGY-WR-2kZ"/>
-        <segue reference="IhN-sp-Mka"/>
-        <segue reference="QQY-oq-lOX"/>
+        <segue reference="McK-So-z3i"/>
+        <segue reference="Mt1-DI-Kb4"/>
+        <segue reference="xX8-7t-KH3"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="IdQ-e8-fcd"/>
-        <segue reference="B3C-Tm-rNk"/>
+        <segue reference="VaQ-hM-Nou"/>
+        <segue reference="Rbu-dB-wCn"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
