@@ -42,6 +42,10 @@ class TestingViewController: UIViewController {
     @IBOutlet weak var choiceC: UIButton!
     @IBOutlet weak var choiceD: UIButton!
     
+    //Outlet for the Description/Causes Questions
+    @IBOutlet weak var QuestionText: UILabel!
+    
+
     let allQuestions = QuestionBank()
     var questionNumber: Int = 0
     var score: Int = 0
@@ -85,7 +89,11 @@ class TestingViewController: UIViewController {
     //changing the question when the next question is needed
     func updateQuestion(){
         if questionNumber < allQuestions.list.count  {
+            if difficulty < 4{
             questionImageView.image = (allQuestions.list[questionNumber].questionImage)
+            }else{
+                QuestionText.text = (allQuestions.list[questionNumber].questionTextDesc)
+            }
             questionLabel.text = allQuestions.list[questionNumber].question
             choiceA.setTitle(allQuestions.list[questionNumber].choiceA, for: UIControlState.normal)
             choiceB.setTitle(allQuestions.list[questionNumber].choiceB, for: UIControlState.normal)
