@@ -773,7 +773,7 @@
                                     <action selector="setDifficulty:" destination="LAc-Nd-gRC" eventType="touchUpInside" id="2Zy-XK-0EN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3J2-lk-dia" customClass="DLRadioButton">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3J2-lk-dia" customClass="DLRadioButton">
                                 <rect key="frame" x="0.0" y="269" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -787,6 +787,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="setDifficulty:" destination="LAc-Nd-gRC" eventType="touchUpInside" id="4m1-Ks-zlY"/>
                                     <outletCollection property="otherButtons" destination="sgX-Gp-EEO" id="1RU-KY-Mpk"/>
                                     <outletCollection property="otherButtons" destination="CYB-LH-OUq" id="qrm-kA-uMo"/>
                                     <outletCollection property="otherButtons" destination="ply-7G-3zQ" id="mPz-lp-kPw"/>
@@ -1078,7 +1079,7 @@
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6B-ZV-Z3V" userLabel="QuestionView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="happiness_emoji" translatesAutoresizingMaskIntoConstraints="NO" id="Lwn-ff-KaO" userLabel="ImageQuestion">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lwn-ff-KaO" userLabel="ImageQuestion">
                                                 <rect key="frame" x="15" y="15" width="345" height="240"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="KSu-Md-L2r"/>
@@ -1088,6 +1089,13 @@
                                                 <rect key="frame" x="15" y="263" width="330" height="27"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZX-XF-seK">
+                                                <rect key="frame" x="15" y="15" width="345" height="240"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1226,6 +1234,7 @@
                         <viewLayoutGuide key="safeArea" id="giW-vj-n97"/>
                     </view>
                     <connections>
+                        <outlet property="QuestionText" destination="iZX-XF-seK" id="Gal-Am-oKy"/>
                         <outlet property="choiceA" destination="eoj-sJ-QRO" id="5Jg-mY-OKf"/>
                         <outlet property="choiceB" destination="aoL-8a-9HR" id="FXG-1U-hhA"/>
                         <outlet property="choiceC" destination="DYD-lR-BRP" id="iC1-a5-pgx"/>
@@ -1248,7 +1257,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3009" y="1101"/>
+            <point key="canvasLocation" x="3008.8000000000002" y="1100.5997001499252"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="dgT-aD-gj9">
@@ -1942,13 +1951,14 @@
         <image name="test-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4Kr-VW-A4c"/>
         <segue reference="BAh-lh-hr2"/>
-        <segue reference="McK-So-z3i"/>
-        <segue reference="Mt1-DI-Kb4"/>
+        <segue reference="LNm-PM-Cj3"/>
+        <segue reference="ZvP-IR-TGS"/>
         <segue reference="xX8-7t-KH3"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="VaQ-hM-Nou"/>
-        <segue reference="Rbu-dB-wCn"/>
+        <segue reference="oee-Nq-WjF"/>
+        <segue reference="Ld5-H7-XLF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

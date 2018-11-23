@@ -19,15 +19,17 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 var friendsFiltered = Array<String>()
 
 class QuestionBank {
     var list = [Question]()
-    
+    var labelTestQuestion = ""
     var friend = "" //get friends from firebase or core data
     let sample = "Sample"
     let emotions = ["happiness", "sadness", "anger", "surprise", "disgust", "fear", "contempt", "neutral"]
+    let emotions2 = ["Happiness", "Sadness", "Anger", "Surprise", "Disgust", "Fear", "Contempt", "Neutral"]
     var emotion = "happiness"
     //var difficulty = 0
     
@@ -43,40 +45,151 @@ class QuestionBank {
         }
         
         //generating a random question
+        if difficulty < 4 {//for image tests
         for randomEmotion in randEmotionSet {
-            if friendsFiltered.count == 0 {
-                friendsFiltered = friends
-            }
-            let fileName = friendsFiltered.randomElement()! + randomEmotion + ".jpg"
-            print(fileName + " being loaded into question")
-            let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
-            let imageUrl: URL = URL(fileURLWithPath: imagePath)
-        
-            // check if the image is stored already
-            
-            if FileManager.default.fileExists(atPath: imagePath),
-                let imageData: Data = try? Data(contentsOf: imageUrl),
-                var image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
-                //figure out how to change which moji button we are changing
-                
-                let rotatedImage = image.rotate(radians: .pi / 2)
-                let topHalfImage = rotatedImage.topHalf
-                let bottomHalfImage = rotatedImage.bottomHalf
-                
-                //difficulty is changed globally
-                switch difficulty {
-                case 1:
-                    image = rotatedImage
-                    print("Full face image set")
-                case 3:
-                    image = topHalfImage!
-                case 2:
-                    image = bottomHalfImage!
-                    
-                default:
-                    print("Difficulty not selected. Error setting image for question")
+                if friendsFiltered.count == 0 {
+                    friendsFiltered = friends
                 }
+                let fileName = friendsFiltered.randomElement()! + randomEmotion + ".jpg"
+                print(fileName + " being loaded into question")
+                let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
+                let imageUrl: URL = URL(fileURLWithPath: imagePath)
+            
+                // check if the image is stored already
                 
+                if FileManager.default.fileExists(atPath: imagePath),
+                    let imageData: Data = try? Data(contentsOf: imageUrl),
+                    var image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
+                    //figure out how to change which moji button we are changing
+                    
+                    let rotatedImage = image.rotate(radians: .pi / 2)
+                    let topHalfImage = rotatedImage.topHalf
+                    let bottomHalfImage = rotatedImage.bottomHalf
+                    
+                    //difficulty is changed globally
+                    switch difficulty {
+                    case 1:
+                        image = rotatedImage
+                        print("Full face image set")
+                    case 3:
+                        image = topHalfImage!
+                    case 2:
+                        image = bottomHalfImage!
+                        
+                    default:
+                        print("Difficulty not selected. Error setting image for question")
+                    }
+                    
+                    //generate a random set of choices of emotions
+                    var randChoiceSet = Set<String>()
+                    var randAnswer = Int()
+                    randChoiceSet.insert(randomEmotion)
+                    
+                    while randChoiceSet.count < 4 {
+                        let randIndex = Int(arc4random_uniform(UInt32(emotions.count)))
+                        randChoiceSet.insert(emotions[randIndex])
+                    }
+                    
+                    //randomly assign solution
+                    var randChoiceArray = Array(randChoiceSet)
+                    var randChoices = Array<String>()
+                    for i in 0 ... 3 {
+                        let randIndex = Int(arc4random_uniform(UInt32(randChoiceArray.count)))
+                        let upperCaseEmotion = randChoiceArray[randIndex].capitalizingFirstLetter()
+                        randChoices.append(upperCaseEmotion)
+                        if randChoices[i] == randomEmotion {
+                            randAnswer = i + 1
+                            print("Answer Set to ", randAnswer)
+                        }
+                        randChoiceArray.remove(at: randIndex)
+                        
+                    }
+                    
+                    //set the answer to the random set
+                    
+                    
+                    list.append(Question(text: self.labelTestQuestion, image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
+                    //print("Looped ", randomEmotion)
+                } else {
+                    //need to implement sample pictures
+                    let randAns = sample + randomEmotion
+                    var image: UIImage = UIImage(named: randAns)!
+                    //let rotatedImage = image.rotate(radians: .pi / 2)
+                    let topHalfImage = image.topHalf
+                    let bottomHalfImage = image.bottomHalf
+                    
+                    switch difficulty {
+                    case 1:
+                        //image = rotatedImage
+                        print("Full face image set")
+                    case 3:
+                        image = topHalfImage!
+                    case 2:
+                        image = bottomHalfImage!
+                    default:
+                        print("Difficulty not selected. Error setting image for question")
+                    }
+                    
+                    //generate a random set of choices of emotions
+                    var randChoiceSet = Set<String>()
+                    var randAnswer = Int()
+                    randChoiceSet.insert(randomEmotion)
+                    
+                    while randChoiceSet.count < 4 {
+                        let randIndex = Int(arc4random_uniform(UInt32(emotions.count)))
+                        randChoiceSet.insert(emotions[randIndex])
+                    }
+                    
+                    //randomly assign solution
+                    var randChoiceArray = Array(randChoiceSet)
+                    var randChoices = Array<String>()
+                    for i in 0 ... 3 {
+                        let randIndex = Int(arc4random_uniform(UInt32(randChoiceArray.count)))
+                        let upperCaseEmotion = randChoiceArray[randIndex]
+                        //check if this emotion is the answer
+                        if upperCaseEmotion == randomEmotion {
+                            randAnswer = i + 1
+                            print("Sample: Answer Set to ", randAnswer)
+                        }
+                        //set the first letter capital before storing to array
+                        randChoices.append(upperCaseEmotion.capitalizingFirstLetter())
+                        print(randChoiceArray[randIndex])
+                        
+                        randChoiceArray.remove(at: randIndex)
+                        
+                    }
+                    
+                    list.append(Question(text: self.labelTestQuestion, image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
+                }
+            }
+        }else{ //for description test
+            var randEmotionSet2 = Set<String>()
+            
+            while randEmotionSet2.count < 5 {
+                let randIndex = Int(arc4random_uniform(UInt32(emotions.count)))
+                randEmotionSet2.insert(emotions2[randIndex])
+            }
+            for randomEmotion in randEmotionSet2 {
+                //set image to be blank
+                let image: UIImage = UIImage()
+              
+                //randomly pick cause (1) or description (0)
+                let DesOrCause = arc4random_uniform(2)
+                print("RANDOM NUM: ", DesOrCause)
+                
+                //get description or cause
+                if DesOrCause == 0 { //get description of random emotion
+                    let ref = Database.database().reference()
+                    ref.child(randomEmotion+"/Description").observeSingleEvent(of: .value) { (snapshot) in
+                        self.labelTestQuestion = snapshot.value as? String ?? "An Error has occured"
+                    }
+                }else{//get cause of random emotion
+                    let ref = Database.database().reference()
+                    ref.child(randomEmotion+"/Causes").observeSingleEvent(of: .value) { (snapshot) in
+                        self.labelTestQuestion = snapshot.value as? String ?? "An Error has occured"
+                    }
+                }
+                print("Description question: " + self.labelTestQuestion)
                 //generate a random set of choices of emotions
                 var randChoiceSet = Set<String>()
                 var randAnswer = Int()
@@ -103,60 +216,7 @@ class QuestionBank {
                 }
                 
                 //set the answer to the random set
-                
-                
-                list.append(Question(image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
-                //print("Looped ", randomEmotion)
-            } else {
-                //need to implement sample pictures
-                let randAns = sample + randomEmotion
-                var image: UIImage = UIImage(named: randAns)!
-                //let rotatedImage = image.rotate(radians: .pi / 2)
-                let topHalfImage = image.topHalf
-                let bottomHalfImage = image.bottomHalf
-                
-                switch difficulty {
-                case 1:
-                    //image = rotatedImage
-                    print("Full face image set")
-                case 3:
-                    image = topHalfImage!
-                case 2:
-                    image = bottomHalfImage!
-                default:
-                    print("Difficulty not selected. Error setting image for question")
-                }
-                
-                //generate a random set of choices of emotions
-                var randChoiceSet = Set<String>()
-                var randAnswer = Int()
-                randChoiceSet.insert(randomEmotion)
-                
-                while randChoiceSet.count < 4 {
-                    let randIndex = Int(arc4random_uniform(UInt32(emotions.count)))
-                    randChoiceSet.insert(emotions[randIndex])
-                }
-                
-                //randomly assign solution
-                var randChoiceArray = Array(randChoiceSet)
-                var randChoices = Array<String>()
-                for i in 0 ... 3 {
-                    let randIndex = Int(arc4random_uniform(UInt32(randChoiceArray.count)))
-                    let upperCaseEmotion = randChoiceArray[randIndex]
-                    //check if this emotion is the answer
-                    if upperCaseEmotion == randomEmotion {
-                        randAnswer = i + 1
-                        print("Sample: Answer Set to ", randAnswer)
-                    }
-                    //set the first letter capital before storing to array
-                    randChoices.append(upperCaseEmotion.capitalizingFirstLetter())
-                    print(randChoiceArray[randIndex])
-                    
-                    randChoiceArray.remove(at: randIndex)
-                    
-                }
-                
-                list.append(Question(image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
+                list.append(Question(text: self.labelTestQuestion, image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
             }
         }
         //list.append(Question(image: randAns2, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: randEmotion[1], userChoiceC: "anger", userChoiceD: "surprise", answer: 2, chosenDifficulty: difficulty))

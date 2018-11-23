@@ -22,6 +22,7 @@ import Foundation
 class Question {
     var difficulty: Int
     let questionImage: UIImage
+    let questionTextDesc: String
     //let sampleImage: String
     let question: String
     let choiceA: String
@@ -30,7 +31,8 @@ class Question {
     let choiceD: String
     let correctAnswer: Int
     
-    init(image: UIImage, questionText: String, userChoiceA: String, userChoiceB: String, userChoiceC: String, userChoiceD: String, answer: Int, chosenDifficulty: Int) {
+    init(text: String, image: UIImage, questionText: String, userChoiceA: String, userChoiceB: String, userChoiceC: String, userChoiceD: String, answer: Int, chosenDifficulty: Int) {
+        questionTextDesc = text
         questionImage = image
         question = questionText
         choiceA = userChoiceA
