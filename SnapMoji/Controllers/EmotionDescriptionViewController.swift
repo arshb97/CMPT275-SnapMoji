@@ -2,6 +2,15 @@
 //  EmotionDescriptionViewController.swift
 //  SnapMoji
 //
+//  Worked on by: Merna Zaki
+//
+//  Changelog:
+//  1.0 - Initial commit of UI and segues
+//  2.0 - Retrieves descrtions/causes from firebase according to emotions pressed
+//
+//  Known bugs:
+//  Cancel button does not reset the changes made by the filter
+//
 //  Created by Mirna Zaki on 11/22/18.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //
