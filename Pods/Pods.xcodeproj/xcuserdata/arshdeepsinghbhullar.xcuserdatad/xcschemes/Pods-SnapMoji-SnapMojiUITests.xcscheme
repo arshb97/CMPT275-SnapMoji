@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EC4A31D5C85E6DF2AD8804BA2CE6C11E"
-               BuildableName = "Pods_SnapMojiTests.framework"
-               BlueprintName = "Pods-SnapMojiTests"
+               BlueprintIdentifier = "6203C0439FF0AE16F8C9E35CEB0DEAAF"
+               BuildableName = "Pods_SnapMoji_SnapMojiUITests.framework"
+               BlueprintName = "Pods-SnapMoji-SnapMojiUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EC4A31D5C85E6DF2AD8804BA2CE6C11E"
-            BuildableName = "Pods_SnapMojiTests.framework"
-            BlueprintName = "Pods-SnapMojiTests"
+            BlueprintIdentifier = "6203C0439FF0AE16F8C9E35CEB0DEAAF"
+            BuildableName = "Pods_SnapMoji_SnapMojiUITests.framework"
+            BlueprintName = "Pods-SnapMoji-SnapMojiUITests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

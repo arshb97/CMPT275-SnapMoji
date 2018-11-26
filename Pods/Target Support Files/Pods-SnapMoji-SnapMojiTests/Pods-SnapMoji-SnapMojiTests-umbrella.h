@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SnapMojiTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SnapMojiTestsVersionString[];
+FOUNDATION_EXPORT double Pods_SnapMoji_SnapMojiTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SnapMoji_SnapMojiTestsVersionString[];
 
