@@ -14,12 +14,12 @@ target 'SnapMoji' do
   pod 'ProjectOxfordFace'
 
   target 'SnapMojiTests' do
-    inherit! :search_paths
+   # inherit! :search_paths
     # Pods for testing
   end
 
   target 'SnapMojiUITests' do
-    inherit! :search_paths
+   # inherit! :search_paths
     # Pods for testing
   end
 
