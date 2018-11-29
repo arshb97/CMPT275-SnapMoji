@@ -46,7 +46,7 @@ class StatisticViewController: UIViewController {
     
     func setChartValues(_ count: Int = 20, difficulty: Int) {
         let values = (0..<count).map { (i) -> ChartDataEntry in
-            let val = Double(arc4random_uniform(UInt32(count)) + 3)
+            let val = Double(arc4random_uniform(UInt32(count)) % 6)
             return ChartDataEntry(x: Double(i), y: val)
         }
         
