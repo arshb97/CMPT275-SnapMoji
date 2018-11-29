@@ -1951,13 +1951,14 @@
         <image name="test-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4Kr-VW-A4c"/>
         <segue reference="BAh-lh-hr2"/>
         <segue reference="LNm-PM-Cj3"/>
         <segue reference="ZvP-IR-TGS"/>
-        <segue reference="bxl-v3-PnQ"/>
+        <segue reference="xX8-7t-KH3"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="KLr-oK-boG"/>
-        <segue reference="j6c-tc-GF0"/>
+        <segue reference="oee-Nq-WjF"/>
+        <segue reference="Ld5-H7-XLF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
