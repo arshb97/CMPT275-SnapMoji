@@ -35,7 +35,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button_image"/>
                                 <connections>
-                                    <segue destination="EZr-Hp-mCQ" kind="presentation" id="j6c-tc-GF0"/>
+                                    <segue destination="Vll-YC-1Fo" kind="presentation" id="6jt-cr-4pA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x09-Ey-8aM" userLabel="Information">
@@ -1757,10 +1757,6 @@
                                 <rect key="frame" x="150" y="618" width="75" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ghi-NR-h0p">
-                                <rect key="frame" x="0.0" y="66" width="375" height="261"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uS8-eO-vvn" userLabel="MEDIUMSTAT">
                                 <rect key="frame" x="7" y="410" width="360" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1769,7 +1765,7 @@
                                 <state key="normal" title="Medium-Statistic"/>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="qtg-nf-03z"/>
-                                    <segue destination="YFx-Um-6KR" kind="presentation" modalTransitionStyle="crossDissolve" id="1Hc-FY-9cR"/>
+                                    <action selector="statsButtonTapped:" destination="Vll-YC-1Fo" eventType="touchUpInside" id="cjv-t6-CrV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjp-EU-ADN" userLabel="HARDSTAT">
@@ -1780,7 +1776,7 @@
                                 <state key="normal" title="Hard-Statistic"/>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="Fqg-aq-EOo"/>
-                                    <segue destination="YFx-Um-6KR" kind="presentation" modalTransitionStyle="crossDissolve" id="Jmp-YJ-n9g"/>
+                                    <action selector="statsButtonTapped:" destination="Vll-YC-1Fo" eventType="touchUpInside" id="Vqa-dK-Nve"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfW-PY-ayF" userLabel="DESCRIPTIONSTAT">
@@ -1791,7 +1787,7 @@
                                 <state key="normal" title="Description-Statistic"/>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="RsF-Bh-4aH"/>
-                                    <segue destination="YFx-Um-6KR" kind="presentation" modalTransitionStyle="crossDissolve" id="BAh-lh-hr2"/>
+                                    <action selector="statsButtonTapped:" destination="Vll-YC-1Fo" eventType="touchUpInside" id="3lL-9V-EWI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQQ-NJ-aX6" userLabel="EASYSTAT">
@@ -1802,17 +1798,31 @@
                                 <state key="normal" title="Easy-Statistic"/>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="SGB-nt-WfN"/>
-                                    <segue destination="YFx-Um-6KR" kind="presentation" modalTransitionStyle="crossDissolve" id="fdb-Y7-C08"/>
+                                    <action selector="statsButtonTapped:" destination="Vll-YC-1Fo" eventType="touchUpInside" id="m1a-L9-LcZ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-1h-roB" userLabel="statsChart" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="74" width="359" height="261"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="261" id="Pw7-9w-iZg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47450980390000003" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="erV-5e-WB3" firstAttribute="trailing" secondItem="JgU-1h-roB" secondAttribute="trailing" constant="8" id="I47-uh-SS2"/>
                             <constraint firstItem="nd8-kG-aya" firstAttribute="top" secondItem="bb6-Qs-PrW" secondAttribute="top" id="YcI-bX-ssC"/>
+                            <constraint firstItem="JgU-1h-roB" firstAttribute="top" secondItem="fas-4h-FXO" secondAttribute="bottom" constant="8" id="qdW-Ie-Twc"/>
+                            <constraint firstItem="JgU-1h-roB" firstAttribute="leading" secondItem="erV-5e-WB3" secondAttribute="leading" constant="8" id="uuT-Dy-uys"/>
                             <constraint firstItem="fas-4h-FXO" firstAttribute="top" secondItem="erV-5e-WB3" secondAttribute="top" constant="2" id="zLN-4D-dUu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="erV-5e-WB3"/>
                     </view>
+                    <connections>
+                        <outlet property="statsChart" destination="JgU-1h-roB" id="bAa-k3-fWj"/>
+                        <outlet property="statsChartLabel" destination="ZXd-53-Vcg" id="pXR-yh-zxo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSa-eu-Zv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1927,8 +1937,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ButtonClicked" width="100" height="100"/>
-        <image name="ButtonUnclicked" width="100" height="100"/>
+        <image name="ButtonClicked" width="75" height="75"/>
+        <image name="ButtonUnclicked" width="75" height="75"/>
         <image name="John-Doe" width="498" height="480"/>
         <image name="add" width="225" height="225"/>
         <image name="angry_emoji" width="160" height="160"/>
@@ -1951,13 +1961,12 @@
         <image name="test-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BAh-lh-hr2"/>
-        <segue reference="LNm-PM-Cj3"/>
-        <segue reference="ZvP-IR-TGS"/>
-        <segue reference="bxl-v3-PnQ"/>
+        <segue reference="Dli-c4-qfY"/>
+        <segue reference="NFZ-3P-Gah"/>
+        <segue reference="tEx-dQ-xWX"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="KLr-oK-boG"/>
-        <segue reference="j6c-tc-GF0"/>
+        <segue reference="9o1-1A-1vH"/>
+        <segue reference="hZc-Co-EYY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
