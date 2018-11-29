@@ -16,6 +16,8 @@
 		034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */; };
 		03638D74218D3986004A5DBF /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03638D73218D3986004A5DBF /* LibraryViewController.swift */; };
 		03C6A2512184EA2800F5FFB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */; };
+		0CB80A0A9B7D44F07F4D691C /* Pods_SnapMoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E89079EC14C940892C2720 /* Pods_SnapMoji.framework */; };
+		5CB3532B14B3020B43E98B09 /* Pods_SnapMoji_SnapMojiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1595B2C138BE67FB38ABA04E /* Pods_SnapMoji_SnapMojiTests.framework */; };
 		732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 732C7860219D0EA400558B5D /* DLRadioButton.m */; };
 		73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F332183BFB1001AAA21 /* AppDelegate.swift */; };
 		73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F352183BFB1001AAA21 /* ViewController.swift */; };
@@ -30,6 +32,7 @@
 		AA95396D21A75A11006B83C4 /* EmotionDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA95396C21A75A11006B83C4 /* EmotionDescriptionViewController.swift */; };
 		BA3A06B0218917870034EDDE /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3A06AF218917870034EDDE /* Camera.storyboard */; };
 		BA71B6DC2183CD22008D8FB4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */; };
+		DE9A115272DE7C5B3385C42E /* Pods_SnapMoji_SnapMojiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB9181DFCC0E812B128ED8D /* Pods_SnapMoji_SnapMojiUITests.framework */; };
 		F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */; };
 		F44CF60B21950B0600B722B6 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF60A21950B0600B722B6 /* TestingViewController.swift */; };
 		F49BAF8A21A76F7D000152F3 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49BAF8921A76F7D000152F3 /* InformationViewController.swift */; };
@@ -72,10 +75,13 @@
 		034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		03638D73218D3986004A5DBF /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1595B2C138BE67FB38ABA04E /* Pods_SnapMoji_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEA0527C87C8E9907A5F479 /* Pods-SnapMoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.debug.xcconfig"; sourceTree = "<group>"; };
 		362CC3F3421CDBD6083C2CA1 /* Pods-SnapMoji-SnapMojiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji-SnapMojiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji-SnapMojiTests/Pods-SnapMoji-SnapMojiTests.release.xcconfig"; sourceTree = "<group>"; };
+		37E89079EC14C940892C2720 /* Pods_SnapMoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F5568E803BE46E003256EA /* Pods-SnapMojiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiUITests/Pods-SnapMojiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C48B220DB147743CC8E0B8D /* Pods-SnapMojiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiTests/Pods-SnapMojiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6EB9181DFCC0E812B128ED8D /* Pods_SnapMoji_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		732C785F219D0EA400558B5D /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 		732C7860219D0EA400558B5D /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		73D60F302183BFB0001AAA21 /* SnapMoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapMoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CB80A0A9B7D44F07F4D691C /* Pods_SnapMoji.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB3532B14B3020B43E98B09 /* Pods_SnapMoji_SnapMojiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9A115272DE7C5B3385C42E /* Pods_SnapMoji_SnapMojiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +180,9 @@
 		25E1A898408376F596B9C25D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37E89079EC14C940892C2720 /* Pods_SnapMoji.framework */,
+				1595B2C138BE67FB38ABA04E /* Pods_SnapMoji_SnapMojiTests.framework */,
+				6EB9181DFCC0E812B128ED8D /* Pods_SnapMoji_SnapMojiUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

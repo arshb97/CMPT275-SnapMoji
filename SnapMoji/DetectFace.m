@@ -19,14 +19,10 @@
 #import "DetectFace.h"
 #import <ProjectOxfordFace/MPOFaceSDK.h>
 #import "PersonFace.h"
-//#import "ImageHelper.h"
-
-
 
 @implementation DetectFace : NSObject
 
 extern NSString *mYGlobalVariable = @"";                  //global variable
-
 
     UIImage * _selectedImage;
     NSMutableArray * _detectionFaces;
@@ -34,7 +30,8 @@ extern NSString *mYGlobalVariable = @"";                  //global variable
 - (NSString *) detectAction: (UIImage *) image  {
     _selectedImage = image;
     
-    static NSString *const ProjectOxfordFaceSubscriptionKey = @"1b46b1e1a8784524a56c1bf76e4549f8";
+    //Setting API key and location
+    static NSString *const ProjectOxfordFaceSubscriptionKey = @"bc6cbfce8e004764bfbf7fb7449bc210";
     static NSString *const ProjectOxfordFaceEndpoint = @"https://westcentralus.api.cognitive.microsoft.com/face/v1.0";
     __block NSString *emotion = @"";
     
@@ -49,7 +46,6 @@ extern NSString *mYGlobalVariable = @"";                  //global variable
         {
             emotion = [NSString stringWithFormat: @"%@", face.attributes.emotion.mostEmotion];
             mYGlobalVariable = emotion;
-            
             NSLog(@"Printing in obj-c function");
             NSLog(@"%@emotion", face.attributes.emotion.mostEmotion);
             NSLog(@"End of Printing in obj-c");
@@ -59,6 +55,7 @@ extern NSString *mYGlobalVariable = @"";                  //global variable
      return emotion;
 }
 
+//function returning the emotion value from API
 -(NSString *) globalVariableGetter
 {
     return mYGlobalVariable;
