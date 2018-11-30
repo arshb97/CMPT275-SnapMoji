@@ -343,7 +343,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFL-sV-HmJ" userLabel="addFriend">
-                                <rect key="frame" x="281" y="551" width="63" height="59"/>
+                                <rect key="frame" x="300" y="551" width="51" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="add"/>
                                 <connections>
@@ -1328,7 +1328,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoT-yB-jDl" userLabel="friends">
-                                <rect key="frame" x="-1" y="590" width="75" height="50"/>
+                                <rect key="frame" x="0.0" y="617" width="75" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="h6t-Jd-oMD" kind="presentation" modalTransitionStyle="crossDissolve" id="VMh-T3-DHA"/>
@@ -1493,7 +1493,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1E-dY-nc4" userLabel="tests">
-                                <rect key="frame" x="-1" y="618" width="75" height="50"/>
+                                <rect key="frame" x="74" y="617" width="75" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="LAc-Nd-gRC" kind="presentation" modalTransitionStyle="crossDissolve" id="S32-iO-u3Z"/>
@@ -1930,7 +1930,7 @@
         <image name="ButtonClicked" width="100" height="100"/>
         <image name="ButtonUnclicked" width="100" height="100"/>
         <image name="John-Doe" width="498" height="480"/>
-        <image name="add" width="225" height="225"/>
+        <image name="add" width="198" height="191"/>
         <image name="angry_emoji" width="160" height="160"/>
         <image name="back" width="18" height="35"/>
         <image name="button_image" width="221" height="63"/>
@@ -1954,10 +1954,10 @@
         <segue reference="BAh-lh-hr2"/>
         <segue reference="LNm-PM-Cj3"/>
         <segue reference="ZvP-IR-TGS"/>
-        <segue reference="bxl-v3-PnQ"/>
+        <segue reference="na3-Vi-bvP"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="KLr-oK-boG"/>
-        <segue reference="j6c-tc-GF0"/>
+        <segue reference="oee-Nq-WjF"/>
+        <segue reference="Ld5-H7-XLF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
