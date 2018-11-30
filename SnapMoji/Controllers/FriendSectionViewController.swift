@@ -18,8 +18,7 @@
 //  3.0 - collection view added and working (can now add a new friend)
 //
 //  Known bugs:
-//  - when submitting nothing (pressing the save button, it will take it as a name
-//  - Not connected to firebase: added friends are not saved when you exist the page
+//  there are no known bugs
 
 
 import UIKit
@@ -44,12 +43,11 @@ UICollectionViewDataSource {
         let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler: { alert -> Void in
             let text = alertController.textFields![0] as UITextField //extract users input
             self.name = text.text!
-            if self.name == ""{
-                // do something here to prevent user from exiting
+            if self.name != ""{
+                print("NAME: ", self.name)
+                friends.append(self.name) //save the users input
+                self.collection.reloadData()
             }
-            print("NAME: ", self.name)
-            friends.append(self.name) //save the users input
-            self.collection.reloadData()
         })
         //cancel button
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: {
@@ -69,36 +67,19 @@ UICollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
+//Extension for Collection View
 extension FriendSectionViewController {
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize{
-//        return CGSize(width: 100, height: 100)
-//    }
     
     //find size of friends
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("here")
         return friends.count
     }
     

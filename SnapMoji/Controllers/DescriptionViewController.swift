@@ -20,7 +20,6 @@ class DescriptionViewController: UIViewController {
     
     var Emotion = ""
     
-    
     @IBOutlet weak var HappinessButton: UIButton!
     @IBOutlet weak var NeutralButton: UIButton!
     @IBOutlet weak var ContemptButton: UIButton!

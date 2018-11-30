@@ -1,8 +1,13 @@
 //
 //  QuestionBank.swift
-//  SnapMoji - Team 10 
+//  SnapMoji - Team 10
 //
-//  Worked on by: Josh Baltar
+//
+//  Description of QuestionBank:
+// Creates questions, answers and additionaly choices for the
+// test that the user inputted
+//
+//  Worked on by: Josh Baltar and Merna Zaki
 //
 //  Changelog:
 //  1.0 - Initial commit layout and segues finished
@@ -10,6 +15,7 @@
 //  2.1 - All difficulties implemented
 //  2.2 - Options are now unique when generated; answers are random
 //  2.3 - Added filters to choose certain friends on load
+//  2.4 - Description of tests fully functional
 //
 //  Known bugs:
 //  No known bugs for this class
@@ -28,6 +34,7 @@ class QuestionBank {
     var labelTestQuestion = "Question"
     var friend = "" //get friends from firebase or core data
     let sample = "Sample"
+    //arrays for the descriptions and causes questions
     let emotions = ["happiness", "sadness", "anger", "surprise", "disgust", "fear", "contempt", "neutral"]
     let anger = ["Everyone has their own triggers for feeling this emotion, but some common ones include feeling threatened or attacked, frustrated or powerless, treated unfairly or lack of respect.", "This is a powerful emotion that people feel from time to time when someone or something frustrates or annoys them. When you feel this emotion, you will feel the need to kick and scream."]
     let contempt = ["Many things can lead you to feel this emotion but they all ultimately lead you to look down on someone. Finding a repulsive characteristic about a person will cause you to feel this emotion. ", "The feeling that a person or a thing is beneath consideration, worthless, or deserving scorn. It is a mix of anger and disgust. "]
@@ -173,6 +180,7 @@ class QuestionBank {
         }else{ //for description test
             var randEmotionSet2 = Set<String>()
             
+            //randomly pick 5 emotions for 5 questions
             while randEmotionSet2.count < 5 {
                 let randIndex = Int(arc4random_uniform(UInt32(emotions.count)))
                 randEmotionSet2.insert(emotions[randIndex])
@@ -208,19 +216,20 @@ class QuestionBank {
                 var randChoiceSet = Array<String>()
                 var randAnswer = Int()
                 randChoiceSet.append(randomEmotion)
-                print("randomEmotion: "+randomEmotion)
-                var copyOfEmotions = emotions
+                var copyOfEmotions = emotions //possible options for the user
+                
+                //remove the current emotion as an additional option
                 for (index, emotion) in copyOfEmotions.enumerated(){
                     if(emotion == randomEmotion){
                         copyOfEmotions.remove(at: index)
                         break
                     }
                 }
-                print("Added Emotion: "+randChoiceSet[0])
+                
+                //add 3 more choices for the user
                 while randChoiceSet.count < 4 {
                     let randIndex = Int(arc4random_uniform(UInt32(copyOfEmotions.count)))
                     randChoiceSet.append(copyOfEmotions[randIndex])
-                    print("Added Emotion: "+copyOfEmotions[randIndex])
                     copyOfEmotions.remove(at: randIndex)
                 }
                 
@@ -243,6 +252,7 @@ class QuestionBank {
                 list.append(Question(text: self.labelTestQuestion, image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
             }//end of for loop
         }//end of else statment
+        
         //list.append(Question(image: randAns2, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: randEmotion[1], userChoiceC: "anger", userChoiceD: "surprise", answer: 2, chosenDifficulty: difficulty))
         //list.append(Question(image: randAns3, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: randEmotion[2], userChoiceC: "anger", userChoiceD: "surprise", answer: 2, chosenDifficulty: difficulty))
         //list.append(Question(image: randAns4, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: "anger", userChoiceC: randEmotion[3], userChoiceD: "surprise", answer: 3, chosenDifficulty: difficulty))
