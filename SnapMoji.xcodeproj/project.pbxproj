@@ -751,7 +751,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = arshbb;
+				PRODUCT_BUNDLE_IDENTIFIER = MM.Snapmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapMoji/SnapMoji-Bridging-Header.h";
@@ -776,7 +776,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = arshbb;
+				PRODUCT_BUNDLE_IDENTIFIER = MM.Snapmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapMoji/SnapMoji-Bridging-Header.h";
