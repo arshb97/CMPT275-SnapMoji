@@ -2,12 +2,17 @@
 //  Questions.swift
 //  SnapMoji - Team 10 
 //
+
+//  Description of Questions:
+//  Structure set up to compile a set for each question
+//  Includes the question, an image, a label, 4 choices, the correct answer and the level of difficulty
 //
-//  Worked on by: Josh Baltar
+//  Worked on by: Josh Baltar and Merna Zaki
 //
 //  Changelog:
 //  1.0 - Initial commit of class with all variables needed
 //  2.0 - changed image in class from String to UIImage
+//  3.0 - Adapted to work for descriptions test as well
 //
 //  Known bugs:
 //  No known bugs for this class
