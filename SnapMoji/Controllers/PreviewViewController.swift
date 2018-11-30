@@ -11,7 +11,7 @@
 //  1.2 - Emotions passed through view controllers, Microsoft emotion API implemented
 //  2.0 - Gallery now sends the image to this view to approve with the MS emotion API
 //  2.1 - Emotion is displayed on the screen when submitted
-//
+//  3.0 - Save and retake button added
 //  Known bugs:
 //  Preview crops the image to accomodate screen size when sent from the gallery
 //
@@ -27,7 +27,7 @@ var detector: DetectFace = DetectFace()
 
 class PreviewViewController: UIViewController, UIApplicationDelegate{
 
-  //  variables to store to firebase
+  //variables to store to firebase
     var imageReference: StorageReference {
         return Storage.storage().reference().child("images")
     }
