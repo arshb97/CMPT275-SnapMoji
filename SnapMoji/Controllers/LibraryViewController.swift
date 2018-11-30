@@ -24,6 +24,7 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
 
 //globally change name so other controllers can access it
 var Name = ""
@@ -31,8 +32,10 @@ var Name = ""
 class LibraryViewController: UIViewController{
 
     
-    //@IBOutlet weak var HappyMojiButton: UIButton!
-    
+    //  variables to store to firebase
+    var imageReference: StorageReference {
+        return Storage.storage().reference().child("images")
+    }
     
     @IBOutlet weak var FriendName: UITextField!
     var setEmotion = "emotion"
@@ -115,7 +118,7 @@ class LibraryViewController: UIViewController{
         for emotion in emotions {
             let fileName = Name + emotion + ".jpg"
             print(fileName)
-            
+            downloadImages(filename: fileName)
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             
@@ -183,17 +186,31 @@ class LibraryViewController: UIViewController{
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
-        
-        //may be needed for collectionView
-        // collectionView.dataSource = self
-        //  collectionView.delegate = self
-        
         getName() //Change the label to the name of the friend (name retrieved from firebase)
         print("LOADED LIBRARY")
-        //get image
-
     }
     
+    func downloadImages(filename: String) {
+        //for emotion in emotions{
+            //let fileName = "test" + "neutral" + ".jpg"
+            //let fileName = "testsadness.jpg"
+            print("Downloading " + filename)
+            let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(filename)"
+            let imageUrl: URL = URL(fileURLWithPath: imagePath)
+        
+            // Create a reference to the file you want to download
+            let downloadImageRef = imageReference.child(filename)
+            
+            // Download to the local filesystem
+            _ = downloadImageRef.write(toFile: imageUrl) { url, error in
+                if let error = error {
+                    // Uh-oh, an error occurred!
+                } else {
+                    // Local file URL for "images/island.jpg" is returned
+                }
+            }
+        //}
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

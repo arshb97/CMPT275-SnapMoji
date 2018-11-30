@@ -27,7 +27,7 @@ var detector: DetectFace = DetectFace()
 
 class PreviewViewController: UIViewController, UIApplicationDelegate{
 
-  //  variables to store to firebase
+    //  variables to store to firebase
     var imageReference: StorageReference {
         return Storage.storage().reference().child("images")
     }
@@ -62,8 +62,6 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     @IBAction func savePhoto_tap(_ sender: UIButton) {
         // USE THIS IMAGE
         guard let imageToSave = image else { return }
-        
-        //uncomment this to upload to firebase
         
         //turn the image into data
         guard let imageData = UIImageJPEGRepresentation(image, 1) else { return }
@@ -124,6 +122,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
      }
      
      downloadtask.resume()
+    
  */
     
     //I have used this print statement just for reference. API takes 1-2 seconds to return the result. The result will be displayed in console. Once you see that result, press Seeresults button
