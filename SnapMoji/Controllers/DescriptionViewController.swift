@@ -19,15 +19,7 @@ import UIKit
 class DescriptionViewController: UIViewController {
     
     var Emotion = ""
-    
-    @IBOutlet weak var HappinessButton: UIButton!
-    @IBOutlet weak var NeutralButton: UIButton!
-    @IBOutlet weak var ContemptButton: UIButton!
-    @IBOutlet weak var FearButton: UIButton!
-    @IBOutlet weak var DisgustButton: UIButton!
-    @IBOutlet weak var SurpriseButton: UIButton!
-    @IBOutlet weak var AngryButton: UIButton!
-    @IBOutlet weak var SadnessButton: UIButton!
+
     
     //prepare emotion variable to send to the next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -40,6 +32,12 @@ class DescriptionViewController: UIViewController {
     }
     
     //One of the 8 emotions (buttons) are pressed
+  
+    @IBAction func HappyPressed(_ sender: Any) {
+        self.Emotion = "Happiness"
+        performSegue(withIdentifier: "DescriptionSeg", sender: nil)
+    }
+    
     @IBAction func NeutralPressed(_ sender: Any) {
         self.Emotion = "Neutral"
         performSegue(withIdentifier: "DescriptionSeg", sender: nil)
@@ -66,10 +64,6 @@ class DescriptionViewController: UIViewController {
     }
     @IBAction func SadnessPressed(_ sender: Any) {
         self.Emotion = "Sadness"
-        performSegue(withIdentifier: "DescriptionSeg", sender: nil)
-    }
-    @IBAction func HappinessPressed(_ sender: Any) {
-        self.Emotion = "Happiness"
         performSegue(withIdentifier: "DescriptionSeg", sender: nil)
     }
     
