@@ -19,6 +19,9 @@ let the user know what emotion is present in the image. SnapMoji is for anyone t
 trouble differentiating emotions in facial expressions and want to work toward developing this
 skill.
 
+## Splash Page 
+The first page that appears when you open the app is a splash page. It includes our logo and five buttons to leading to our main features. Buttons include Information, Main (Friends Section), Test, Statistics and Descriptions. this page is only meant to appear when you initally open the app as all five buttons are also available in the toolbar of all the other pages. 
+
 ## Coding Standards
 Provided below are the standards that are followed while coding SnapMoji.   
 
