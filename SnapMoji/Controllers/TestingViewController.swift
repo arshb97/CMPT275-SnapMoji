@@ -30,9 +30,8 @@ class TestingViewController: UIViewController {
     var pickedAnswer = 0
     
     @IBOutlet weak var questionCounter: UILabel!
-    @IBOutlet weak var friendName: NSLayoutConstraint!
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var progressView: UIView!
+    @IBOutlet weak var progress: UIView!
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -160,7 +159,7 @@ class TestingViewController: UIViewController {
     func updateUI(){
         scoreLabel.text = "Score: \(score)"
         questionCounter.text = "\(questionNumber + 1)/\(allQuestions.list.count)"
-        progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
+        progress.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
     }
     
     //start the quiz again when finished
