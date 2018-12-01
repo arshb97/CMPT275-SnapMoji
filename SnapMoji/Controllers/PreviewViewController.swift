@@ -11,7 +11,7 @@
 //  1.2 - Emotions passed through view controllers, Microsoft emotion API implemented
 //  2.0 - Gallery now sends the image to this view to approve with the MS emotion API
 //  2.1 - Emotion is displayed on the screen when submitted
-//  3.0 - Save and retake button added
+//
 //  Known bugs:
 //  Preview crops the image to accomodate screen size when sent from the gallery
 //
@@ -32,10 +32,6 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         return Storage.storage().reference().child("images")
     }
 
-    //reference to save the photo to gallery
-    @IBOutlet weak var save: UIButton!
-    //reference to send the photo to API
-    @IBOutlet weak var submit: UIButton!
     
     //variables to prepare sending to the next view controller
     var emotion = "emotion"
@@ -45,7 +41,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     
     //reference for the photo
     @IBOutlet weak var photo: UIImageView!
-    //label to display the emotion value returned by API
+    
     @IBOutlet weak var apiEmotionValue: UILabel!
     
     //load the image when page is loaded from the camera
@@ -56,17 +52,12 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         
         photo.image = self.image
         print("PreviewView "+fileName)
+        
+
         var _ = detector.detectAction(image)
-        save.isHidden = true
-        retake.isHidden = true
 
     }
-    //Reference to retake the image if emotion value returned by API does not match with selected emotion
-    @IBOutlet weak var retake: UIButton!
-    //function that takes backt to popUpViewController to select another image
-    @IBAction func retake_tap(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+    
     //function to implement the save button
     @IBAction func savePhoto_tap(_ sender: UIButton) {
         // USE THIS IMAGE
@@ -147,28 +138,13 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     
     //function to see results of the emotion api
     @IBAction func seeResults(_ sender: Any) {
+
         emotionResult = detector.globalVariableGetter()
-        print (emotionResult)
-        apiEmotionValue.text = emotionResult
-        print("emoji emotion" , emotion)
         
-        //if-else to display the save or retake button depending if emotion returned by API matches with emoji emotion
-        if emotion == emotionResult
-        {
-        submit.setTitle("", for: .normal)
-            save.isHidden = false
-        }
-        else
-        {
-            submit.setTitle("", for: .normal)
-            retake.isHidden = false
-        }
-        //if statement to handle a image which cannot be recognised by API
-        if emotionResult == ""
-        {
-        apiEmotionValue.text = "Invalid face"
-        }
-        emotionResult = ""
+        print (emotionResult)
+        
+        apiEmotionValue.text = emotionResult
+        
     }
     
     // function to implement the cancel button

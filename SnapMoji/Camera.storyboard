@@ -83,9 +83,37 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eO9-a9-tvX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-ZF-Dqf">
+                            <view alpha="0.5" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-ZF-Dqf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-O9-5WI">
+                                        <rect key="frame" x="333" y="28" width="34" height="30"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="savePhoto_tap:" destination="xe6-yV-cLw" eventType="touchUpInside" id="8SE-bN-pP9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftz-29-qfx">
+                                        <rect key="frame" x="8" y="28" width="48" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButton_tap:" destination="xe6-yV-cLw" eventType="touchUpInside" id="uWe-pa-TJK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="J7h-O9-5WI" secondAttribute="bottom" constant="2" id="1cV-HK-Lab"/>
+                                    <constraint firstItem="J7h-O9-5WI" firstAttribute="top" secondItem="fRd-ZF-Dqf" secondAttribute="top" constant="28" id="20n-yU-Jdn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ftz-29-qfx" secondAttribute="bottom" constant="2" id="Ee9-VU-hAg"/>
+                                    <constraint firstItem="Ftz-29-qfx" firstAttribute="top" secondItem="fRd-ZF-Dqf" secondAttribute="top" constant="28" id="jRd-Jw-fZ5"/>
+                                    <constraint firstItem="Ftz-29-qfx" firstAttribute="leading" secondItem="fRd-ZF-Dqf" secondAttribute="leading" constant="8" id="mj3-9K-q3F"/>
+                                    <constraint firstAttribute="trailing" secondItem="J7h-O9-5WI" secondAttribute="trailing" constant="8" id="n4a-bF-XKa"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF7-Fg-Ii7">
                                 <rect key="frame" x="310" y="617" width="49" height="30"/>
@@ -103,50 +131,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aL8-bx-EQT">
-                                <rect key="frame" x="311" y="598" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Retake">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="retake_tap:" destination="xe6-yV-cLw" eventType="touchUpInside" id="Vln-nw-hdz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftz-29-qfx">
-                                <rect key="frame" x="16" y="617" width="48" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelButton_tap:" destination="xe6-yV-cLw" eventType="touchUpInside" id="uWe-pa-TJK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-O9-5WI">
-                                <rect key="frame" x="317" y="583" width="34" height="30"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="savePhoto_tap:" destination="xe6-yV-cLw" eventType="touchUpInside" id="8SE-bN-pP9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="J7h-O9-5WI" secondAttribute="trailing" constant="25" id="8Jq-t9-iF3"/>
                             <constraint firstItem="xDK-pR-7Ki" firstAttribute="trailing" secondItem="yF7-Fg-Ii7" secondAttribute="trailing" constant="16" id="9aZ-qG-6ve"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="top" secondItem="WSJ-at-tOa" secondAttribute="top" id="Bx0-P7-FYs"/>
-                            <constraint firstAttribute="bottom" secondItem="J7h-O9-5WI" secondAttribute="bottom" constant="46" id="EK2-oW-UKs"/>
                             <constraint firstItem="xDK-pR-7Ki" firstAttribute="bottom" secondItem="yF7-Fg-Ii7" secondAttribute="bottom" constant="20" id="M8j-3Z-Pnp"/>
-                            <constraint firstItem="Ftz-29-qfx" firstAttribute="leading" secondItem="WSJ-at-tOa" secondAttribute="leading" constant="16" id="Mye-ee-fpx"/>
-                            <constraint firstItem="Ftz-29-qfx" firstAttribute="top" secondItem="WSJ-at-tOa" secondAttribute="top" constant="617" id="UkQ-Ja-C4q"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="leading" secondItem="xDK-pR-7Ki" secondAttribute="leading" id="WBw-uY-Qvy"/>
                             <constraint firstItem="fRd-ZF-Dqf" firstAttribute="leading" secondItem="xDK-pR-7Ki" secondAttribute="leading" id="bss-qp-74q"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="trailing" secondItem="xDK-pR-7Ki" secondAttribute="trailing" id="czA-bw-DWX"/>
-                            <constraint firstItem="J7h-O9-5WI" firstAttribute="top" secondItem="WSJ-at-tOa" secondAttribute="top" constant="591" id="dh3-Jk-Teq"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="bottom" secondItem="xDK-pR-7Ki" secondAttribute="bottom" id="lLl-bU-MfS"/>
-                            <constraint firstAttribute="bottom" secondItem="Ftz-29-qfx" secondAttribute="bottom" constant="20" id="nG8-x7-oPP"/>
                             <constraint firstItem="fRd-ZF-Dqf" firstAttribute="trailing" secondItem="xDK-pR-7Ki" secondAttribute="trailing" id="nQp-rx-RMz"/>
                             <constraint firstItem="fRd-ZF-Dqf" firstAttribute="top" secondItem="WSJ-at-tOa" secondAttribute="top" id="oWD-B6-8Qp"/>
                         </constraints>
@@ -155,20 +149,10 @@
                     <connections>
                         <outlet property="apiEmotionValue" destination="NDC-u4-mIQ" id="u0L-Di-ozr"/>
                         <outlet property="photo" destination="eO9-a9-tvX" id="XpI-Gf-vAs"/>
-                        <outlet property="retake" destination="aL8-bx-EQT" id="bMM-Yc-dBB"/>
-                        <outlet property="save" destination="J7h-O9-5WI" id="fZm-jO-G54"/>
-                        <outlet property="submit" destination="yF7-Fg-Ii7" id="gbX-St-HvT"/>
                         <segue destination="tBz-Lj-VCq" kind="presentation" identifier="showMojiLibrary_Segue" id="oHn-LH-0rK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFl-UB-rlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mz8-Oj-WDm">
-                    <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Save">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
             </objects>
             <point key="canvasLocation" x="2684" y="1609.745127436282"/>
         </scene>

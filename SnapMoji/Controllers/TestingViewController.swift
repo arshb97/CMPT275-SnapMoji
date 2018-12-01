@@ -65,8 +65,51 @@ class TestingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //answer highlighted in blue
     @IBAction func answerPressed(_ sender: UIButton) {
         pickedAnswer =  sender.tag
+        if pickedAnswer == 1 {
+             self.choiceA.backgroundColor = UIColor.init(displayP3Red: 0.389, green: 0.732, blue: 0.852, alpha: 1)
+            self.choiceB.backgroundColor = UIColor.white
+            self.choiceC.backgroundColor = UIColor.white
+            self.choiceD.backgroundColor = UIColor.white
+            
+            choiceA.setTitleColor(UIColor.white, for: .normal)
+            choiceB.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            choiceC.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            choiceD.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            
+        } else if pickedAnswer == 2 {
+            self.choiceB.backgroundColor = UIColor.init(displayP3Red: 0.389, green: 0.732, blue: 0.852, alpha: 1)
+            self.choiceA.backgroundColor = UIColor.white
+            self.choiceC.backgroundColor = UIColor.white
+            self.choiceD.backgroundColor = UIColor.white
+            choiceB.setTitleColor(UIColor.white, for: .normal)
+            choiceA.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            choiceC.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            choiceD.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            
+        } else if pickedAnswer == 3 {
+            self.choiceC.backgroundColor = UIColor.init(displayP3Red: 0.389, green: 0.732, blue: 0.852, alpha: 1)
+            self.choiceA.backgroundColor = UIColor.white
+            self.choiceB.backgroundColor = UIColor.white
+            self.choiceD.backgroundColor = UIColor.white
+            choiceC.setTitleColor(UIColor.white, for: .normal)
+            choiceA.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            choiceB.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            choiceD.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            
+        } else if pickedAnswer == 4 {
+            self.choiceD.backgroundColor = UIColor.init(displayP3Red: 0.389, green: 0.732, blue: 0.852, alpha: 1)
+            self.choiceA.backgroundColor = UIColor.white
+            self.choiceB.backgroundColor = UIColor.white
+            self.choiceC.backgroundColor = UIColor.white
+            choiceD.setTitleColor(UIColor.white, for: .normal)
+            choiceA.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            choiceB.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            choiceC.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+            
+        }
         
     }
     
