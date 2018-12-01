@@ -1114,7 +1114,7 @@
                                 <color key="backgroundColor" red="0.91123362815924702" green="0.91123362815924702" blue="0.91123362815924702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="A.">
-                                    <color key="titleColor" red="0.070588235289999995" green="0.47843137250000001" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.24099999999999999" green="0.47370857" blue="0.76473885770000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="ZBl-ZO-N5H"/>
@@ -1960,12 +1960,12 @@
         <image name="test-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dli-c4-qfY"/>
-        <segue reference="NFZ-3P-Gah"/>
-        <segue reference="tEx-dQ-xWX"/>
+        <segue reference="McK-So-z3i"/>
+        <segue reference="Mt1-DI-Kb4"/>
+        <segue reference="xX8-7t-KH3"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="9o1-1A-1vH"/>
-        <segue reference="hZc-Co-EYY"/>
+        <segue reference="VaQ-hM-Nou"/>
+        <segue reference="Rbu-dB-wCn"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
