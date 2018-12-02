@@ -1873,7 +1873,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91123362819999998" green="0.91123362819999998" blue="0.91123362819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Medium-Statistic"/>
+                                <state key="normal" title="Medium"/>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="qtg-nf-03z"/>
                                     <action selector="statsButtonTapped:" destination="Vll-YC-1Fo" eventType="touchUpInside" id="cjv-t6-CrV"/>
@@ -1884,7 +1884,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91123362819999998" green="0.91123362819999998" blue="0.91123362819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Hard-Statistic"/>
+                                <state key="normal" title="Hard"/>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="Fqg-aq-EOo"/>
                                     <action selector="statsButtonTapped:" destination="Vll-YC-1Fo" eventType="touchUpInside" id="Vqa-dK-Nve"/>
@@ -1895,7 +1895,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91123362819999998" green="0.91123362819999998" blue="0.91123362819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Description-Statistic"/>
+                                <state key="normal" title="Descriptions"/>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="RsF-Bh-4aH"/>
                                     <action selector="statsButtonTapped:" destination="Vll-YC-1Fo" eventType="touchUpInside" id="3lL-9V-EWI"/>
@@ -1906,7 +1906,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91123362819999998" green="0.91123362819999998" blue="0.91123362819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Easy-Statistic"/>
+                                <state key="normal" title="Easy"/>
                                 <connections>
                                     <action selector="answerPressed:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="SGB-nt-WfN"/>
                                     <action selector="statsButtonTapped:" destination="Vll-YC-1Fo" eventType="touchUpInside" id="m1a-L9-LcZ"/>
@@ -1965,12 +1965,12 @@ The application aims to aid emotion recognition and understanding. Through custo
         <image name="test-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dli-c4-qfY"/>
-        <segue reference="qcb-Pu-7cZ"/>
-        <segue reference="na3-Vi-bvP"/>
+        <segue reference="ugE-ur-h0V"/>
+        <segue reference="NFZ-3P-Gah"/>
+        <segue reference="tEx-dQ-xWX"/>
         <segue reference="soC-be-xo6"/>
         <segue reference="9o1-1A-1vH"/>
-        <segue reference="e9f-3y-7Ef"/>
+        <segue reference="hZc-Co-EYY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

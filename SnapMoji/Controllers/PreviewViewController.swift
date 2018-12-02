@@ -54,8 +54,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         print("PreviewView "+fileName)
         
 
-        var _ = detector.detectAction(image)
-
+        getEmotion()
     }
     
     //function to implement the save button
@@ -66,6 +65,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         //turn the image into data
         guard let imageData = UIImageJPEGRepresentation(image, 1) else { return }
         
+        /*
         let uploadImageRef = imageReference.child(fileName)
         
         let uploadTask = uploadImageRef.putData(imageData, metadata: nil) { (metadata, error) in
@@ -80,50 +80,31 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         }
         
         uploadTask.resume()
-        
+        */
         
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
         
         //saves image in directory
-        emotionResult = detector.globalVariableGetter()
+        //emotionResult = detector.globalVariableGetter()
+        print(emotionResult + " IMAGE")
         print("Saving file as " + fileName)
-        if emotionResult == emotion {
+        //if emotionResult == emotion {
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             if fromGallery {
-                let newImage: UIImage = image.rotate(radians: 3 * .pi / 2)// create your UIImage here
-                try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
-            } else {
                 let newImage: UIImage = image// create your UIImage here
                 try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
+            } else {
+                let newImage: UIImage = image.rotate(radians: 0)// create your UIImage here
+                try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
             }
-        }
+        //}
         
         //transition back to the library
         performSegue(withIdentifier: "showMojiLibrary_Segue", sender: nil)
         //dismiss(animated: true, completion: nil)
     }
     
-    
-/*downloading:
-     
-     let downloadImageRef = imageReference.child(fileName)
-     let downloadtask = downloadImageRef.getData(maxSize: 1024*1024*12) { (data, error) in
-     if let data = data {
-     let image = UIImage(data: data)
-     self.downloadImage.image = image
-     
-     }
-     print(error ?? "NO ERROR")
-     }
-     
-     downloadtask.observe(.progress) { (snapshot) in
-     print(snapshot.progress ?? "NO MORE PROGRESS")
-     }
-     
-     downloadtask.resume()
-    
- */
     
     //I have used this print statement just for reference. API takes 1-2 seconds to return the result. The result will be displayed in console. Once you see that result, press Seeresults button
     //sends the image to the microsoft emotion api
@@ -138,7 +119,8 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     
     //function to see results of the emotion api
     @IBAction func seeResults(_ sender: Any) {
-
+        
+        //var _ = detector.detectAction(image)
         emotionResult = detector.globalVariableGetter()
         
         print (emotionResult)
@@ -152,6 +134,12 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         dismiss(animated: true, completion: nil)
     }
  
+    func getEmotion() {
+        var _ = detector.detectAction(image)
+        emotionResult = detector.globalVariableGetter()
+        print (emotionResult)
+        apiEmotionValue.text = emotionResult
+    }
     /*
     // MARK: - Navigation
 

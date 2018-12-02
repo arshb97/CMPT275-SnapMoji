@@ -34,6 +34,7 @@ extern NSString *mYGlobalVariable = @"";                  //global variable
 - (NSString *) detectAction: (UIImage *) image  {
     _selectedImage = image;
     
+    //renew the subscription key if no emotion is returned when sending to Microsoft
     static NSString *const ProjectOxfordFaceSubscriptionKey = @"c84e7e224eb34453975d70ea1b9c9d0d";
     static NSString *const ProjectOxfordFaceEndpoint = @"https://westcentralus.api.cognitive.microsoft.com/face/v1.0";
     __block NSString *emotion = @"";
