@@ -143,6 +143,9 @@ class TestingViewController: UIViewController {
             choiceD.setTitle(allQuestions.list[questionNumber].choiceD, for: UIControlState.normal)
             selectedAnswer = allQuestions.list[questionNumber].correctAnswer
         } else {
+            //store the score:
+            insertScore(score: score, difficulty: difficulty)
+            //display the score:
             let finishMessage = "You got \(score)/\(allQuestions.list.count)!"
             
             let alert = UIAlertController(title: "Nice job!", message: finishMessage, preferredStyle: .alert)
@@ -160,6 +163,16 @@ class TestingViewController: UIViewController {
         scoreLabel.text = "Score: \(score)"
         questionCounter.text = "\(questionNumber + 1)/\(allQuestions.list.count)"
         progress.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
+        pickedAnswer = 0
+        self.choiceA.backgroundColor = UIColor.white
+        self.choiceB.backgroundColor = UIColor.white
+        self.choiceC.backgroundColor = UIColor.white
+        self.choiceD.backgroundColor = UIColor.white
+        
+        choiceA.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+        choiceB.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+        choiceC.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+        choiceD.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
     }
     
     //start the quiz again when finished
@@ -168,5 +181,43 @@ class TestingViewController: UIViewController {
         questionNumber = 0
         updateQuestion()
         
+    }
+    
+    //function to add a new element to any of the difficulty arrays to be used for the statistics charts
+    func insertScore(score: Int, difficulty: Int) {
+        if difficulty == 1 {
+            for i in 0...14 { //hardcoded for loop size: replace later
+                print(i)
+                if i == 14 {
+                    testScoreEasyArray[i] = score
+                } else {
+                    testScoreEasyArray[i] = testScoreEasyArray[i+1]
+                }
+            }
+        } else if difficulty == 2 {
+            for i in 0...14 {
+                if i == 14 {
+                    testScoreMediumArray[i] = score
+                } else {
+                    testScoreMediumArray[i] = testScoreMediumArray[i+1]
+                }
+            }
+        } else if difficulty == 3 {
+            for i in 0...14 {
+                if i == 14 {
+                    testScoreHardArray[i] = score
+                } else {
+                    testScoreHardArray[i] = testScoreHardArray[i+1]
+                }
+            }
+        } else if difficulty == 4 {
+            for i in 0...14 {
+                if i == 14 {
+                    testScoreDescriptionArray[i] = score
+                } else {
+                    testScoreDescriptionArray[i] = testScoreDescriptionArray[i+1]
+                }
+            }
+        }
     }
 }

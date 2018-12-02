@@ -203,7 +203,7 @@ class LibraryViewController: UIViewController{
             
             // Download to the local filesystem
             _ = downloadImageRef.write(toFile: imageUrl) { url, error in
-                if let error = error {
+                if error != nil {
                     // Uh-oh, an error occurred!
                 } else {
                     // Local file URL for "images/island.jpg" is returned

@@ -155,10 +155,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcG-FT-dAr">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcG-FT-dAr">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="" image="friends" id="XC3-Ep-BuN">
                                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
@@ -180,6 +179,12 @@
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.34732090290000001" green="0.64390670120000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNG-sc-NfN" userLabel="tests">
                                 <rect key="frame" x="75" y="618" width="75" height="50"/>
@@ -203,7 +208,7 @@
                                 <rect key="frame" x="0.0" y="618" width="75" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="h6t-Jd-oMD" kind="presentation" id="Mjl-Mo-hBg"/>
+                                    <segue destination="h6t-Jd-oMD" kind="presentation" modalTransitionStyle="crossDissolve" id="Mjl-Mo-hBg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbH-xK-NdD" userLabel="statistics">
@@ -254,10 +259,9 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.3006075621" green="0.59006965160000002" blue="0.95690423250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </navigationBar>
-                            <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMQ-0l-Oah">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMQ-0l-Oah">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="" image="friends" id="Rct-SH-OzW">
                                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
@@ -279,6 +283,12 @@ The application aims to aid emotion recognition and understanding. Through custo
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.34732090290000001" green="0.64390670120000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpQ-2C-k1p" userLabel="statistics">
                                 <rect key="frame" x="150" y="618" width="75" height="50"/>
@@ -576,10 +586,9 @@ The application aims to aid emotion recognition and understanding. Through custo
                                     <segue destination="h6t-Jd-oMD" kind="presentation" modalTransitionStyle="crossDissolve" id="63o-yf-e3T"/>
                                 </connections>
                             </button>
-                            <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTY-2L-hwj">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTY-2L-hwj">
                                 <rect key="frame" x="0.0" y="619" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="" image="friends" id="GLN-Pr-tG5">
                                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
@@ -601,6 +610,12 @@ The application aims to aid emotion recognition and understanding. Through custo
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.34732090285908879" green="0.6439067012002897" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-ng-hUo" userLabel="tests">
                                 <rect key="frame" x="75" y="619" width="75" height="50"/>
@@ -848,10 +863,9 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VKc-GN-OO2">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VKc-GN-OO2">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="" image="friends" id="Ts0-SQ-y9M">
                                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
@@ -873,6 +887,12 @@ The application aims to aid emotion recognition and understanding. Through custo
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.34732090290000001" green="0.64390670120000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBu-a0-tRb" userLabel="tests">
                                 <rect key="frame" x="75" y="618" width="75" height="50"/>
@@ -907,7 +927,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zh-CH-ngH" userLabel="back">
-                                <rect key="frame" x="20" y="32" width="16" height="30"/>
+                                <rect key="frame" x="11" y="32" width="16" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -1098,7 +1118,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <color key="backgroundColor" red="0.3006075621" green="0.59006965160000002" blue="0.95690423250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji8-ML-ueS" userLabel="back">
-                                <rect key="frame" x="10" y="32" width="16" height="30"/>
+                                <rect key="frame" x="11" y="32" width="16" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -1208,10 +1228,9 @@ The application aims to aid emotion recognition and understanding. Through custo
                                     <action selector="submitAnswer:" destination="9f1-Ce-LGf" eventType="touchUpInside" id="hzX-Nd-c5D"/>
                                 </connections>
                             </button>
-                            <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUj-Rx-d4l">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUj-Rx-d4l">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="" image="friends" id="BQJ-XR-yWU">
                                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
@@ -1233,6 +1252,12 @@ The application aims to aid emotion recognition and understanding. Through custo
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.34732090290000001" green="0.64390670120000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49u-op-2uZ" userLabel="tests">
                                 <rect key="frame" x="75" y="618" width="75" height="50"/>
@@ -1338,17 +1363,16 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 </textAttributes>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eaf-wG-QHh" userLabel="back">
-                                <rect key="frame" x="10" y="32" width="16" height="30"/>
+                                <rect key="frame" x="11" y="32" width="16" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <segue destination="h6t-Jd-oMD" kind="presentation" modalTransitionStyle="crossDissolve" id="Pc3-OX-Rbo"/>
                                 </connections>
                             </button>
-                            <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GqF-51-GVz">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GqF-51-GVz">
                                 <rect key="frame" x="-1" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="" image="friends" id="XMG-af-v37">
                                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
@@ -1370,6 +1394,12 @@ The application aims to aid emotion recognition and understanding. Through custo
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.34732090290000001" green="0.64390670120000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egS-2h-QSe" userLabel="description">
                                 <rect key="frame" x="225" y="617" width="75" height="50"/>
@@ -1583,10 +1613,10 @@ The application aims to aid emotion recognition and understanding. Through custo
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tm0-LJ-IF3">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tm0-LJ-IF3">
                                 <rect key="frame" x="-1" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.34732090290000001" green="0.64390670120000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <tabBarItem title="" image="friends" id="bgt-6F-lHG">
                                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
@@ -1608,6 +1638,12 @@ The application aims to aid emotion recognition and understanding. Through custo
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.34732090290000001" green="0.64390670120000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jn-L9-lju">
                                 <rect key="frame" x="16" y="89" width="124" height="30"/>
@@ -1684,7 +1720,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <color key="barTintColor" red="0.3006075621" green="0.59006965160000002" blue="0.95690423250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaa-bv-Dmi" userLabel="back">
-                                <rect key="frame" x="10" y="32" width="16" height="30"/>
+                                <rect key="frame" x="11" y="32" width="16" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -1769,10 +1805,9 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wHf-k6-9Tn">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wHf-k6-9Tn">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="" image="friends" id="Rje-rW-c3C">
                                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
@@ -1794,6 +1829,12 @@ The application aims to aid emotion recognition and understanding. Through custo
                                     </tabBarItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.34732090290000001" green="0.64390670120000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cD-au-Z8a" userLabel="tests">
                                 <rect key="frame" x="75" y="618" width="75" height="50"/>
@@ -1900,8 +1941,8 @@ The application aims to aid emotion recognition and understanding. Through custo
         </scene>
     </scenes>
     <resources>
-        <image name="ButtonClicked" width="100" height="100"/>
-        <image name="ButtonUnclicked" width="100" height="100"/>
+        <image name="ButtonClicked" width="75" height="75"/>
+        <image name="ButtonUnclicked" width="75" height="75"/>
         <image name="John-Doe" width="498" height="480"/>
         <image name="add" width="225" height="225"/>
         <image name="angry_emoji" width="160" height="160"/>
@@ -1924,12 +1965,12 @@ The application aims to aid emotion recognition and understanding. Through custo
         <image name="test-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="McK-So-z3i"/>
-        <segue reference="Mt1-DI-Kb4"/>
-        <segue reference="xX8-7t-KH3"/>
+        <segue reference="Dli-c4-qfY"/>
+        <segue reference="qcb-Pu-7cZ"/>
+        <segue reference="na3-Vi-bvP"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="VaQ-hM-Nou"/>
-        <segue reference="Rbu-dB-wCn"/>
+        <segue reference="9o1-1A-1vH"/>
+        <segue reference="e9f-3y-7Ef"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
