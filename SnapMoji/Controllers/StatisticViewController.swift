@@ -24,6 +24,11 @@
 import UIKit
 import Charts
 
+var testScoreEasyArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+var testScoreMediumArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+var testScoreHardArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+var testScoreDescriptionArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
 class StatisticViewController: UIViewController {
     
     @IBOutlet weak var statsChart: LineChartView!
@@ -32,7 +37,7 @@ class StatisticViewController: UIViewController {
     
     @IBAction func statsButtonTapped(_ sender: UIButton) {
         if sender.tag > 0 {
-            let count = Int(arc4random_uniform(20) + 3)
+            let count = 15
             let difficulty = sender.tag
             setChartValues(count, difficulty: difficulty)
         }
@@ -44,9 +49,20 @@ class StatisticViewController: UIViewController {
         setChartValues(difficulty: 1)
     }
     
-    func setChartValues(_ count: Int = 20, difficulty: Int) {
+    func setChartValues(_ count: Int = 15, difficulty: Int) {
+        
         let values = (0..<count).map { (i) -> ChartDataEntry in
-            let val = Double(arc4random_uniform(UInt32(count)) % 6)
+            var val = Double(testScoreEasyArray[i])
+            if difficulty == 1 {
+                val = Double(testScoreEasyArray[i])
+            } else if difficulty == 2 {
+                val = Double(testScoreMediumArray[i])
+            } else if difficulty == 3 {
+                val = Double(testScoreHardArray[i])
+            } else if difficulty == 4 {
+                val = Double(testScoreDescriptionArray[i])
+            }
+            
             return ChartDataEntry(x: Double(i), y: val)
         }
         
