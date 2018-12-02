@@ -927,7 +927,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zh-CH-ngH" userLabel="back">
-                                <rect key="frame" x="20" y="32" width="16" height="30"/>
+                                <rect key="frame" x="11" y="32" width="16" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -1118,7 +1118,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <color key="backgroundColor" red="0.3006075621" green="0.59006965160000002" blue="0.95690423250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji8-ML-ueS" userLabel="back">
-                                <rect key="frame" x="10" y="32" width="16" height="30"/>
+                                <rect key="frame" x="11" y="32" width="16" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -1363,7 +1363,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 </textAttributes>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eaf-wG-QHh" userLabel="back">
-                                <rect key="frame" x="10" y="32" width="16" height="30"/>
+                                <rect key="frame" x="11" y="32" width="16" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -1720,7 +1720,7 @@ The application aims to aid emotion recognition and understanding. Through custo
                                 <color key="barTintColor" red="0.3006075621" green="0.59006965160000002" blue="0.95690423250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaa-bv-Dmi" userLabel="back">
-                                <rect key="frame" x="10" y="32" width="16" height="30"/>
+                                <rect key="frame" x="11" y="32" width="16" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -1966,11 +1966,11 @@ The application aims to aid emotion recognition and understanding. Through custo
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lGY-WR-2kZ"/>
-        <segue reference="IhN-sp-Mka"/>
-        <segue reference="QQY-oq-lOX"/>
+        <segue reference="NFZ-3P-Gah"/>
+        <segue reference="tEx-dQ-xWX"/>
         <segue reference="soC-be-xo6"/>
-        <segue reference="OBD-He-BuK"/>
-        <segue reference="B3C-Tm-rNk"/>
+        <segue reference="9o1-1A-1vH"/>
+        <segue reference="hZc-Co-EYY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1137254902" green="0.4823529412" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
