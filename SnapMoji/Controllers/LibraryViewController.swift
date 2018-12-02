@@ -127,8 +127,8 @@ class LibraryViewController: UIViewController{
                 let imageData: Data = try? Data(contentsOf: imageUrl),
                 let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
                 //figure out how to change which moji button we are changing
-        
-                let rotatedImage = image.rotate(radians: .pi / 2)
+                
+                let rotatedImage = image
                 switch fileName {
                 case Name + "happiness.jpg":
                     HappyMojiButton.setImage(rotatedImage, for: .normal)
