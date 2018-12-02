@@ -16,10 +16,6 @@
 		034D0CE52186E1E7005CC0CB /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D0CE42186E1E7005CC0CB /* PopUpViewController.swift */; };
 		03638D74218D3986004A5DBF /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03638D73218D3986004A5DBF /* LibraryViewController.swift */; };
 		03C6A2512184EA2800F5FFB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */; };
-		1398613943D6A7457FCC1868 /* Pods_SnapMoji_SnapMojiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759C52F2292911484A43C0F6 /* Pods_SnapMoji_SnapMojiUITests.framework */; };
-		25A6406C36D91D595D739C89 /* Pods_SnapMoji_SnapMojiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4331908AEFE1360C68A8B5B2 /* Pods_SnapMoji_SnapMojiTests.framework */; };
-		370506BB0884C843BD804D6E /* Pods_SnapMoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F322DF366EC37112FFFC322E /* Pods_SnapMoji.framework */; };
-		46C4ACFA34692B56761B32E4 /* Pods_SnapMojiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */; };
 		732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 732C7860219D0EA400558B5D /* DLRadioButton.m */; };
 		73D60F342183BFB1001AAA21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F332183BFB1001AAA21 /* AppDelegate.swift */; };
 		73D60F362183BFB1001AAA21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D60F352183BFB1001AAA21 /* ViewController.swift */; };
@@ -39,11 +35,8 @@
 		C52214BBF064446E44CDB3EB /* Pods_SnapMoji_SnapMojiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF856C1B3EF6F197D2A692B4 /* Pods_SnapMoji_SnapMojiUITests.framework */; };
 		F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */; };
 		F44CF60B21950B0600B722B6 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF60A21950B0600B722B6 /* TestingViewController.swift */; };
-		F49BAF8A21A76F7D000152F3 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49BAF8921A76F7D000152F3 /* InformationViewController.swift */; };
 		F49BAF8C21A76FC3000152F3 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49BAF8B21A76FC3000152F3 /* StatisticViewController.swift */; };
-		F49BAF8E21A77034000152F3 /* LevelStatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49BAF8D21A77034000152F3 /* LevelStatViewController.swift */; };
 		F4ACC21421A7473200EC3DAF /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACC21321A7473200EC3DAF /* DescriptionViewController.swift */; };
-		FE65EEA9756AB3BE5B52FC3D /* Pods_SnapMojiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B6ECDB239816E74A118711 /* Pods_SnapMojiUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +68,6 @@
 		03C6A2502184EA2800F5FFB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EEA0527C87C8E9907A5F479 /* Pods-SnapMoji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.debug.xcconfig"; sourceTree = "<group>"; };
 		362CC3F3421CDBD6083C2CA1 /* Pods-SnapMoji-SnapMojiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji-SnapMojiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji-SnapMojiTests/Pods-SnapMoji-SnapMojiTests.release.xcconfig"; sourceTree = "<group>"; };
-		4331908AEFE1360C68A8B5B2 /* Pods_SnapMoji_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F5568E803BE46E003256EA /* Pods-SnapMojiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiUITests/Pods-SnapMojiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C48B220DB147743CC8E0B8D /* Pods-SnapMojiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiTests/Pods-SnapMojiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E10774B8A280516470634AC /* Pods_SnapMoji_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +86,6 @@
 		73D60F4F2183BFB2001AAA21 /* SnapMojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapMojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D60F532183BFB3001AAA21 /* SnapMojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapMojiUITests.swift; sourceTree = "<group>"; };
 		73D60F552183BFB3001AAA21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		759C52F2292911484A43C0F6 /* Pods_SnapMoji_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1C93E5218EC50C002EE0D1 /* SnapMoji-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapMoji-Bridging-Header.h"; sourceTree = "<group>"; };
 		7D1C93E6218EC50D002EE0D1 /* DetectFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectFace.h; sourceTree = "<group>"; };
 		7D1C93E7218EC50D002EE0D1 /* PersonFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonFace.m; sourceTree = "<group>"; };
@@ -103,7 +94,6 @@
 		A883BD768F7AD36E0AA368A3 /* Pods_SnapMoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSectionViewController.swift; sourceTree = "<group>"; };
 		AA95396C21A75A11006B83C4 /* EmotionDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDescriptionViewController.swift; sourceTree = "<group>"; };
-		B46622497AA9164E50C7DF77 /* Pods_SnapMojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3A06AF218917870034EDDE /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BF2225CE33CB98F019DE517A /* Pods-SnapMoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji/Pods-SnapMoji.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,12 +101,9 @@
 		D0E59BAA2F8FC7054F2DFBD7 /* Pods-SnapMoji-SnapMojiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji-SnapMojiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji-SnapMojiUITests/Pods-SnapMoji-SnapMojiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC14DFE773228110D3F90F2F /* Pods-SnapMoji-SnapMojiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji-SnapMojiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji-SnapMojiUITests/Pods-SnapMoji-SnapMojiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED743C16F0C662281D354910 /* Pods-SnapMoji-SnapMojiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMoji-SnapMojiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMoji-SnapMojiTests/Pods-SnapMoji-SnapMojiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F322DF366EC37112FFFC322E /* Pods_SnapMoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44CF6082194FD4300B722B6 /* TestSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSettingViewController.swift; sourceTree = "<group>"; };
 		F44CF60A21950B0600B722B6 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
-		F49BAF8921A76F7D000152F3 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		F49BAF8B21A76FC3000152F3 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
-		F49BAF8D21A77034000152F3 /* LevelStatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelStatViewController.swift; sourceTree = "<group>"; };
 		F4ACC21321A7473200EC3DAF /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		FA4BA06EFA0822E50315B809 /* Pods-SnapMojiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapMojiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapMojiUITests/Pods-SnapMojiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF856C1B3EF6F197D2A692B4 /* Pods_SnapMoji_SnapMojiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapMoji_SnapMojiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,13 +134,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA66C45121ADF4A500006518 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -171,9 +151,7 @@
 				F44CF60A21950B0600B722B6 /* TestingViewController.swift */,
 				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
 				AA95396C21A75A11006B83C4 /* EmotionDescriptionViewController.swift */,
-				F49BAF8921A76F7D000152F3 /* InformationViewController.swift */,
 				F49BAF8B21A76FC3000152F3 /* StatisticViewController.swift */,
-				F49BAF8D21A77034000152F3 /* LevelStatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -573,7 +551,6 @@
 				03638D74218D3986004A5DBF /* LibraryViewController.swift in Sources */,
 				032A694821A110770089BCB2 /* CheckBox.swift in Sources */,
 				7D1C93EA218EC50E002EE0D1 /* PersonFace.m in Sources */,
-				F49BAF8E21A77034000152F3 /* LevelStatViewController.swift in Sources */,
 				732C7861219D0EA400558B5D /* DLRadioButton.m in Sources */,
 				034D0CDF21868196005CC0CB /* PreviewViewController.swift in Sources */,
 				F49BAF8C21A76FC3000152F3 /* StatisticViewController.swift in Sources */,
@@ -581,7 +558,6 @@
 				F4ACC21421A7473200EC3DAF /* DescriptionViewController.swift in Sources */,
 				032A694621A10E240089BCB2 /* FiltersViewController.swift in Sources */,
 				F44CF6092194FD4300B722B6 /* TestSettingViewController.swift in Sources */,
-				F49BAF8A21A76F7D000152F3 /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
