@@ -150,6 +150,7 @@
 				032A694521A10E240089BCB2 /* FiltersViewController.swift */,
 				F44CF60A21950B0600B722B6 /* TestingViewController.swift */,
 				AA64660F2194C6E4007A93E1 /* FriendSectionViewController.swift */,
+				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
 				AA95396C21A75A11006B83C4 /* EmotionDescriptionViewController.swift */,
 				F49BAF8B21A76FC3000152F3 /* StatisticViewController.swift */,
 			);
@@ -193,7 +194,6 @@
 			children = (
 				73D60F332183BFB1001AAA21 /* AppDelegate.swift */,
 				032A694021A0FF4A0089BCB2 /* Controllers */,
-				BA71B6DB2183CD22008D8FB4 /* CollectionViewCell.swift */,
 				032A6937219D5C1E0089BCB2 /* QuestionBank.swift */,
 				032A6935219D5A600089BCB2 /* Questions.swift */,
 				032A694721A110770089BCB2 /* CheckBox.swift */,
