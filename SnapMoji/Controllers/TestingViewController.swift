@@ -160,6 +160,16 @@ class TestingViewController: UIViewController {
         scoreLabel.text = "Score: \(score)"
         questionCounter.text = "\(questionNumber + 1)/\(allQuestions.list.count)"
         progress.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
+        pickedAnswer = 0
+        self.choiceA.backgroundColor = UIColor.white
+        self.choiceB.backgroundColor = UIColor.white
+        self.choiceC.backgroundColor = UIColor.white
+        self.choiceD.backgroundColor = UIColor.white
+        
+        choiceA.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+        choiceB.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+        choiceC.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
+        choiceD.setTitleColor(UIColor.init(displayP3Red: 0.241, green: 0.474, blue: 0.765, alpha: 1), for: .normal)
     }
     
     //start the quiz again when finished
