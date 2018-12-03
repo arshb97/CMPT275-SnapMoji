@@ -14,6 +14,7 @@
 //  1.1 - Camera working and storing photos to phone and firebase
 //  1.2 - Emotions passed through view controllers, Microsoft emotion API implemented
 //  2.0 - Removed rotating images when grabbing from the directory
+//  3.0 - Added support for downloading images from Firebase
 //
 //  Known bugs:
 //  No warning as to when an emoji is not replaced when an image is selected
@@ -118,6 +119,7 @@ class LibraryViewController: UIViewController{
         for emotion in emotions {
             let fileName = Name + emotion + ".jpg"
             print(fileName)
+            //uncomment this to download from Firebase
             //downloadImages(filename: fileName)
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)

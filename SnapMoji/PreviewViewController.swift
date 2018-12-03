@@ -66,7 +66,8 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         //turn the image into data
         guard let imageData = UIImageJPEGRepresentation(image, 1) else { return }
         
-        /*
+        //uncomment this to upload to Firebase
+        
         let uploadImageRef = imageReference.child(fileName)
         
         let uploadTask = uploadImageRef.putData(imageData, metadata: nil) { (metadata, error) in
@@ -81,7 +82,7 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         }
         
         uploadTask.resume()
-        */
+        
         
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
         
