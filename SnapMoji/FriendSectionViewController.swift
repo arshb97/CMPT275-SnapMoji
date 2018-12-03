@@ -27,12 +27,16 @@ public var friends = ["Sample"] //array of friends
 
 class FriendSectionViewController:  UIViewController, UICollectionViewDelegate,
 UICollectionViewDataSource {
-
+    
+    //outlet defined from the storyboard
     @IBOutlet weak var addFriend: UIButton!
+    //name left empty to be filled in when the friend is selected
     private var name = ""
     
+    //using a collection view for each friend in the friends section
     @IBOutlet weak var collection: UICollectionView!
     
+    //when the "add friend" icon is tapped bring up a text field to enter a name
     @IBAction func addFriend_tab(_ sender: Any) {
         //create popup
         let alertController = UIAlertController(title: "Add New Friend", message: "Type your friends name below", preferredStyle: UIAlertControllerStyle.alert)
@@ -61,6 +65,7 @@ UICollectionViewDataSource {
         
     }
 
+    //when a person is selected print
     @objc private func buttonAction(sender: UIButton!) {
         print("Button tapped")
     }

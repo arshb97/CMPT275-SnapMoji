@@ -20,8 +20,9 @@ import FirebaseDatabase
 
 class EmotionDescriptionViewController: UIViewController {
     
-    var EmotionLabel = ""
+    var EmotionLabel = "" //title for the emotion
     
+    //define outlets needed from the storyboard
     @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var Description: UILabel!
     @IBOutlet weak var causes: UILabel!
@@ -42,8 +43,6 @@ class EmotionDescriptionViewController: UIViewController {
         ref.child(EmotionLabel+"/Causes").observeSingleEvent(of: .value) { (snapshot) in
             self.causes.text = snapshot.value as? String
         }
-
-        // Do any additional setup after loading the view.
     }
 
 }

@@ -25,9 +25,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
         super.viewDidLoad()
-       // collectionView.dataSource = self
-      //  collectionView.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
