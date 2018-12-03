@@ -15,6 +15,7 @@
 //  Known bugs:
 //  Preview crops the image to accomodate screen size when sent from the gallery
 //
+//
 //  Created by Josh Baltar on 2018-10-28.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //
@@ -51,9 +52,9 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         // Do any additional setup after loading the view.
         
         photo.image = self.image
-        print("PreviewView "+fileName)
+        print("PreviewView " + fileName)
         
-
+        var _ = detector.detectAction(image)
         getEmotion()
     }
     
@@ -88,17 +89,17 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
         //emotionResult = detector.globalVariableGetter()
         print(emotionResult + " IMAGE")
         print("Saving file as " + fileName)
-        //if emotionResult == emotion {
+        if emotionResult == emotion {
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             if fromGallery {
-                let newImage: UIImage = image// create your UIImage here
+                let newImage: UIImage = image.rotate(radians: 0)// create your UIImage here
                 try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
             } else {
                 let newImage: UIImage = image.rotate(radians: 0)// create your UIImage here
                 try? UIImagePNGRepresentation(newImage)?.write(to: imageUrl)
             }
-        //}
+        }
         
         //transition back to the library
         performSegue(withIdentifier: "showMojiLibrary_Segue", sender: nil)
@@ -117,37 +118,30 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     //variable to store what the emotion returns
     var emotionResult = ""                  //Variable to store the emotion of the picture given by API
     
-    //function to see results of the emotion api
-    @IBAction func seeResults(_ sender: Any) {
-        
-        //var _ = detector.detectAction(image)
-        emotionResult = detector.globalVariableGetter()
-        
-        print (emotionResult)
-        
-        apiEmotionValue.text = emotionResult
-        
-    }
-    
     // function to implement the cancel button
     @IBAction func cancelButton_tap(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
  
     func getEmotion() {
-        var _ = detector.detectAction(image)
+        print (emotionResult + "waiting until show emotion\n\n\n")
+        
+        //execute code with a delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.showEmotion()
+        })
+        
+    }
+    
+    func showEmotion() {
         emotionResult = detector.globalVariableGetter()
-        print (emotionResult)
+        print (emotionResult + "waiting until show emotion 2 \n\n\n")
         apiEmotionValue.text = emotionResult
+        if emotionResult == emotion {
+            apiEmotionValue.textColor = UIColor.green
+        } else {
+            apiEmotionValue.textColor = UIColor.red
+        }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
