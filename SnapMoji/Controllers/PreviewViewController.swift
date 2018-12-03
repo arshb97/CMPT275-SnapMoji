@@ -15,6 +15,7 @@
 //  Known bugs:
 //  Preview crops the image to accomodate screen size when sent from the gallery
 //
+//
 //  Created by Josh Baltar on 2018-10-28.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
 //
