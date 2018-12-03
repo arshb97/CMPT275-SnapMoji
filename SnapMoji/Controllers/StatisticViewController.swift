@@ -24,6 +24,7 @@
 import UIKit
 import Charts
 
+//these arrays are used for storing the test scores for the varying difficulties
 var testScoreEasyArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var testScoreMediumArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var testScoreHardArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -31,14 +32,16 @@ var testScoreDescriptionArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 class StatisticViewController: UIViewController {
     
+    //outlets to control the chart titles and the chart itself
     @IBOutlet weak var statsChart: LineChartView!
-    
     @IBOutlet weak var statsChartLabel: UILabel!
     
+    //function to execute when any of the stats buttons are pressed
     @IBAction func statsButtonTapped(_ sender: UIButton) {
-        if sender.tag > 0 {
+        if sender.tag > 0 { //tag used as the identifier for each button
             let count = 15
             let difficulty = sender.tag
+            //count = the amount of data points, difficulty = difficulty of test results to view
             setChartValues(count, difficulty: difficulty)
         }
     }
@@ -46,12 +49,16 @@ class StatisticViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //easy chart initially loaded
         setChartValues(difficulty: 1)
     }
     
+    //function to change the chart values depenging on the difficulty pressed
+    //function creates the chart and defines the values in the chart
     func setChartValues(_ count: Int = 15, difficulty: Int) {
         
         let values = (0..<count).map { (i) -> ChartDataEntry in
+            //using a double for the score
             var val = Double(testScoreEasyArray[i])
             if difficulty == 1 {
                 val = Double(testScoreEasyArray[i])
@@ -66,8 +73,11 @@ class StatisticViewController: UIViewController {
             return ChartDataEntry(x: Double(i), y: val)
         }
         
+        
+        //define values and label for the chart
         var set1 = LineChartDataSet(values: values, label: "DataSet 1")
         
+        //change title depending on the title
         if difficulty == 1{
             set1 = LineChartDataSet(values: values, label: "Easy")
             statsChartLabel.text = "Test Results - Easy"

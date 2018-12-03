@@ -13,10 +13,10 @@
 //  1.0 - Initial commit layout and segues finished
 //  1.1 - Camera working and storing photos to phone and firebase
 //  1.2 - Emotions passed through view controllers, Microsoft emotion API implemented
+//  2.0 - Removed rotating images when grabbing from the directory
 //
 //  Known bugs:
 //  No warning as to when an emoji is not replaced when an image is selected
-//  Gallery does not save the photo
 //
 //  Created by Josh Baltar on 2018-11-02.
 //  Copyright © 2018 Mojo Mojis. All rights reserved.
@@ -40,7 +40,7 @@ class LibraryViewController: UIViewController{
     @IBOutlet weak var FriendName: UITextField!
     var setEmotion = "emotion"
     
-    //buttons initialized
+    //buttons for setting the emotion tapped
     @IBOutlet weak var HappyMojiButton: UIButton!
     @IBOutlet weak var SadMojiButton: UIButton!
     @IBOutlet weak var AngryMojiButton: UIButton!
@@ -50,11 +50,11 @@ class LibraryViewController: UIViewController{
     @IBOutlet weak var ContemptMojiButton: UIButton!
     @IBOutlet weak var NeutralMojiButton: UIButton!
     
+    //an IBAction is used for each button tapped
     @IBAction func HappyMoji_tap(_ sender: Any) {
         setEmotion = emotions[0]
         performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
     }
-    
     @IBAction func SadMoji_tap(_ sender: Any) {
         setEmotion = emotions[1]
         performSegue(withIdentifier: "libToPopUp_Segue", sender: nil)
@@ -100,7 +100,7 @@ class LibraryViewController: UIViewController{
     //Microsoft Emotion API
     let emotions = ["happiness", "sadness", "anger", "surprise", "disgust", "fear", "contempt", "neutral"]
     
-    //gets the name of the selected friend in the library
+    //gets the name of the selected friend in the library from firebase
     func getName() {
         let ref = Database.database().reference()
         ref.child("currentFriend/name").observeSingleEvent(of: .value) { (snapshot) in
@@ -128,6 +128,8 @@ class LibraryViewController: UIViewController{
                 let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
                 //figure out how to change which moji button we are changing
                 
+                //The image was once rotated for a bug fix, but now has been fixed
+                //remove this variable if time permits
                 let rotatedImage = image
                 switch fileName {
                 case Name + "happiness.jpg":
@@ -158,7 +160,7 @@ class LibraryViewController: UIViewController{
                     print("NO IMAGE AVAILABLE FOR " + self.FriendName.text! + fileName)
                 }
             }else{
-                    //Set the default images for Sample
+                    //Set the default images if the Sample friend was selected
                     if (Name == "Sample"){
                         var image = UIImage(named: "Samplehappiness")!
                         HappyMojiButton.setImage(image, for: .normal)
@@ -213,7 +215,7 @@ class LibraryViewController: UIViewController{
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
 }
