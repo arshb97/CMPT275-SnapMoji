@@ -25,6 +25,7 @@ import Foundation
 
 
 class Question {
+    //Initializing variables of Question class
     var difficulty: Int
     let questionImage: UIImage
     let questionTextDesc: String
@@ -36,6 +37,7 @@ class Question {
     let choiceD: String
     let correctAnswer: Int
     
+    //initialize question with values given when instantiated
     init(text: String, image: UIImage, questionText: String, userChoiceA: String, userChoiceB: String, userChoiceC: String, userChoiceD: String, answer: Int, chosenDifficulty: Int) {
         questionTextDesc = text
         questionImage = image

@@ -46,10 +46,8 @@ class QuestionBank {
     let surprise = ["Any unexpected event can cause you to feel this emotion such as receiving unexpected news or someone giving you something unexpectedly. ", "This emotion is a brief mental and physiological state, experienced in response to an unexpected event."]
     var emotion = "happiness"
     let ref = Database.database().reference()
-    //var difficulty = 0
     
     //use sample if less than 5 images exist
-    
     init() {
         //randomly pick 5 unique emotions
         var randEmotionSet = Set<String>() //a set can can only contain unique elements
@@ -174,6 +172,7 @@ class QuestionBank {
                         
                     }
                     
+                    //define question with randomly chosen choices
                     list.append(Question(text: self.labelTestQuestion, image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
                 }
             }
@@ -252,13 +251,6 @@ class QuestionBank {
                 list.append(Question(text: self.labelTestQuestion, image: image, questionText: "What emotion is this?", userChoiceA: randChoices[0], userChoiceB: randChoices[1], userChoiceC: randChoices[2], userChoiceD: randChoices[3], answer: randAnswer, chosenDifficulty: difficulty))
             }//end of for loop
         }//end of else statment
-        
-        //list.append(Question(image: randAns2, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: randEmotion[1], userChoiceC: "anger", userChoiceD: "surprise", answer: 2, chosenDifficulty: difficulty))
-        //list.append(Question(image: randAns3, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: randEmotion[2], userChoiceC: "anger", userChoiceD: "surprise", answer: 2, chosenDifficulty: difficulty))
-        //list.append(Question(image: randAns4, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: "anger", userChoiceC: randEmotion[3], userChoiceD: "surprise", answer: 3, chosenDifficulty: difficulty))
-        //list.append(Question(image: randAns5, questionText: "What emotion is this?", userChoiceA: "happiness", userChoiceB: "contempt", userChoiceC: "anger", userChoiceD: randEmotion[4], answer: 4, chosenDifficulty: difficulty))
-        
-        
     }//end of init
 }//end of class
 
@@ -283,6 +275,7 @@ extension UIImage {
     }
 }
 
+//extension to capital first letter of a string 
 extension String {
     func capitalizingFirstLetter() -> String {
         return prefix(1).uppercased() + self.lowercased().dropFirst()
