@@ -118,7 +118,7 @@ class LibraryViewController: UIViewController{
         for emotion in emotions {
             let fileName = Name + emotion + ".jpg"
             print(fileName)
-            downloadImages(filename: fileName)
+            //downloadImages(filename: fileName)
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(fileName)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
             
@@ -197,7 +197,7 @@ class LibraryViewController: UIViewController{
             print("Downloading " + filename)
             let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(filename)"
             let imageUrl: URL = URL(fileURLWithPath: imagePath)
-        
+            
             // Create a reference to the file you want to download
             let downloadImageRef = imageReference.child(filename)
             

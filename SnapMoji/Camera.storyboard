@@ -115,17 +115,8 @@
                                     <constraint firstAttribute="trailing" secondItem="J7h-O9-5WI" secondAttribute="trailing" constant="8" id="n4a-bF-XKa"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF7-Fg-Ii7">
-                                <rect key="frame" x="310" y="617" width="49" height="30"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="seeResults:" destination="xe6-yV-cLw" eventType="touchUpInside" id="cSI-Dn-aLj"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDC-u4-mIQ">
-                                <rect key="frame" x="153" y="543" width="182" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDC-u4-mIQ">
+                                <rect key="frame" x="96" y="607" width="182" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
                                 <nil key="textColor"/>
@@ -134,9 +125,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xDK-pR-7Ki" firstAttribute="trailing" secondItem="yF7-Fg-Ii7" secondAttribute="trailing" constant="16" id="9aZ-qG-6ve"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="top" secondItem="WSJ-at-tOa" secondAttribute="top" id="Bx0-P7-FYs"/>
-                            <constraint firstItem="xDK-pR-7Ki" firstAttribute="bottom" secondItem="yF7-Fg-Ii7" secondAttribute="bottom" constant="20" id="M8j-3Z-Pnp"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="leading" secondItem="xDK-pR-7Ki" secondAttribute="leading" id="WBw-uY-Qvy"/>
                             <constraint firstItem="fRd-ZF-Dqf" firstAttribute="leading" secondItem="xDK-pR-7Ki" secondAttribute="leading" id="bss-qp-74q"/>
                             <constraint firstItem="eO9-a9-tvX" firstAttribute="trailing" secondItem="xDK-pR-7Ki" secondAttribute="trailing" id="czA-bw-DWX"/>

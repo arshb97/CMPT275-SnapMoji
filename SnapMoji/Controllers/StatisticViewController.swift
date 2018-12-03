@@ -70,16 +70,16 @@ class StatisticViewController: UIViewController {
         
         if difficulty == 1{
             set1 = LineChartDataSet(values: values, label: "Easy")
-            statsChartLabel.text = "Statistics - Easy"
+            statsChartLabel.text = "Test Results - Easy"
         } else if difficulty == 2{
             set1 = LineChartDataSet(values: values, label: "Medium")
-            statsChartLabel.text = "Statistics - Medium"
+            statsChartLabel.text = "Test Results - Medium"
         } else if difficulty == 3{
             set1 = LineChartDataSet(values: values, label: "Hard")
-            statsChartLabel.text = "Statistics - Hard"
+            statsChartLabel.text = "Test Results - Hard"
         } else if difficulty == 4{
             set1 = LineChartDataSet(values: values, label: "Descriptions")
-            statsChartLabel.text = "Statistics - Descriptions"
+            statsChartLabel.text = "Test Results - Descriptions"
         }
         
         let data = LineChartData(dataSet: set1)
