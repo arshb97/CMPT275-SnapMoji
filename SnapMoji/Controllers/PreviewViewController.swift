@@ -123,24 +123,24 @@ class PreviewViewController: UIViewController, UIApplicationDelegate{
     }
  
     func getEmotion() {
-            emotionResult = detector.globalVariableGetter()
-            print (emotionResult)
-            apiEmotionValue.text = emotionResult
-            if emotionResult == emotion {
-                apiEmotionValue.textColor = UIColor.green
-            } else {
-                apiEmotionValue.textColor = UIColor.red
-            }
+        print (emotionResult + "waiting until show emotion\n\n\n")
+        
+        //execute code with a delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.showEmotion()
+        })
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func showEmotion() {
+        emotionResult = detector.globalVariableGetter()
+        print (emotionResult + "waiting until show emotion 2 \n\n\n")
+        apiEmotionValue.text = emotionResult
+        if emotionResult == emotion {
+            apiEmotionValue.textColor = UIColor.green
+        } else {
+            apiEmotionValue.textColor = UIColor.red
+        }
     }
-    */
 
 }
